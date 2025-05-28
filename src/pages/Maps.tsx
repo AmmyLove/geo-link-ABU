@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { MapPin, Cloud, Layers, Navigation } from 'lucide-react';
 import Navbar from '../components/Navbar';
@@ -9,6 +10,39 @@ import LocationServices from '../components/LocationServices';
 const Maps = () => {
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [selectedLocation, setSelectedLocation] = useState<string>('main-gate');
+  const [mapLayer, setMapLayer] = useState<string>('standard');
+
+  const campusLocations = [
+    {
+      id: 'main-gate',
+      name: 'Main Gate',
+      coordinates: [7.6383, 11.1531] as [number, number],
+      description: 'Main entrance to ABU Zaria campus',
+      type: 'landmark' as const
+    },
+    {
+      id: 'geography-dept',
+      name: 'Geography Department',
+      coordinates: [7.6403, 11.1541] as [number, number],
+      description: 'Department of Geography and Environmental Management',
+      type: 'department' as const
+    },
+    {
+      id: 'library',
+      name: 'Kashim Ibrahim Library',
+      coordinates: [7.6393, 11.1521] as [number, number],
+      description: 'Main university library',
+      type: 'facility' as const
+    },
+    {
+      id: 'student-center',
+      name: 'Student Center',
+      coordinates: [7.6413, 11.1551] as [number, number],
+      description: 'Student activities and services center',
+      type: 'facility' as const
+    }
+  ];
 
   const findLocation = () => {
     if (navigator.geolocation) {
@@ -28,6 +62,10 @@ const Maps = () => {
     }
   };
 
+  const handleLocationSelect = (locationId: string) => {
+    setSelectedLocation(locationId);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -43,7 +81,35 @@ const Maps = () => {
         {/* Interactive Map Section */}
         <div className="md:col-span-2">
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <InteractiveMap />
+            <div className="p-4 border-b border-gray-200">
+              <div className="flex gap-2 mb-4">
+                <button
+                  onClick={() => setMapLayer('standard')}
+                  className={`px-3 py-1 rounded ${mapLayer === 'standard' ? 'bg-green-600 text-white' : 'bg-gray-200'}`}
+                >
+                  Standard
+                </button>
+                <button
+                  onClick={() => setMapLayer('satellite')}
+                  className={`px-3 py-1 rounded ${mapLayer === 'satellite' ? 'bg-green-600 text-white' : 'bg-gray-200'}`}
+                >
+                  Satellite
+                </button>
+                <button
+                  onClick={() => setMapLayer('terrain')}
+                  className={`px-3 py-1 rounded ${mapLayer === 'terrain' ? 'bg-green-600 text-white' : 'bg-gray-200'}`}
+                >
+                  Terrain
+                </button>
+              </div>
+            </div>
+            <InteractiveMap 
+              selectedLocation={selectedLocation}
+              onLocationSelect={handleLocationSelect}
+              locations={campusLocations}
+              mapLayer={mapLayer}
+              userLocation={userLocation}
+            />
           </div>
         </div>
 

@@ -22,7 +22,9 @@ const FeaturedProjects = () => {
       image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop',
       tags: ['GIS', 'Climate Change', 'Remote Sensing'],
       award: 'Best Research Project 2024',
-      status: 'Published'
+      status: 'Published',
+      paperUrl: 'https://scholar.google.com/scholar?q=climate+change+northern+nigeria+gis',
+      abstract: 'This comprehensive study examines the impact of climate change on Northern Nigeria using advanced GIS technology and satellite data analysis. The research reveals significant temperature increases and changing precipitation patterns over the past two decades.'
     },
     {
       id: 2,
@@ -34,7 +36,9 @@ const FeaturedProjects = () => {
       image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&h=300&fit=crop',
       tags: ['Urban Planning', 'Satellite Imagery', 'Population Studies'],
       award: 'Innovation Award',
-      status: 'In Progress'
+      status: 'In Progress',
+      paperUrl: null,
+      abstract: 'This ongoing research project maps the rapid urban expansion of Zaria metropolitan area using high-resolution satellite imagery and advanced remote sensing techniques to analyze population growth trends and urban sprawl patterns.'
     },
     {
       id: 3,
@@ -46,7 +50,9 @@ const FeaturedProjects = () => {
       image: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=400&h=300&fit=crop',
       tags: ['Water Management', 'Sustainability', 'Rural Development'],
       award: 'Community Impact Award',
-      status: 'Completed'
+      status: 'Completed',
+      paperUrl: 'https://scholar.google.com/scholar?q=water+resource+management+northern+nigeria',
+      abstract: 'This research develops sustainable water management strategies for rural communities in Northern Nigeria, focusing on groundwater conservation and community-based water resource management approaches.'
     },
     {
       id: 4,
@@ -58,7 +64,9 @@ const FeaturedProjects = () => {
       image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400&h=300&fit=crop',
       tags: ['Agriculture', 'Land Use', 'Food Security'],
       award: null,
-      status: 'Under Review'
+      status: 'Under Review',
+      paperUrl: null,
+      abstract: 'This study provides a comprehensive analysis of agricultural land use patterns in Kaduna State, examining their implications for regional food security and sustainable agricultural development.'
     },
     {
       id: 5,
@@ -70,7 +78,9 @@ const FeaturedProjects = () => {
       image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop',
       tags: ['Transportation', 'Network Analysis', 'Urban Planning'],
       award: 'Technical Excellence Award',
-      status: 'Published'
+      status: 'Published',
+      paperUrl: 'https://scholar.google.com/scholar?q=transportation+network+optimization+zaria',
+      abstract: 'This research applies advanced network analysis and spatial modeling techniques to optimize transportation networks in Zaria metropolitan area, improving connectivity and reducing travel times.'
     }
   ];
 
@@ -82,6 +92,14 @@ const FeaturedProjects = () => {
       case 'Under Review': return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800';
     }
+  };
+
+  const handleViewDetails = (project: typeof featuredProjects[0]) => {
+    alert(`Project Details:\n\nTitle: ${project.title}\nStudent: ${project.student}\nYear: ${project.year}\nCategory: ${project.category}\nStatus: ${project.status}\n\nAbstract:\n${project.abstract}\n\n${project.award ? `Award: ${project.award}` : ''}`);
+  };
+
+  const handleReadPaper = (paperUrl: string) => {
+    window.open(paperUrl, '_blank');
   };
 
   return (
@@ -160,12 +178,18 @@ const FeaturedProjects = () => {
                     )}
                     
                     <div className="flex items-center justify-between pt-2">
-                      <button className="text-green-600 hover:text-green-700 font-medium text-sm flex items-center group">
+                      <button 
+                        onClick={() => handleViewDetails(project)}
+                        className="text-green-600 hover:text-green-700 font-medium text-sm flex items-center group"
+                      >
                         View Details
                         <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
                       </button>
-                      {project.status === 'Published' && (
-                        <button className="text-blue-600 hover:text-blue-700 text-sm flex items-center">
+                      {project.status === 'Published' && project.paperUrl && (
+                        <button 
+                          onClick={() => handleReadPaper(project.paperUrl!)}
+                          className="text-blue-600 hover:text-blue-700 text-sm flex items-center"
+                        >
                           <ExternalLink size={14} className="mr-1" />
                           Read Paper
                         </button>
