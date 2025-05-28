@@ -1,12 +1,16 @@
 
-import React, { useState } from 'react';
-import { MapPin, Navigation, Phone, Clock, Car, Bus } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { MapPin, Navigation, Phone, Clock, Car, Bus, Cloud, Sun, CloudRain, Thermometer, Wind, Eye, MapIcon, Satellite, Terrain, Locate } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import InteractiveMap from '../components/InteractiveMap';
+import WeatherWidget from '../components/WeatherWidget';
+import LocationServices from '../components/LocationServices';
 
 const Maps = () => {
   const [selectedLocation, setSelectedLocation] = useState('department');
+  const [mapLayer, setMapLayer] = useState('standard');
+  const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
 
   const locations = [
     {
@@ -58,11 +62,35 @@ const Maps = () => {
     }
   ];
 
+  const mapLayers = [
+    { id: 'standard', name: 'Standard', icon: MapIcon },
+    { id: 'satellite', name: 'Satellite', icon: Satellite },
+    { id: 'terrain', name: 'Terrain', icon: Terrain }
+  ];
+
   const handleGetDirections = () => {
     const selectedLoc = locations.find(loc => loc.id === selectedLocation);
     if (selectedLoc) {
       const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedLoc.name + ' ABU Zaria')}`;
       window.open(googleMapsUrl, '_blank');
+    }
+  };
+
+  const handleFindMyLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setUserLocation([latitude, longitude]);
+          console.log('User location found:', latitude, longitude);
+        },
+        (error) => {
+          console.error('Error getting location:', error);
+          alert('Unable to get your location. Please check your browser permissions.');
+        }
+      );
+    } else {
+      alert('Geolocation is not supported by this browser.');
     }
   };
 
@@ -76,8 +104,21 @@ const Maps = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Campus Maps & Location</h1>
           <p className="text-xl text-green-100 max-w-3xl mx-auto">
             Find your way around Ahmadu Bello University campus and locate our department 
-            with detailed maps and directions.
+            with detailed maps, real-time weather, and directions.
           </p>
+        </div>
+      </section>
+
+      {/* Weather and Location Services */}
+      <section className="py-8 px-4 bg-white border-b">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <WeatherWidget />
+            <LocationServices 
+              onFindLocation={handleFindMyLocation}
+              userLocation={userLocation}
+            />
+          </div>
         </div>
       </section>
 
@@ -88,7 +129,7 @@ const Maps = () => {
             {/* Location Selector */}
             <div className="lg:col-span-1">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Campus Locations</h3>
-              <div className="space-y-4">
+              <div className="space-y-4 mb-8">
                 {locations.map((location) => (
                   <div
                     key={location.id}
@@ -112,6 +153,27 @@ const Maps = () => {
                   </div>
                 ))}
               </div>
+
+              {/* Map Layer Controls */}
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h4 className="font-semibold text-gray-800 mb-3">Map Layers</h4>
+                <div className="space-y-2">
+                  {mapLayers.map((layer) => (
+                    <button
+                      key={layer.id}
+                      onClick={() => setMapLayer(layer.id)}
+                      className={`w-full flex items-center space-x-3 p-3 rounded-lg transition-all ${
+                        mapLayer === layer.id
+                          ? 'bg-green-100 text-green-800 border-2 border-green-300'
+                          : 'bg-white text-gray-600 border-2 border-gray-200 hover:border-green-200'
+                      }`}
+                    >
+                      <layer.icon size={20} />
+                      <span className="font-medium">{layer.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Interactive Map */}
@@ -126,6 +188,8 @@ const Maps = () => {
                   description: loc.description,
                   type: loc.type
                 }))}
+                mapLayer={mapLayer}
+                userLocation={userLocation}
               />
               
               {/* Location Details */}
