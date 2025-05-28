@@ -114,6 +114,87 @@ const Noticeboard = () => {
     return noticeDate > threeDaysAgo;
   };
 
+  const handleDownload = (filename: string) => {
+    // Create a blob with dummy PDF content for demo purposes
+    const pdfContent = `%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/Font <<
+/F1 4 0 R
+>>
+>>
+/MediaBox [0 0 612 792]
+/Contents 5 0 R
+>>
+endobj
+
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Times-Roman
+>>
+endobj
+
+5 0 obj
+<<
+/Length 44
+>>
+stream
+BT
+/F1 12 Tf
+72 720 Td
+(${filename}) Tj
+ET
+endstream
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000274 00000 n 
+0000000361 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+456
+%%EOF`;
+
+    const blob = new Blob([pdfContent], { type: 'application/pdf' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -228,7 +309,10 @@ const Noticeboard = () => {
                             <Download className="text-green-600" size={20} />
                             <span className="text-sm font-medium text-gray-700">{notice.attachment}</span>
                           </div>
-                          <button className="bg-green-600 text-white px-4 py-1 rounded text-sm hover:bg-green-700 transition-colors">
+                          <button 
+                            onClick={() => handleDownload(notice.attachment)}
+                            className="bg-green-600 text-white px-4 py-1 rounded text-sm hover:bg-green-700 transition-colors"
+                          >
                             Download
                           </button>
                         </div>
@@ -264,7 +348,10 @@ const Noticeboard = () => {
                       <p className="text-sm text-gray-500">{document.file}</p>
                     </div>
                   </div>
-                  <button className="bg-green-600 text-white p-2 rounded hover:bg-green-700 transition-colors">
+                  <button 
+                    onClick={() => handleDownload(document.file)}
+                    className="bg-green-600 text-white p-2 rounded hover:bg-green-700 transition-colors"
+                  >
                     <Download size={16} />
                   </button>
                 </div>

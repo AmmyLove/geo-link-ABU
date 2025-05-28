@@ -7,6 +7,7 @@ import ContactHero from '../components/ContactHero';
 import ContactInfo from '../components/ContactInfo';
 import KeyContacts from '../components/KeyContacts';
 import EmergencyInfo from '../components/EmergencyInfo';
+import VirtualTour from '../components/VirtualTour';
 
 const Contact = () => {
   const handleFormSubmit = async (formData: any): Promise<boolean> => {
@@ -37,6 +38,7 @@ const Contact = () => {
       </section>
 
       <KeyContacts />
+      <VirtualTour />
       <EmergencyInfo />
 
       <Footer />

@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, Mail, Phone, Globe, BookOpen } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -189,9 +189,12 @@ const Lecturers = () => {
 
                   <p className="text-gray-600 text-sm mb-4 line-clamp-3">{lecturer.bio}</p>
                   
-                  <button className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                  <Link 
+                    to={`/lecturers/${lecturer.id}`}
+                    className="block w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-center"
+                  >
                     View Full Profile
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
