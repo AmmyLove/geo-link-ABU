@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, Users, Calendar, BookOpen, ChevronRight, Globe, Leaf, Mountain } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import FeaturedProjects from '../components/FeaturedProjects';
 
 const Index = () => {
   const quickLinks = [
@@ -11,27 +12,6 @@ const Index = () => {
     { title: 'Faculty Profiles', icon: Users, href: '/lecturers' },
     { title: 'Campus Maps', icon: MapPin, href: '/maps' },
     { title: 'Latest News', icon: BookOpen, href: '/news' },
-  ];
-
-  const featuredProjects = [
-    {
-      title: 'Climate Change Impact Assessment',
-      student: 'Aisha Muhammad',
-      description: 'Analysis of climate patterns in Northern Nigeria using GIS technology.',
-      image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop'
-    },
-    {
-      title: 'Urban Growth Mapping',
-      student: 'Ibrahim Sani',
-      description: 'Mapping urban expansion in Zaria using satellite imagery and remote sensing.',
-      image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&h=300&fit=crop'
-    },
-    {
-      title: 'Water Resource Management',
-      student: 'Fatima Aliyu',
-      description: 'Sustainable water management strategies for rural communities.',
-      image: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=400&h=300&fit=crop'
-    }
   ];
 
   const news = [
@@ -167,28 +147,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Student Projects */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Featured Student Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProjects.map((project, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
-                  <p className="text-sm text-green-600 font-medium mb-3">By {project.student}</p>
-                  <p className="text-gray-600 leading-relaxed">{project.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Featured Student Projects - Now using the new component */}
+      <FeaturedProjects />
 
       {/* Latest News */}
       <section className="py-16 px-4 bg-gray-100">
