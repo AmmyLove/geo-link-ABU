@@ -11,14 +11,12 @@ const LocationServices: React.FC<LocationServicesProps> = ({ onFindLocation, use
   const calculateDistance = () => {
     if (!userLocation) return null;
     
-    // ABU Zaria coordinates (approximate)
     const campusLat = 11.1515;
     const campusLng = 7.6406;
     
     const [userLat, userLng] = userLocation;
     
-    // Simple distance calculation using Haversine formula
-    const R = 6371; // Earth's radius in kilometers
+    const R = 6371;
     const dLat = (campusLat - userLat) * Math.PI / 180;
     const dLng = (campusLng - userLng) * Math.PI / 180;
     const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
@@ -39,31 +37,31 @@ const LocationServices: React.FC<LocationServicesProps> = ({ onFindLocation, use
   };
 
   return (
-    <div className="bg-gradient-to-br from-green-400 to-emerald-600 text-white rounded-xl p-6 shadow-lg">
+    <div className="bg-white rounded-xl p-6 shadow-lg border">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-semibold">Location Services</h3>
-        <Navigation size={24} className="opacity-80" />
+        <h3 className="text-xl font-semibold text-gray-900">Location Services</h3>
+        <Navigation size={24} className="text-green-600" />
       </div>
 
       <div className="space-y-4">
         <button
           onClick={onFindLocation}
-          className="w-full bg-white/20 hover:bg-white/30 rounded-lg p-4 transition-colors flex items-center space-x-3"
+          className="w-full bg-green-50 hover:bg-green-100 rounded-lg p-4 transition-colors flex items-center space-x-3 border border-green-200"
         >
-          <Locate size={24} />
+          <Locate size={24} className="text-green-600" />
           <div className="text-left">
-            <div className="font-semibold">Find My Location</div>
-            <div className="text-sm opacity-80">Get your current position</div>
+            <div className="font-semibold text-gray-900">Find My Location</div>
+            <div className="text-sm text-gray-600">Get your current position</div>
           </div>
         </button>
 
         {userLocation && (
-          <div className="bg-white/20 rounded-lg p-4">
+          <div className="bg-gray-50 rounded-lg p-4 border">
             <div className="flex items-center space-x-2 mb-3">
-              <MapPin size={20} />
-              <span className="font-semibold">Your Location</span>
+              <MapPin size={20} className="text-green-600" />
+              <span className="font-semibold text-gray-900">Your Location</span>
             </div>
-            <div className="text-sm opacity-90 mb-3">
+            <div className="text-sm text-gray-600 mb-3">
               Lat: {userLocation[0].toFixed(6)}<br />
               Lng: {userLocation[1].toFixed(6)}
             </div>
@@ -71,28 +69,28 @@ const LocationServices: React.FC<LocationServicesProps> = ({ onFindLocation, use
             {calculateDistance() && (
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center space-x-2">
-                  <Navigation size={16} />
-                  <span className="text-sm">Distance to Campus:</span>
+                  <Navigation size={16} className="text-green-600" />
+                  <span className="text-sm text-gray-600">Distance to Campus:</span>
                 </div>
-                <span className="font-semibold">{calculateDistance()} km</span>
+                <span className="font-semibold text-gray-900">{calculateDistance()} km</span>
               </div>
             )}
 
             <button
               onClick={getDirectionsToUser}
-              className="w-full bg-white/30 hover:bg-white/40 rounded-lg p-2 transition-colors text-sm font-medium"
+              className="w-full bg-green-600 hover:bg-green-700 text-white rounded-lg p-2 transition-colors text-sm font-medium"
             >
               Get Directions to Campus
             </button>
           </div>
         )}
 
-        <div className="bg-white/20 rounded-lg p-4">
+        <div className="bg-gray-50 rounded-lg p-4 border">
           <div className="flex items-center space-x-2 mb-2">
-            <Clock size={16} />
-            <span className="text-sm font-semibold">Campus Hours</span>
+            <Clock size={16} className="text-green-600" />
+            <span className="text-sm font-semibold text-gray-900">Campus Hours</span>
           </div>
-          <div className="text-xs opacity-80">
+          <div className="text-xs text-gray-600">
             Mon-Fri: 7:00 AM - 6:00 PM<br />
             Sat: 8:00 AM - 4:00 PM<br />
             Sun: Closed
