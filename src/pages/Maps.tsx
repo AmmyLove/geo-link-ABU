@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import InteractiveMap from '../components/InteractiveMap';
 import WeatherWidget from '../components/WeatherWidget';
 import LocationServices from '../components/LocationServices';
+import VirtualTour from '../components/VirtualTour';
 
 const Maps = () => {
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
@@ -146,6 +147,11 @@ const Maps = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Virtual Departmental Tour Section */}
+        <div className="mt-12">
+          <VirtualTour />
         </div>
       </main>
 

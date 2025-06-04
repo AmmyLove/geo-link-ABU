@@ -8,29 +8,34 @@ const VirtualTour = () => {
 
   const locations = [
     {
-      name: 'Main Entrance',
+      name: 'Department Entrance',
       image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=600&fit=crop',
       description: 'Welcome to the Department of Geography and Environmental Management'
     },
     {
       name: 'GIS Laboratory',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop',
-      description: 'State-of-the-art GIS and Remote Sensing Laboratory'
+      description: 'State-of-the-art GIS and Remote Sensing Laboratory with modern equipment'
     },
     {
-      name: 'Lecture Hall',
+      name: 'Lecture Halls',
       image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=800&h=600&fit=crop',
-      description: 'Modern lecture halls equipped with multimedia facilities'
+      description: 'Modern lecture halls equipped with multimedia facilities for interactive learning'
     },
     {
       name: 'Faculty Offices',
       image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop',
-      description: 'Faculty offices and meeting spaces'
+      description: 'Faculty offices where students can meet with professors for guidance'
     },
     {
       name: 'Research Center',
       image: 'https://images.unsplash.com/photo-1551135049-8a33b5883817?w=800&h=600&fit=crop',
-      description: 'Climate Change and Environmental Research Center'
+      description: 'Climate Change and Environmental Research Center for advanced studies'
+    },
+    {
+      name: 'Student Study Area',
+      image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop',
+      description: 'Collaborative study spaces for group work and individual research'
     }
   ];
 
@@ -57,10 +62,10 @@ const VirtualTour = () => {
     <section className="py-16 px-4 bg-gradient-to-br from-green-50 to-emerald-100">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Virtual Campus Tour</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Virtual Departmental Tour</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Take a virtual tour of our department facilities and get familiar with our campus
-            before your visit.
+            Explore the Department of Geography and Environmental Management facilities
+            and discover our modern learning environments.
           </p>
         </div>
 
@@ -131,12 +136,12 @@ const VirtualTour = () => {
               </div>
 
               <div className="text-sm text-gray-500">
-                Click arrows or use auto-tour to navigate
+                Navigate through departmental facilities
               </div>
             </div>
 
             {/* Location Thumbnails */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
               {locations.map((location, index) => (
                 <button
                   key={index}
@@ -165,14 +170,19 @@ const VirtualTour = () => {
           </div>
         </div>
 
-        {/* Additional Info */}
+        {/* Department Info */}
         <div className="mt-8 text-center">
           <p className="text-gray-600 mb-4">
-            Want to visit in person? Schedule a guided tour with our staff.
+            Learn more about our programs and research opportunities in Geography and Environmental Management.
           </p>
-          <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
-            Schedule Campus Visit
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+              View Academic Programs
+            </button>
+            <button className="bg-white text-green-600 border-2 border-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition-colors">
+              Research Projects
+            </button>
+          </div>
         </div>
       </div>
     </section>
