@@ -20,14 +20,20 @@ const WeatherWidget: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   const weatherService = WeatherService.getInstance();
 
-  const fetchWeather = async () => {
+  const fetchWeather = async (forceRefresh: boolean = false) => {
     try {
-      setLoading(true);
+      setLoading(!weather); // Only show loading on initial load
+      setIsRefreshing(forceRefresh);
       setError(null);
-      const weatherData = await weatherService.getCurrentWeather();
+      
+      const weatherData = forceRefresh 
+        ? await weatherService.refreshWeather()
+        : await weatherService.getCurrentWeather();
+        
       setWeather(weatherData);
       setLastUpdated(new Date());
     } catch (err) {
@@ -35,14 +41,19 @@ const WeatherWidget: React.FC = () => {
       console.error('Weather fetch error:', err);
     } finally {
       setLoading(false);
+      setIsRefreshing(false);
     }
+  };
+
+  const handleRefresh = () => {
+    fetchWeather(true);
   };
 
   useEffect(() => {
     fetchWeather();
     
     // Refresh every 5 minutes
-    const interval = setInterval(fetchWeather, 5 * 60 * 1000);
+    const interval = setInterval(() => fetchWeather(), 5 * 60 * 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -85,10 +96,11 @@ const WeatherWidget: React.FC = () => {
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg md:text-xl font-semibold text-gray-900">Weather</h3>
           <button 
-            onClick={fetchWeather}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            onClick={handleRefresh}
+            disabled={isRefreshing}
+            className="p-2 hover:bg-gray-100 rounded-lg transition-colors disabled:opacity-50"
           >
-            <RefreshCw size={20} className="text-green-600" />
+            <RefreshCw size={20} className={`text-green-600 ${isRefreshing ? 'animate-spin' : ''}`} />
           </button>
         </div>
         <div className="flex items-center space-x-3 text-red-600">
@@ -112,11 +124,12 @@ const WeatherWidget: React.FC = () => {
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg md:text-xl font-semibold text-gray-900">Current Weather</h3>
         <button 
-          onClick={fetchWeather}
-          className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-          disabled={loading}
+          onClick={handleRefresh}
+          disabled={isRefreshing}
+          className="p-2 hover:bg-gray-100 rounded-lg transition-colors disabled:opacity-50"
+          title="Refresh weather data"
         >
-          <RefreshCw size={20} className={`text-green-600 ${loading ? 'animate-spin' : ''}`} />
+          <RefreshCw size={20} className={`text-green-600 ${isRefreshing ? 'animate-spin' : ''}`} />
         </button>
       </div>
       
@@ -169,6 +182,7 @@ const WeatherWidget: React.FC = () => {
       {lastUpdated && (
         <div className="text-xs text-gray-500 text-center">
           Last updated: {lastUpdated.toLocaleTimeString()}
+          {isRefreshing && <span className="ml-2 text-green-600">Updating...</span>}
         </div>
       )}
     </div>

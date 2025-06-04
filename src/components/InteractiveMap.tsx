@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { MapPin, ZoomIn, ZoomOut, Navigation, Layers, User, Plus, Minus, Maximize2, RotateCcw } from 'lucide-react';
+import { MapPin, ZoomIn, ZoomOut, Navigation, Layers, User, Plus, Minus, Maximize2, Minimize2, RotateCcw } from 'lucide-react';
 
 interface Location {
   id: string;
@@ -75,6 +74,10 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
       default:
         return 'bg-gray-50';
     }
+  };
+
+  const toggleFullscreen = () => {
+    setIsFullscreen(!isFullscreen);
   };
 
   useEffect(() => {
@@ -245,10 +248,15 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
           <Layers size={20} className={showLabels ? 'text-green-600' : 'text-gray-600'} />
         </button>
         <button
-          onClick={() => setIsFullscreen(!isFullscreen)}
+          onClick={toggleFullscreen}
           className="bg-white p-3 rounded-lg shadow-xl hover:bg-gray-50 transition-colors"
+          title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
         >
-          <Maximize2 size={20} className="text-gray-600" />
+          {isFullscreen ? (
+            <Minimize2 size={20} className="text-gray-600" />
+          ) : (
+            <Maximize2 size={20} className="text-gray-600" />
+          )}
         </button>
       </div>
 
@@ -276,6 +284,16 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
           <span className="text-xs text-gray-600">100m</span>
         </div>
       </div>
+
+      {/* Fullscreen overlay close button */}
+      {isFullscreen && (
+        <button
+          onClick={() => setIsFullscreen(false)}
+          className="absolute top-6 right-20 bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg shadow-xl transition-colors z-10"
+        >
+          <Minimize2 size={16} />
+        </button>
+      )}
     </div>
   );
 };

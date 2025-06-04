@@ -15,7 +15,7 @@ class WeatherService {
   private static instance: WeatherService;
   private cache: WeatherData | null = null;
   private lastFetch: number = 0;
-  private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+  private readonly CACHE_DURATION = 2 * 60 * 1000; // 2 minutes for more frequent updates
 
   static getInstance(): WeatherService {
     if (!WeatherService.instance) {
@@ -65,10 +65,10 @@ class WeatherService {
     };
   }
 
-  async getCurrentWeather(): Promise<WeatherData> {
+  async getCurrentWeather(forceRefresh: boolean = false): Promise<WeatherData> {
     const now = Date.now();
     
-    if (this.cache && (now - this.lastFetch) < this.CACHE_DURATION) {
+    if (!forceRefresh && this.cache && (now - this.lastFetch) < this.CACHE_DURATION) {
       return this.cache;
     }
 
@@ -78,7 +78,13 @@ class WeatherService {
     this.cache = this.generateRealisticWeather();
     this.lastFetch = now;
     
+    console.log('Weather data refreshed:', this.cache);
     return this.cache;
+  }
+
+  // Force refresh method for manual refresh
+  async refreshWeather(): Promise<WeatherData> {
+    return this.getCurrentWeather(true);
   }
 
   async getHourlyForecast(): Promise<WeatherData[]> {
