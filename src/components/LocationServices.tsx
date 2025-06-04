@@ -1,13 +1,13 @@
-
 import React from 'react';
-import { Locate, MapPin, Navigation, Clock, Car, PersonStanding } from 'lucide-react';
+import { Locate, MapPin, Navigation, Clock, Car, PersonStanding, Loader2 } from 'lucide-react';
 
 interface LocationServicesProps {
   onFindLocation: () => void;
   userLocation: [number, number] | null;
+  isLoading?: boolean;
 }
 
-const LocationServices: React.FC<LocationServicesProps> = ({ onFindLocation, userLocation }) => {
+const LocationServices: React.FC<LocationServicesProps> = ({ onFindLocation, userLocation, isLoading = false }) => {
   // Geography Department coordinates
   const geographyDeptLat = 11.1541;
   const geographyDeptLng = 7.6403;
@@ -61,21 +61,30 @@ const LocationServices: React.FC<LocationServicesProps> = ({ onFindLocation, use
   const distance = calculateDistance();
 
   return (
-    <div className="bg-white rounded-xl p-6 shadow-lg border">
+    <div className="bg-white rounded-xl p-4 md:p-6 shadow-lg border">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-semibold text-gray-900">Location Services</h3>
+        <h3 className="text-lg md:text-xl font-semibold text-gray-900">Location Services</h3>
         <Navigation size={24} className="text-green-600" />
       </div>
 
       <div className="space-y-4">
         <button
           onClick={onFindLocation}
-          className="w-full bg-green-50 hover:bg-green-100 rounded-lg p-4 transition-colors flex items-center space-x-3 border border-green-200"
+          disabled={isLoading}
+          className="w-full bg-green-50 hover:bg-green-100 rounded-lg p-4 transition-colors flex items-center space-x-3 border border-green-200 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          <Locate size={24} className="text-green-600" />
-          <div className="text-left">
-            <div className="font-semibold text-gray-900">Find My Location</div>
-            <div className="text-sm text-gray-600">Get your current position</div>
+          {isLoading ? (
+            <Loader2 size={24} className="text-green-600 animate-spin" />
+          ) : (
+            <Locate size={24} className="text-green-600" />
+          )}
+          <div className="text-left flex-1">
+            <div className="font-semibold text-gray-900">
+              {isLoading ? 'Finding Location...' : 'Find My Location'}
+            </div>
+            <div className="text-sm text-gray-600">
+              {isLoading ? 'Please wait while we locate you' : 'Get your current position'}
+            </div>
           </div>
         </button>
 
