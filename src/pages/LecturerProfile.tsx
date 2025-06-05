@@ -11,10 +11,10 @@ const LecturerProfile = () => {
   const lecturers = [
     {
       id: 1,
-      name: 'Prof. Aminu Hassan',
+      name: 'Dr. S. Abbas',
       position: 'Professor & Head of Department',
       specialization: 'Climate Change & Environmental Policy',
-      email: 'aminu.hassan@abu.edu.ng',
+      email: 's.abbas@abu.edu.ng',
       phone: '+234 803 123 4567',
       office: 'Room 201, Environmental Design Building',
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=300&h=400&fit=crop',

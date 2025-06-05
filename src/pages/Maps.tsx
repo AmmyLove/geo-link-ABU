@@ -189,7 +189,7 @@ const Maps = () => {
             <WeatherWidget />
             
             {/* Enhanced Quick Actions */}
-            <div className="bg-white rounded-xl p-4 md:p-6 shadow-lg border">
+            {/* <div className="bg-white rounded-xl p-4 md:p-6 shadow-lg border">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
               <div className="space-y-3">
                 <button className="w-full bg-green-50 hover:bg-green-100 text-green-700 rounded-lg p-3 transition-colors text-sm font-medium border border-green-200 flex items-center justify-center space-x-2">
@@ -205,7 +205,7 @@ const Maps = () => {
                   <span>Emergency Contacts</span>
                 </button>
               </div>
-            </div>
+            </div> */}
 
             {/* Campus Statistics */}
             <div className="bg-white rounded-xl p-4 md:p-6 shadow-lg border">

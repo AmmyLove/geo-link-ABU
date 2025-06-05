@@ -11,21 +11,21 @@ const Lecturers = () => {
   const lecturers = [
     {
       id: 1,
-      name: 'Prof. Aminu Hassan',
+      name: 'Dr. S. Abbas',
       position: 'Professor & Head of Department',
       specialization: 'Climate Change & Environmental Policy',
-      email: 'aminu.hassan@abu.edu.ng',
+      email: 's.abbas@abu.edu.ng',
       phone: '+234 803 123 4567',
       office: 'Room 201, Environmental Design Building',
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=300&h=400&fit=crop',
-      bio: 'Prof. Hassan has over 20 years of experience in climate change research and environmental policy. He leads several international research collaborations.',
+      bio: 'Dr. S. Abbas has over 20 years of experience in climate change research and environmental policy. He leads several international research collaborations.',
       research: ['Climate Change Adaptation', 'Environmental Policy', 'Sustainable Development'],
       publications: 45
     },
     {
       id: 2,
-      name: 'Dr. Fatima Abubakar',
-      position: 'Associate Professor',
+      name: 'Prof. Bernedine Akpu',
+      position: 'Senior Lecturer',
       specialization: 'GIS & Remote Sensing',
       email: 'fatima.abubakar@abu.edu.ng',
       phone: '+234 803 234 5678',
@@ -37,8 +37,8 @@ const Lecturers = () => {
     },
     {
       id: 3,
-      name: 'Dr. Ibrahim Musa',
-      position: 'Senior Lecturer',
+      name: 'Dr. A. Balarebe',
+      position: 'Lecturer',
       specialization: 'Urban Geography & Planning',
       email: 'ibrahim.musa@abu.edu.ng',
       phone: '+234 803 345 6789',
@@ -50,8 +50,8 @@ const Lecturers = () => {
     },
     {
       id: 4,
-      name: 'Dr. Aisha Yusuf',
-      position: 'Senior Lecturer',
+      name: 'Dr. Muktar',
+      position: 'Lecturer',
       specialization: 'Hydrology & Water Resources',
       email: 'aisha.yusuf@abu.edu.ng',
       phone: '+234 803 456 7890',
@@ -63,7 +63,7 @@ const Lecturers = () => {
     },
     {
       id: 5,
-      name: 'Dr. Mohammed Salim',
+      name: 'Dr. Muhammed Ismail',
       position: 'Lecturer',
       specialization: 'Economic Geography',
       email: 'mohammed.salim@abu.edu.ng',
@@ -76,7 +76,7 @@ const Lecturers = () => {
     },
     {
       id: 6,
-      name: 'Dr. Halima Ahmed',
+      name: 'Dr. Amina Maiwada',
       position: 'Lecturer',
       specialization: 'Environmental Management',
       email: 'halima.ahmed@abu.edu.ng',
