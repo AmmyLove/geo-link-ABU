@@ -73,6 +73,35 @@ const LecturerProfile = () => {
           citations: 78
         }
       ]
+    },
+    {
+      id: 3,
+      name: 'Dr. Fatima Abubakar',
+      position: 'Associate Professor',
+      specialization: 'GIS & Remote Sensing',
+      email: 'fatima.abubakar@abu.edu.ng',
+      phone: '+234 803 234 5678',
+      office: 'Room 205, Environmental Design Building',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=400&fit=crop',
+      bio: 'Dr. Abubakar specializes in GIS applications for urban planning and environmental monitoring. She heads the GIS Laboratory and has developed innovative mapping solutions for sustainable development.',
+      research: ['Geographic Information Systems', 'Remote Sensing', 'Urban Planning', 'Spatial Analysis'],
+      publications: 32,
+      education: [
+        { degree: 'Ph.D. Geographic Information Science', institution: 'University of Leeds', year: '2008' },
+        { degree: 'M.Sc. Remote Sensing', institution: 'University of Edinburgh', year: '2005' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello University', year: '2003' }
+      ],
+      courses: ['GEO 301: Geographic Information Systems', 'GEO 402: Remote Sensing Applications', 'GEO 503: Spatial Data Analysis'],
+      awards: ['GIS Innovation Award 2022', 'Best Paper Award - AARSE Conference 2021'],
+      recentPublications: [
+        {
+          title: 'Urban Growth Monitoring Using Multi-temporal Satellite Data',
+          journal: 'Remote Sensing of Environment',
+          year: '2024',
+          doi: '10.1016/j.rse.2024.113789',
+          citations: 78
+        }
+      ]
     }
   ];
 
