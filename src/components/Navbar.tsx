@@ -1,16 +1,27 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X, Leaf, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAcademicsOpen, setIsAcademicsOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Lecturers', path: '/lecturers' },
+    { 
+      name: 'Academics', 
+      path: '#',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Courses', path: '/courses' },
+        { name: 'Programs', path: '/programs' },
+        { name: 'Lecturers', path: '/lecturers' },
+      ]
+    },
+    { name: 'Career Prospects', path: '/careers' },
     { name: 'GIS Maps', path: '/maps' },
     { name: 'Noticeboard', path: '/noticeboard' },
     { name: 'News', path: '/news' },
@@ -18,6 +29,7 @@ const Navbar = () => {
   ];
 
   const isActive = (path: string) => location.pathname === path;
+  const isAcademicsActive = () => ['/courses', '/programs', '/lecturers'].some(path => location.pathname.startsWith(path));
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -34,19 +46,55 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  isActive(item.path)
-                    ? 'text-green-600 bg-green-50'
-                    : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
-                }`}
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="relative">
+                {item.hasDropdown ? (
+                  <div className="relative">
+                    <button
+                      onClick={() => setIsAcademicsOpen(!isAcademicsOpen)}
+                      className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                        isAcademicsActive()
+                          ? 'text-green-600 bg-green-50'
+                          : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                      }`}
+                    >
+                      {item.name}
+                      <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isAcademicsOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    
+                    {isAcademicsOpen && (
+                      <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
+                        {item.dropdownItems?.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.path}
+                            onClick={() => setIsAcademicsOpen(false)}
+                            className={`block px-4 py-2 text-sm transition-colors ${
+                              isActive(dropdownItem.path)
+                                ? 'text-green-600 bg-green-50'
+                                : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                            }`}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      isActive(item.path)
+                        ? 'text-green-600 bg-green-50'
+                        : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             ))}
           </div>
 
@@ -66,18 +114,56 @@ const Navbar = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                    isActive(item.path)
-                      ? 'text-green-600 bg-green-50'
-                      : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  {item.hasDropdown ? (
+                    <div>
+                      <button
+                        onClick={() => setIsAcademicsOpen(!isAcademicsOpen)}
+                        className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                          isAcademicsActive()
+                            ? 'text-green-600 bg-green-50'
+                            : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                        }`}
+                      >
+                        {item.name}
+                        <ChevronDown className={`h-4 w-4 transition-transform ${isAcademicsOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {isAcademicsOpen && (
+                        <div className="pl-4 mt-1 space-y-1">
+                          {item.dropdownItems?.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.name}
+                              to={dropdownItem.path}
+                              onClick={() => {
+                                setIsOpen(false);
+                                setIsAcademicsOpen(false);
+                              }}
+                              className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                isActive(dropdownItem.path)
+                                  ? 'text-green-600 bg-green-50'
+                                  : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                              }`}
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      onClick={() => setIsOpen(false)}
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        isActive(item.path)
+                          ? 'text-green-600 bg-green-50'
+                          : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
             </div>
           </div>

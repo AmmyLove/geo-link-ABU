@@ -12,6 +12,9 @@ import Maps from "./pages/Maps";
 import Noticeboard from "./pages/Noticeboard";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
+import Courses from "./pages/Courses";
+import Programs from "./pages/Programs";
+import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +30,9 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/lecturers" element={<Lecturers />} />
           <Route path="/lecturers/:id" element={<LecturerProfile />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/maps" element={<Maps />} />
           <Route path="/noticeboard" element={<Noticeboard />} />
           <Route path="/news" element={<News />} />

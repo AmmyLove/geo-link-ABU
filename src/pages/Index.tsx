@@ -1,17 +1,19 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Users, Calendar, BookOpen, ChevronRight, Globe, Leaf, Mountain } from 'lucide-react';
+import { MapPin, Users, Calendar, BookOpen, ChevronRight, Globe, Leaf, Mountain, GraduationCap, Briefcase, Award } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FeaturedProjects from '../components/FeaturedProjects';
 
 const Index = () => {
   const quickLinks = [
-    { title: 'Academic Calendar', icon: Calendar, href: '/noticeboard' },
-    { title: 'Faculty Profiles', icon: Users, href: '/lecturers' },
-    { title: 'Campus Maps', icon: MapPin, href: '/maps' },
-    { title: 'Latest News', icon: BookOpen, href: '/news' },
+    { title: 'Our Courses', icon: BookOpen, href: '/courses', description: 'Explore exciting courses' },
+    { title: 'Academic Programs', icon: GraduationCap, href: '/programs', description: 'Discover our programs' },
+    { title: 'Faculty Profiles', icon: Users, href: '/lecturers', description: 'Meet our experts' },
+    { title: 'Career Prospects', icon: Briefcase, href: '/careers', description: 'Your future awaits' },
+    { title: 'Campus Maps', icon: MapPin, href: '/maps', description: 'Navigate our campus' },
+    { title: 'Latest News', icon: Calendar, href: '/news', description: 'Stay updated' },
   ];
 
   const news = [
@@ -29,6 +31,27 @@ const Index = () => {
       title: 'New GIS Laboratory Inaugurated',
       date: 'November 5, 2024',
       summary: 'State-of-the-art GIS lab officially opened with latest mapping technology.'
+    }
+  ];
+
+  const highlights = [
+    {
+      icon: Award,
+      title: 'Academic Excellence',
+      description: '50+ years of excellence in geography education with internationally recognized programs.',
+      link: '/programs'
+    },
+    {
+      icon: Users,
+      title: 'Expert Faculty',
+      description: '25+ distinguished faculty members conducting cutting-edge research worldwide.',
+      link: '/lecturers'
+    },
+    {
+      icon: Briefcase,
+      title: 'Career Success',
+      description: '92% graduate employment rate with alumni working in top organizations globally.',
+      link: '/careers'
     }
   ];
 
@@ -63,17 +86,17 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/about" 
+              to="/programs" 
               className="bg-white text-green-800 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center"
             >
-              Learn More
+              Explore Programs
               <ChevronRight className="ml-2" size={20} />
             </Link>
             <Link 
-              to="/lecturers" 
+              to="/courses" 
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-800 transition-colors inline-flex items-center justify-center"
             >
-              Meet Our Faculty
+              Browse Courses
             </Link>
           </div>
         </div>
@@ -83,7 +106,7 @@ const Index = () => {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Quick Access</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {quickLinks.map((link, index) => (
               <Link
                 key={index}
@@ -91,57 +114,61 @@ const Index = () => {
                 className="group bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 <link.icon className="text-green-600 mb-4 group-hover:text-green-700 transition-colors" size={32} />
-                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-green-800 transition-colors">
+                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-green-800 transition-colors mb-2">
                   {link.title}
                 </h3>
+                <p className="text-gray-600 text-sm">{link.description}</p>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Department Overview */}
+      {/* Department Highlights */}
       <section className="py-16 px-4 bg-gradient-to-r from-gray-50 to-green-50">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">About Our Department</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                The Department of Geography and Environmental Management at Ahmadu Bello University is a leading center for geographical education and environmental research in West Africa. We combine traditional geographical knowledge with modern technology to address contemporary environmental challenges.
-              </p>
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">500+</div>
-                  <div className="text-gray-600">Students</div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Why Choose Our Department?</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We combine traditional geographical knowledge with modern technology to prepare you for success in today's world.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {highlights.map((highlight, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <highlight.icon className="text-green-600" size={32} />
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">25+</div>
-                  <div className="text-gray-600">Faculty Members</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">50+</div>
-                  <div className="text-gray-600">Research Projects</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">1972</div>
-                  <div className="text-gray-600">Established</div>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">{highlight.title}</h3>
+                <p className="text-gray-600 mb-4">{highlight.description}</p>
+                <Link 
+                  to={highlight.link}
+                  className="text-green-600 hover:text-green-700 font-medium inline-flex items-center"
+                >
+                  Learn More
+                  <ChevronRight className="ml-1" size={16} />
+                </Link>
               </div>
-              <Link 
-                to="/about" 
-                className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors inline-flex items-center"
-              >
-                Read More
-                <ChevronRight className="ml-2" size={20} />
-              </Link>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-3xl font-bold text-green-600">500+</div>
+              <div className="text-gray-600">Students</div>
             </div>
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1466442929976-97f336a657be?w=600&h=400&fit=crop" 
-                alt="University Campus"
-                className="rounded-xl shadow-lg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent rounded-xl"></div>
+            <div>
+              <div className="text-3xl font-bold text-green-600">25+</div>
+              <div className="text-gray-600">Faculty Members</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-green-600">50+</div>
+              <div className="text-gray-600">Research Projects</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-green-600">1972</div>
+              <div className="text-gray-600">Established</div>
             </div>
           </div>
         </div>
