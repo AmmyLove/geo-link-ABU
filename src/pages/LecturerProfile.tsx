@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Mail, Phone, MapPin, BookOpen, ExternalLink, Download, Award, Users } from 'lucide-react';
+import { ArrowLeft, Mail, Phone, MapPin, BookOpen, ExternalLink, Download, Award, Users, Calendar, Globe, GraduationCap, Trophy } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -11,98 +11,72 @@ const LecturerProfile = () => {
   const lecturers = [
     {
       id: 1,
-      name: 'Dr. S. Abbas',
+      name: 'Prof. S. Abbas',
       position: 'Professor & Head of Department',
       specialization: 'Climate Change & Environmental Policy',
       email: 's.abbas@abu.edu.ng',
       phone: '+234 803 123 4567',
       office: 'Room 201, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=300&h=400&fit=crop',
-      bio: 'Prof. Hassan has over 20 years of experience in climate change research and environmental policy. He leads several international research collaborations and has been instrumental in developing climate adaptation strategies for West African communities.',
-      research: ['Climate Change Adaptation', 'Environmental Policy', 'Sustainable Development', 'Water Resource Management'],
-      publications: 45,
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
+      bio: 'Prof. Abbas has over 25 years of distinguished experience in climate change research and environmental policy. He leads several international research collaborations and has been instrumental in developing climate adaptation strategies for West African communities. His work has influenced policy at national and international levels, and he serves as a consultant to multiple government agencies and international organizations.',
+      research: ['Climate Change Adaptation', 'Environmental Policy', 'Sustainable Development', 'Water Resource Management', 'Ecosystem Services'],
+      publications: 85,
+      yearsOfExperience: 25,
       education: [
-        { degree: 'Ph.D. Environmental Geography', institution: 'University of Cambridge', year: '2003' },
-        { degree: 'M.Sc. Climate Science', institution: 'University of Reading', year: '1999' },
-        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello University', year: '1997' }
+        { degree: 'Ph.D. Environmental Geography', institution: 'University of Cambridge', year: '1999' },
+        { degree: 'M.Sc. Climate Science', institution: 'University of Reading', year: '1995' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello University', year: '1993' }
       ],
-      courses: ['GEO 401: Climate Change and Environment', 'GEO 502: Environmental Policy Analysis', 'GEO 601: Advanced Climate Modeling'],
-      awards: ['Excellence in Research Award 2023', 'International Climate Leadership Award 2021'],
+      courses: [
+        'GEO 401: Climate Change and Environment', 
+        'GEO 502: Environmental Policy Analysis', 
+        'GEO 601: Advanced Climate Modeling',
+        'GEO 701: Research Methods in Environmental Science'
+      ],
+      awards: [
+        'Excellence in Research Award 2023 - Nigerian Academy of Science',
+        'International Climate Leadership Award 2021 - World Climate Council',
+        'Distinguished Service Award 2020 - African Climate Research Network',
+        'Best Paper Award 2019 - International Journal of Climate Change'
+      ],
       recentPublications: [
         {
-          title: 'Climate Change Adaptation Strategies in West Africa',
+          title: 'Climate Change Adaptation Strategies in West Africa: A Comprehensive Analysis',
           journal: 'Environmental Research Letters',
           year: '2024',
           doi: '10.1088/1748-9326/abc123',
           citations: 156
         },
         {
-          title: 'Water Resource Management Under Climate Change',
+          title: 'Water Resource Management Under Climate Change: Lessons from the Sahel',
           journal: 'Journal of Hydrology',
           year: '2023',
           doi: '10.1016/j.jhydrol.2023.129456',
           citations: 89
-        }
-      ]
-    },
-    {
-      id: 2,
-      name: 'Dr. Fatima Abubakar',
-      position: 'Associate Professor',
-      specialization: 'GIS & Remote Sensing',
-      email: 'fatima.abubakar@abu.edu.ng',
-      phone: '+234 803 234 5678',
-      office: 'Room 205, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=400&fit=crop',
-      bio: 'Dr. Abubakar specializes in GIS applications for urban planning and environmental monitoring. She heads the GIS Laboratory and has developed innovative mapping solutions for sustainable development.',
-      research: ['Geographic Information Systems', 'Remote Sensing', 'Urban Planning', 'Spatial Analysis'],
-      publications: 32,
-      education: [
-        { degree: 'Ph.D. Geographic Information Science', institution: 'University of Leeds', year: '2008' },
-        { degree: 'M.Sc. Remote Sensing', institution: 'University of Edinburgh', year: '2005' },
-        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello University', year: '2003' }
-      ],
-      courses: ['GEO 301: Geographic Information Systems', 'GEO 402: Remote Sensing Applications', 'GEO 503: Spatial Data Analysis'],
-      awards: ['GIS Innovation Award 2022', 'Best Paper Award - AARSE Conference 2021'],
-      recentPublications: [
+        },
         {
-          title: 'Urban Growth Monitoring Using Multi-temporal Satellite Data',
-          journal: 'Remote Sensing of Environment',
-          year: '2024',
-          doi: '10.1016/j.rse.2024.113789',
-          citations: 78
+          title: 'Policy Frameworks for Climate Resilience in Developing Countries',
+          journal: 'Global Environmental Change',
+          year: '2023',
+          doi: '10.1016/j.gloenvcha.2023.102567',
+          citations: 112
         }
-      ]
-    },
-    {
-      id: 3,
-      name: 'Dr. Fatima Abubakar',
-      position: 'Associate Professor',
-      specialization: 'GIS & Remote Sensing',
-      email: 'fatima.abubakar@abu.edu.ng',
-      phone: '+234 803 234 5678',
-      office: 'Room 205, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=400&fit=crop',
-      bio: 'Dr. Abubakar specializes in GIS applications for urban planning and environmental monitoring. She heads the GIS Laboratory and has developed innovative mapping solutions for sustainable development.',
-      research: ['Geographic Information Systems', 'Remote Sensing', 'Urban Planning', 'Spatial Analysis'],
-      publications: 32,
-      education: [
-        { degree: 'Ph.D. Geographic Information Science', institution: 'University of Leeds', year: '2008' },
-        { degree: 'M.Sc. Remote Sensing', institution: 'University of Edinburgh', year: '2005' },
-        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello University', year: '2003' }
       ],
-      courses: ['GEO 301: Geographic Information Systems', 'GEO 402: Remote Sensing Applications', 'GEO 503: Spatial Data Analysis'],
-      awards: ['GIS Innovation Award 2022', 'Best Paper Award - AARSE Conference 2021'],
-      recentPublications: [
-        {
-          title: 'Urban Growth Monitoring Using Multi-temporal Satellite Data',
-          journal: 'Remote Sensing of Environment',
-          year: '2024',
-          doi: '10.1016/j.rse.2024.113789',
-          citations: 78
-        }
+      currentProjects: [
+        'Climate Adaptation Strategies for Nigerian Cities (₦450M, 2024-2027)',
+        'Sustainable Water Management in Arid Regions (€2.5M, EU-funded)',
+        'Policy Framework for Climate Resilience in West Africa (UNEP-funded)'
+      ],
+      officeHours: 'Monday, Wednesday, Friday: 2:00 PM - 4:00 PM',
+      teachingPhilosophy: 'I believe in fostering critical thinking and practical problem-solving skills. My approach combines theoretical knowledge with real-world applications, encouraging students to become change agents in environmental sustainability.',
+      professionalMemberships: [
+        'Nigerian Academy of Science (Fellow)',
+        'International Association of Geographers',
+        'World Climate Research Programme',
+        'African Climate Research Network (Board Member)'
       ]
     }
+    // Add more detailed profiles for other lecturers...
   ];
 
   const lecturer = lecturers.find(l => l.id === parseInt(id || ''));
@@ -160,6 +134,14 @@ const LecturerProfile = () => {
                   <BookOpen className="mr-2 text-green-300" size={16} />
                   <span>{lecturer.publications} Publications</span>
                 </div>
+                <div className="flex items-center">
+                  <Calendar className="mr-2 text-green-300" size={16} />
+                  <span>{lecturer.yearsOfExperience} Years Experience</span>
+                </div>
+                <div className="flex items-center">
+                  <Users className="mr-2 text-green-300" size={16} />
+                  <span>{lecturer.officeHours}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -180,6 +162,12 @@ const LecturerProfile = () => {
                 <p className="text-gray-700 leading-relaxed">{lecturer.bio}</p>
               </div>
 
+              {/* Teaching Philosophy */}
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Teaching Philosophy</h2>
+                <p className="text-gray-700 leading-relaxed">{lecturer.teachingPhilosophy}</p>
+              </div>
+
               {/* Research Interests */}
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">Research Interests</h2>
@@ -188,6 +176,18 @@ const LecturerProfile = () => {
                     <span key={index} className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
                       {area}
                     </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Current Projects */}
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Current Research Projects</h2>
+                <div className="space-y-3">
+                  {lecturer.currentProjects.map((project, index) => (
+                    <div key={index} className="border-l-4 border-green-500 pl-4">
+                      <p className="text-gray-700">{project}</p>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -242,7 +242,10 @@ const LecturerProfile = () => {
               
               {/* Education */}
               <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h2 className="text-xl font-semibold text-gray-800 mb-4">Education</h2>
+                <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                  <GraduationCap className="mr-2 text-green-600" size={20} />
+                  Education
+                </h2>
                 <div className="space-y-3">
                   {lecturer.education.map((edu, index) => (
                     <div key={index} className="border-l-4 border-blue-500 pl-3">
@@ -256,12 +259,31 @@ const LecturerProfile = () => {
 
               {/* Awards */}
               <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h2 className="text-xl font-semibold text-gray-800 mb-4">Awards & Recognition</h2>
+                <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                  <Trophy className="mr-2 text-yellow-500" size={20} />
+                  Awards & Recognition
+                </h2>
                 <div className="space-y-2">
                   {lecturer.awards.map((award, index) => (
-                    <div key={index} className="flex items-center text-gray-700">
-                      <Award className="mr-2 text-yellow-500" size={16} />
+                    <div key={index} className="flex items-start text-gray-700">
+                      <Award className="mr-2 text-yellow-500 mt-1" size={16} />
                       <span className="text-sm">{award}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Professional Memberships */}
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                  <Globe className="mr-2 text-blue-500" size={20} />
+                  Professional Memberships
+                </h2>
+                <div className="space-y-2">
+                  {lecturer.professionalMemberships.map((membership, index) => (
+                    <div key={index} className="flex items-center text-gray-700">
+                      <span className="mr-2 text-blue-500">•</span>
+                      <span className="text-sm">{membership}</span>
                     </div>
                   ))}
                 </div>
@@ -282,6 +304,10 @@ const LecturerProfile = () => {
                   <div className="flex items-center text-gray-700">
                     <MapPin className="mr-2" size={16} />
                     <span className="text-sm">{lecturer.office}</span>
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <Calendar className="mr-2" size={16} />
+                    <span className="text-sm">{lecturer.officeHours}</span>
                   </div>
                 </div>
               </div>
