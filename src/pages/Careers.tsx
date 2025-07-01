@@ -15,7 +15,7 @@ const Careers = () => {
       opportunities: ['Environmental Impact Assessment', 'Sustainability Consulting', 'Environmental Auditing', 'Remediation Planning'],
       employers: ['Chevron Nigeria', 'Shell Petroleum', 'ExxonMobil', 'Environmental consultancies'],
       skills: ['EIA expertise', 'Environmental law', 'Project management', 'Stakeholder engagement'],
-      dayInLife: 'Start your day reviewing environmental impact assessments, conduct field surveys, analyze data, meet with clients to discuss sustainability strategies, and prepare comprehensive reports for regulatory compliance.',
+      dayInLife: 'Your geography and environmental management degree is crucial as you start each day reviewing environmental impact assessments using spatial analysis skills. The geographical understanding of ecosystem interactions helps you conduct field surveys, while your environmental management training guides data analysis. You meet with clients to discuss sustainability strategies, leveraging your knowledge of human-environment relationships. The comprehensive understanding of physical and human geography acquired in your degree is essential for preparing regulatory compliance reports that consider both environmental and socioeconomic factors.',
       careerProgression: [
         { level: 'Graduate Trainee', salary: '₦1.8M - ₦2.5M', years: '0-2' },
         { level: 'Environmental Analyst', salary: '₦2.5M - ₦4M', years: '2-5' },
@@ -29,9 +29,9 @@ const Careers = () => {
         'Knowledge of environmental regulations'
       ],
       companies: [
-        { name: 'Chevron Nigeria', positions: 'Environmental Specialists', salary: '₦4.5M - ₦8M' },
-        { name: 'Shell Petroleum', positions: 'EIA Consultants', salary: '₦5M - ₦9M' },
-        { name: 'Environmental Resources Managers', positions: 'Senior Consultants', salary: '₦3.5M - ₦6M' }
+        { name: 'Chevron Nigeria', positions: 'Environmental Specialists', salary: '₦4.5M - ₦8M', website: 'https://www.chevron.com/worldwide/nigeria' },
+        { name: 'Shell Petroleum', positions: 'EIA Consultants', salary: '₦5M - ₦9M', website: 'https://www.shell.com.ng' },
+        { name: 'Environmental Resources Managers', positions: 'Senior Consultants', salary: '₦3.5M - ₦6M', website: 'https://www.erm.com' }
       ]
     },
     {
@@ -43,7 +43,7 @@ const Careers = () => {
       opportunities: ['GIS Analyst', 'Remote Sensing Specialist', 'Cartographer', 'Spatial Data Scientist'],
       employers: ['Google Earth', 'Esri Nigeria', 'Survey departments', 'Tech companies'],
       skills: ['ArcGIS/QGIS', 'Python/R programming', 'Remote sensing', 'Database management'],
-      dayInLife: 'Begin with spatial data analysis, create interactive maps, process satellite imagery, develop GIS applications, collaborate with teams on spatial solutions, and present findings to stakeholders.',
+      dayInLife: 'Your geography degree provides the theoretical foundation as you begin with spatial data analysis, applying geographical concepts learned in physical and human geography courses. The cartography and mathematical geography knowledge from your studies guides you in creating interactive maps and processing satellite imagery. Your environmental management background helps in developing GIS applications for environmental monitoring. When collaborating with teams on spatial solutions, your comprehensive understanding of geographical processes and human-environment interactions, gained through your degree, enables you to present meaningful findings to stakeholders.',
       careerProgression: [
         { level: 'GIS Technician', salary: '₦1.5M - ₦2.2M', years: '0-2' },
         { level: 'GIS Analyst', salary: '₦2.2M - ₦3.8M', years: '2-4' },
@@ -57,9 +57,9 @@ const Careers = () => {
         'Cartographic design principles'
       ],
       companies: [
-        { name: 'Esri Nigeria', positions: 'GIS Developers', salary: '₦3.5M - ₦6M' },
-        { name: 'Nigerian Geological Survey', positions: 'Cartographers', salary: '₦2.8M - ₦4.5M' },
-        { name: 'Tech Startups', positions: 'Spatial Data Scientists', salary: '₦4M - ₦7M' }
+        { name: 'Esri Nigeria', positions: 'GIS Developers', salary: '₦3.5M - ₦6M', website: 'https://www.esri.com/en-us/about/offices/nigeria' },
+        { name: 'Nigerian Geological Survey', positions: 'Cartographers', salary: '₦2.8M - ₦4.5M', website: 'https://www.ngs.gov.ng' },
+        { name: 'Google', positions: 'Spatial Data Scientists', salary: '₦4M - ₦7M', website: 'https://about.google/intl/en_ng/' }
       ]
     },
     {
@@ -71,7 +71,7 @@ const Careers = () => {
       opportunities: ['Urban Planner', 'Development Officer', 'Smart City Consultant', 'Housing Specialist'],
       employers: ['State governments', 'Development banks', 'Real estate firms', 'International organizations'],
       skills: ['Planning software', 'Policy analysis', 'Community engagement', 'Project management'],
-      dayInLife: 'Review development proposals, conduct site visits, engage with communities, analyze zoning regulations, develop master plans, and coordinate with government officials and developers.',
+      dayInLife: 'Your geography and environmental management degree is fundamental as you review development proposals, applying urban geography principles learned in your studies. The human geography knowledge helps you conduct site visits and understand settlement patterns, while environmental management training guides sustainable development decisions. Community engagement draws on your understanding of cultural geography and population dynamics. When developing master plans and coordinating with officials, your comprehensive geographical education helps you consider spatial relationships, environmental impacts, and socioeconomic factors that only a geography degree can provide.',
       careerProgression: [
         { level: 'Planning Assistant', salary: '₦2M - ₦3M', years: '0-2' },
         { level: 'Urban Planner', salary: '₦3M - ₦4.5M', years: '2-5' },
@@ -85,9 +85,9 @@ const Careers = () => {
         'Community engagement skills'
       ],
       companies: [
-        { name: 'Lagos State Government', positions: 'Urban Planners', salary: '₦3.5M - ₦6M' },
-        { name: 'World Bank', positions: 'Development Specialists', salary: '₦5M - ₦8M' },
-        { name: 'Julius Berger', positions: 'Project Planners', salary: '₦4M - ₦7M' }
+        { name: 'Lagos State Government', positions: 'Urban Planners', salary: '₦3.5M - ₦6M', website: 'https://lagosstate.gov.ng' },
+        { name: 'World Bank', positions: 'Development Specialists', salary: '₦5M - ₦8M', website: 'https://www.worldbank.org/en/country/nigeria' },
+        { name: 'Julius Berger', positions: 'Project Planners', salary: '₦4M - ₦7M', website: 'https://www.julius-berger.com' }
       ]
     },
     {
@@ -99,7 +99,7 @@ const Careers = () => {
       opportunities: ['Climate Scientist', 'Adaptation Specialist', 'Carbon Analyst', 'Policy Researcher'],
       employers: ['NIMET', 'International NGOs', 'Research institutes', 'UN agencies'],
       skills: ['Climate modeling', 'Data analysis', 'Policy development', 'Grant writing'],
-      dayInLife: 'Analyze climate data, run climate models, write research papers, attend conferences, collaborate with international researchers, and develop policy recommendations.',
+      dayInLife: 'Your geography and environmental management degree is essential as you analyze climate data, using climatology and meteorology knowledge from your physical geography courses. Running climate models requires the mathematical geography and statistical skills developed during your studies. Writing research papers and attending conferences builds on the research methodology training from your degree. Your environmental management background is crucial when collaborating with international researchers and developing policy recommendations, as you understand the complex interactions between climate, environment, and human systems that only a comprehensive geography education provides.',
       careerProgression: [
         { level: 'Research Assistant', salary: '₦2.2M - ₦3.2M', years: '0-2' },
         { level: 'Climate Analyst', salary: '₦3.2M - ₦5M', years: '2-5' },
@@ -113,9 +113,9 @@ const Careers = () => {
         'Grant writing experience'
       ],
       companies: [
-        { name: 'NIMET', positions: 'Climate Scientists', salary: '₦3.5M - ₦6M' },
-        { name: 'UNDP', positions: 'Climate Specialists', salary: '₦5M - ₦9M' },
-        { name: 'CGIAR', positions: 'Research Scientists', salary: '₦4M - ₦7M' }
+        { name: 'NIMET', positions: 'Climate Scientists', salary: '₦3.5M - ₦6M', website: 'https://www.nimet.gov.ng' },
+        { name: 'UNDP', positions: 'Climate Specialists', salary: '₦5M - ₦9M', website: 'https://www.undp.org/nigeria' },
+        { name: 'CGIAR', positions: 'Research Scientists', salary: '₦4M - ₦7M', website: 'https://www.cgiar.org' }
       ]
     },
     {
@@ -127,7 +127,7 @@ const Careers = () => {
       opportunities: ['Policy Analyst', 'Program Manager', 'Environmental Officer', 'Survey Officer'],
       employers: ['NASRDA', 'Federal Ministry of Environment', 'NIMET', 'State planning commissions'],
       skills: ['Policy analysis', 'Public administration', 'Project management', 'Research methods'],
-      dayInLife: 'Develop policy frameworks, coordinate with stakeholders, manage government programs, conduct research, prepare briefings for officials, and oversee project implementation.',
+      dayInLife: 'Your geography and environmental management degree provides the interdisciplinary foundation needed for government work. When developing policy frameworks, you apply knowledge of human geography, environmental systems, and spatial planning gained from your studies. Coordinating with stakeholders requires understanding of political geography and regional development concepts from your degree. Managing government programs and conducting research builds on the research methodology and project management skills developed during your geography education. The holistic understanding of environmental and social systems that your degree provides is essential for preparing briefings for officials and overseeing policy implementation.',
       careerProgression: [
         { level: 'Assistant Officer', salary: '₦1.8M - ₦2.5M', years: '0-3' },
         { level: 'Principal Officer', salary: '₦2.5M - ₦4M', years: '3-6' },
@@ -141,9 +141,9 @@ const Careers = () => {
         'Knowledge of government procedures'
       ],
       companies: [
-        { name: 'NASRDA', positions: 'Space Scientists', salary: '₦3M - ₦8M' },
-        { name: 'Federal Ministry of Environment', positions: 'Environmental Officers', salary: '₦2.5M - ₦6M' },
-        { name: 'NIMET', positions: 'Meteorologists', salary: '₦3M - ₦7M' }
+        { name: 'NASRDA', positions: 'Space Scientists', salary: '₦3M - ₦8M', website: 'https://nasrda.gov.ng' },
+        { name: 'Federal Ministry of Environment', positions: 'Environmental Officers', salary: '₦2.5M - ₦6M', website: 'https://environment.gov.ng' },
+        { name: 'NIMET', positions: 'Meteorologists', salary: '₦3M - ₦7M', website: 'https://www.nimet.gov.ng' }
       ]
     },
     {
@@ -155,7 +155,7 @@ const Careers = () => {
       opportunities: ['University Lecturer', 'Research Fellow', 'Department Head', 'International Researcher'],
       employers: ['Universities', 'Research institutes', 'International organizations', 'Think tanks'],
       skills: ['Research methods', 'Academic writing', 'Grant acquisition', 'Teaching excellence'],
-      dayInLife: 'Conduct lectures, supervise students, carry out research, write academic papers, apply for grants, attend conferences, and collaborate with international colleagues.',
+      dayInLife: 'Your geography and environmental management degree forms the core of your academic career. Conducting lectures draws directly on the comprehensive knowledge gained from your studies in physical geography, human geography, and environmental management. Supervising students requires the research methodology and analytical skills developed during your degree program. Carrying out research and writing academic papers builds on the interdisciplinary foundation that geography provides, allowing you to address complex environmental and spatial problems. Your degree\'s broad scope enables you to collaborate with international colleagues across multiple disciplines, making you uniquely qualified for academic leadership roles.',
       careerProgression: [
         { level: 'Graduate Assistant', salary: '₦1.2M - ₦2M', years: '0-2' },
         { level: 'Assistant Lecturer', salary: '₦2M - ₦3.5M', years: '2-4' },
@@ -169,9 +169,9 @@ const Careers = () => {
         'Publication record'
       ],
       companies: [
-        { name: 'Universities', positions: 'Lecturers/Professors', salary: '₦2M - ₦15M' },
-        { name: 'Research Institutes', positions: 'Research Fellows', salary: '₦3M - ₦8M' },
-        { name: 'International Organizations', positions: 'Research Specialists', salary: '₦5M - ₦12M' }
+        { name: 'University of Ibadan', positions: 'Lecturers/Professors', salary: '₦2M - ₦15M', website: 'https://www.ui.edu.ng' },
+        { name: 'Nigerian Institute for Social and Economic Research', positions: 'Research Fellows', salary: '₦3M - ₦8M', website: 'https://www.niser.org.ng' },
+        { name: 'UNESCO', positions: 'Research Specialists', salary: '₦5M - ₦12M', website: 'https://en.unesco.org/fieldoffice/abuja' }
       ]
     },
     {
@@ -183,7 +183,7 @@ const Careers = () => {
       opportunities: ['Disaster Risk Analyst', 'Emergency Planning Manager', 'Hazard Assessment Specialist', 'Recovery Coordinator'],
       employers: ['NEMA', 'Red Cross', 'UN-OCHA', 'International NGOs'],
       skills: ['Risk assessment', 'Emergency planning', 'Community engagement', 'Crisis management'],
-      dayInLife: 'Assess disaster risks, develop emergency response plans, train communities, coordinate with agencies, analyze hazard data, and implement disaster preparedness programs.',
+      dayInLife: 'Your geography and environmental management degree is vital for disaster risk management. Assessing disaster risks requires the geomorphology, climatology, and hazard geography knowledge from your physical geography courses. Developing emergency response plans draws on your understanding of human geography, settlement patterns, and population dynamics. Training communities builds on the environmental management and social geography components of your degree. Your geographical education provides the spatial thinking and environmental awareness essential for analyzing hazard data and implementing disaster preparedness programs that consider both physical processes and human vulnerability.',
       careerProgression: [
         { level: 'Risk Analyst', salary: '₦2.5M - ₦3.5M', years: '0-2' },
         { level: 'Emergency Planner', salary: '₦3.5M - ₦5M', years: '2-5' },
@@ -197,9 +197,9 @@ const Careers = () => {
         'Multi-agency coordination experience'
       ],
       companies: [
-        { name: 'NEMA', positions: 'Emergency Managers', salary: '₦3.5M - ₦6M' },
-        { name: 'UN-OCHA', positions: 'Humanitarian Officers', salary: '₦5M - ₦8M' },
-        { name: 'Red Cross', positions: 'Disaster Specialists', salary: '₦3M - ₦5.5M' }
+        { name: 'NEMA', positions: 'Emergency Managers', salary: '₦3.5M - ₦6M', website: 'https://nema.gov.ng' },
+        { name: 'UN-OCHA', positions: 'Humanitarian Officers', salary: '₦5M - ₦8M', website: 'https://www.unocha.org/nigeria' },
+        { name: 'Nigerian Red Cross', positions: 'Disaster Specialists', salary: '₦3M - ₦5.5M', website: 'https://www.redcross.org.ng' }
       ]
     },
     {
@@ -211,7 +211,7 @@ const Careers = () => {
       opportunities: ['Agricultural Analyst', 'Precision Agriculture Specialist', 'Food Security Researcher', 'Rural Development Officer'],
       employers: ['FAO', 'IITA', 'Agricultural companies', 'Development organizations'],
       skills: ['Crop modeling', 'GIS applications', 'Climate analysis', 'Agricultural economics'],
-      dayInLife: 'Analyze agricultural data, conduct field surveys, develop crop models, work with farmers, assess climate impacts, and design sustainable farming systems.',
+      dayInLife: 'Your geography and environmental management degree provides the essential foundation for agricultural geography work. Analyzing agricultural data requires the climatology, soil geography, and biogeography knowledge from your physical geography courses. Conducting field surveys builds on the field methods and research techniques learned during your studies. Developing crop models draws on your understanding of environmental systems and statistical analysis from your degree. Working with farmers requires the rural geography and community engagement skills developed through your geographical education. Your comprehensive understanding of human-environment interactions, gained from your degree, is crucial for designing sustainable farming systems.',
       careerProgression: [
         { level: 'Agricultural Analyst', salary: '₦2M - ₦3M', years: '0-2' },
         { level: 'Specialist', salary: '₦3M - ₦4.5M', years: '2-5' },
@@ -225,9 +225,9 @@ const Careers = () => {
         'Statistical analysis capabilities'
       ],
       companies: [
-        { name: 'IITA', positions: 'Research Scientists', salary: '₦3.5M - ₦6M' },
-        { name: 'FAO', positions: 'Agricultural Officers', salary: '₦4M - ₦7M' },
-        { name: 'Agribusiness Companies', positions: 'Sustainability Managers', salary: '₦3M - ₦5.5M' }
+        { name: 'IITA', positions: 'Research Scientists', salary: '₦3.5M - ₦6M', website: 'https://www.iita.org' },
+        { name: 'FAO', positions: 'Agricultural Officers', salary: '₦4M - ₦7M', website: 'https://www.fao.org/nigeria/en/' },
+        { name: 'Olam Nigeria', positions: 'Sustainability Managers', salary: '₦3M - ₦5.5M', website: 'https://www.olamgroup.com/locations/nigeria.html' }
       ]
     }
   ];
@@ -399,7 +399,16 @@ const Careers = () => {
                         <div className="space-y-2">
                           {path.companies.map((company, idx) => (
                             <div key={idx} className="p-2 bg-gray-50 rounded">
-                              <div className="font-medium text-sm">{company.name}</div>
+                              <div className="font-medium text-sm">
+                                <a 
+                                  href={company.website} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="text-green-600 hover:text-green-700 hover:underline"
+                                >
+                                  {company.name}
+                                </a>
+                              </div>
                               <div className="text-xs text-gray-600">{company.positions}</div>
                               <div className="text-xs text-green-600">{company.salary}</div>
                             </div>
