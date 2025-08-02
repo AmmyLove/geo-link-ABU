@@ -8,159 +8,165 @@ const Programs = () => {
   const programs = [
     {
       id: 1,
-      title: 'Centre for Risk and Disaster Management',
-      type: 'Research Center',
-      icon: Shield,
-      description: 'Leading research center specializing in risk assessment, disaster preparedness, and emergency response strategies for Nigeria and West Africa.',
-      features: [
-        'Disaster risk assessment and mapping',
-        'Emergency response training programs',
-        'Community resilience building',
-        'Hazard monitoring and early warning systems',
-        'Post-disaster recovery planning'
-      ],
-      highlights: {
-        established: '2010',
-        projects: '25+ active projects',
-        partnerships: 'NEMA, NIMET, UN-DRR',
-        impact: '500+ communities reached'
-      },
-      admissionInfo: 'Open to researchers, government officials, and NGO workers',
-      duration: 'Ongoing research programs and short courses',
-      careerOutcomes: 'Disaster management specialists, emergency coordinators, risk analysts',
-      bgColor: 'bg-red-50',
-      borderColor: 'border-red-200',
-      iconColor: 'text-red-600'
-    },
-    {
-      id: 2,
-      title: 'Postgraduate Programs',
-      type: 'Graduate Studies',
-      icon: GraduationCap,
-      description: 'Advanced degrees preparing scholars and professionals for leadership roles in geography, environmental management, and related fields.',
-      features: [
-        'MSc Geography (Physical/Human specializations)',
-        'MSc Environmental Management',
-        'PhD Geography and Environmental Studies',
-        'Research supervision by leading experts',
-        'International collaboration opportunities'
-      ],
-      highlights: {
-        established: '1985',
-        graduates: '800+ alumni',
-        research: '50+ ongoing thesis projects',
-        funding: 'Scholarships available'
-      },
-      admissionInfo: 'Bachelor\'s degree with 2nd class upper or equivalent',
-      duration: 'MSc: 18-24 months, PhD: 3-5 years',
-      careerOutcomes: 'University lecturers, senior researchers, policy makers, consultants',
-      bgColor: 'bg-purple-50',
-      borderColor: 'border-purple-200',
-      iconColor: 'text-purple-600'
-    },
-    {
-      id: 3,
-      title: 'Undergraduate Programs',
-      type: 'Bachelor\'s Degree',
+      title: 'BSc Geography',
+      type: 'Undergraduate Degree',
       icon: BookOpen,
-      description: 'Comprehensive undergraduate education combining theoretical knowledge with practical skills for the modern geography and environmental professional.',
+      description: 'A comprehensive 4-year undergraduate program that provides students with a solid foundation in both physical and human geography, preparing them for diverse career paths in the geographical sciences.',
       features: [
-        'BSc Geography (4-year program)',
-        'Environmental Management track',
+        'Core courses in Physical Geography',
+        'Human Geography specializations',
+        'GIS and Remote Sensing training',
         'Field work and practical training',
-        'Industry attachment opportunities',
-        'Research project in final year'
+        'Industry attachment (SIWES)',
+        'Final year research project'
       ],
       highlights: {
-        established: '1972',
-        students: '400+ current students',
-        placement: '85% graduate employment',
-        accreditation: 'NUC approved'
+        established: '1962',
+        students: '300+ current students',
+        placement: '90% graduate employment',
+        accreditation: 'NUC Approved'
       },
-      admissionInfo: 'JAMB score 180+, O\'Level credits in Math, English, Geography, and 2 science subjects',
+      admissionInfo: 'JAMB UTME with minimum of 180 points, O\'Level credits in Mathematics, English, Geography, and two Science subjects',
       duration: '4 years (8 semesters)',
-      careerOutcomes: 'GIS analysts, environmental consultants, urban planners, teachers',
+      careerOutcomes: 'Cartographers, GIS specialists, environmental consultants, urban planners, teachers, researchers',
       bgColor: 'bg-blue-50',
       borderColor: 'border-blue-200',
       iconColor: 'text-blue-600'
     },
     {
-      id: 4,
-      title: 'Professional Development Center',
-      type: 'Continuing Education',
-      icon: Award,
-      description: 'Short courses, workshops, and certification programs for working professionals seeking to upgrade their skills and knowledge.',
-      features: [
-        'GIS and Remote Sensing workshops',
-        'Environmental Impact Assessment certification',
-        'Project management for geographers',
-        'Climate change adaptation training',
-        'Professional certification programs'
-      ],
-      highlights: {
-        established: '2015',
-        participants: '1200+ trained',
-        courses: '15+ specialized programs',
-        partnerships: 'Industry collaborations'
-      },
-      admissionInfo: 'Open to professionals, minimum HND/BSc',
-      duration: '1 week to 6 months programs',
-      careerOutcomes: 'Career advancement, skill certification, professional networking',
-      bgColor: 'bg-orange-50',
-      borderColor: 'border-orange-200',
-      iconColor: 'text-orange-600'
-    },
-    {
-      id: 5,
-      title: 'Climate Research Institute',
-      type: 'Research Center',
+      id: 2,
+      title: 'MSc Environmental Management',
+      type: 'Postgraduate Degree',
       icon: Globe,
-      description: 'Cutting-edge research on climate change, adaptation strategies, and sustainable development solutions for the Sahel region.',
+      description: 'An advanced program designed to train skilled manpower capable of monitoring and managing environmental challenges. Focuses on sustainable development and environmental assessment methodologies.',
       features: [
-        'Climate modeling and prediction',
-        'Renewable energy research',
-        'Carbon footprint assessment',
-        'Community-based adaptation projects',
-        'Policy development support'
+        'Environmental Assessment (EIA and SEA)',
+        'Environmental monitoring and evaluation',
+        'Resource management strategies',
+        'Climate change adaptation',
+        'Environmental policy and legislation',
+        'Field research and thesis writing'
       ],
       highlights: {
-        established: '2018',
-        funding: '₦2.5B research grants',
-        publications: '150+ peer-reviewed papers',
-        impact: 'National climate policy input'
+        established: '1985',
+        graduates: '500+ alumni',
+        research: '30+ ongoing projects',
+        partnerships: 'Government agencies & NGOs'
       },
-      admissionInfo: 'Research collaborations welcome',
-      duration: 'Long-term research programs',
-      careerOutcomes: 'Climate scientists, policy advisors, international consultants',
+      admissionInfo: 'Bachelor\'s degree with Second Class Upper or equivalent in relevant fields',
+      duration: '18-24 months (3-4 semesters)',
+      careerOutcomes: 'Environmental managers, policy analysts, EIA consultants, sustainable development specialists',
       bgColor: 'bg-green-50',
       borderColor: 'border-green-200',
       iconColor: 'text-green-600'
     },
     {
-      id: 6,
-      title: 'Urban Studies Laboratory',
-      type: 'Research Facility',
-      icon: Microscope,
-      description: 'State-of-the-art facility for urban planning research, smart city technologies, and sustainable development studies.',
+      id: 3,
+      title: 'MSc Geography',
+      type: 'Postgraduate Degree',
+      icon: GraduationCap,
+      description: 'Advanced study in geographical sciences with options for specialization in physical geography, human geography, or geographic information systems.',
       features: [
-        'Urban modeling and simulation',
-        'Smart city technology research',
-        'Transportation planning studies',
-        'Housing and settlement analysis',
-        'Community development projects'
+        'Physical Geography specialization',
+        'Human Geography specialization',
+        'Advanced GIS and Remote Sensing',
+        'Research methodology training',
+        'Statistical analysis techniques',
+        'Comprehensive thesis research'
       ],
       highlights: {
-        established: '2020',
-        equipment: '₦500M modern facilities',
-        projects: '20+ city planning projects',
-        collaborations: 'Municipal governments'
+        established: '1975',
+        graduates: '400+ alumni',
+        specializations: '3 major tracks',
+        publications: '50+ research papers annually'
       },
-      admissionInfo: 'Open to students and researchers',
-      duration: 'Project-based engagements',
-      careerOutcomes: 'Urban planners, smart city specialists, municipal consultants',
-      bgColor: 'bg-indigo-50',
-      borderColor: 'border-indigo-200',
-      iconColor: 'text-indigo-600'
+      admissionInfo: 'Bachelor\'s degree with Second Class Upper in Geography or related fields',
+      duration: '18-24 months (3-4 semesters)',
+      careerOutcomes: 'University lecturers, senior researchers, GIS analysts, development planners',
+      bgColor: 'bg-purple-50',
+      borderColor: 'border-purple-200',
+      iconColor: 'text-purple-600'
+    },
+    {
+      id: 4,
+      title: 'PhD Geography and Environmental Studies',
+      type: 'Doctoral Degree',
+      icon: Award,
+      description: 'The highest level of academic achievement in geographical and environmental sciences, preparing scholars for leadership in research, academia, and policy development.',
+      features: [
+        'Advanced research methodologies',
+        'Independent research supervision',
+        'Teaching assistantship opportunities',
+        'Conference presentation requirements',
+        'International collaboration projects',
+        'Original thesis contribution'
+      ],
+      highlights: {
+        established: '1980',
+        graduates: '150+ PhDs',
+        faculty: '20+ expert supervisors',
+        impact: 'National policy influence'
+      },
+      admissionInfo: 'Master\'s degree with distinction or very good grade in relevant fields',
+      duration: '3-5 years minimum',
+      careerOutcomes: 'University professors, senior researchers, policy makers, international consultants',
+      bgColor: 'bg-yellow-50',
+      borderColor: 'border-yellow-200',
+      iconColor: 'text-yellow-600'
+    },
+    {
+      id: 5,
+      title: 'Postgraduate Diploma (PGD) Geography',
+      type: 'Postgraduate Diploma',
+      icon: Users,
+      description: 'A conversion program designed for graduates from other disciplines who wish to pursue advanced studies in Geography and Environmental Management.',
+      features: [
+        'Foundation courses in Geography',
+        'Environmental science principles',
+        'Research methods introduction',
+        'Practical field work',
+        'GIS fundamentals',
+        'Project-based learning'
+      ],
+      highlights: {
+        established: '1990',
+        graduates: '200+ conversions',
+        success: '85% proceed to MSc',
+        duration: 'Fast-track option'
+      },
+      admissionInfo: 'Bachelor\'s degree in any discipline with Second Class Lower minimum',
+      duration: '12 months (2 semesters)',
+      careerOutcomes: 'Pathway to MSc programs, environmental officers, planning assistants',
+      bgColor: 'bg-orange-50',
+      borderColor: 'border-orange-200',
+      iconColor: 'text-orange-600'
+    },
+    {
+      id: 6,
+      title: 'Professional Development Programs',
+      type: 'Continuing Education',
+      icon: Shield,
+      description: 'Short-term specialized training programs and workshops designed for working professionals seeking to enhance their skills in specific areas of geography and environmental management.',
+      features: [
+        'GIS and Remote Sensing workshops',
+        'Environmental Impact Assessment training',
+        'Climate change adaptation seminars',
+        'Disaster risk management courses',
+        'Urban planning workshops',
+        'Professional certification programs'
+      ],
+      highlights: {
+        established: '2000',
+        participants: '1000+ trained',
+        programs: '15+ specialized courses',
+        partnerships: 'Industry collaborations'
+      },
+      admissionInfo: 'Open to professionals with minimum HND/BSc qualification',
+      duration: '1 week to 6 months',
+      careerOutcomes: 'Professional advancement, skill certification, networking opportunities',
+      bgColor: 'bg-red-50',
+      borderColor: 'border-red-200',
+      iconColor: 'text-red-600'
     }
   ];
 
