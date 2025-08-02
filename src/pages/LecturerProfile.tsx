@@ -11,14 +11,14 @@ const LecturerProfile = () => {
   const lecturers = [
     {
       id: 1,
-      name: 'Prof. S. Abbas',
-      position: 'Professor & Head of Department',
+      name: 'Dr. I. Mukhtar',
+      position: 'Head of Department',
       specialization: 'Climate Change & Environmental Policy',
-      email: 's.abbas@abu.edu.ng',
-      phone: '+234 803 123 4567',
+      email: 'i.mukhtar@abu.edu.ng',
+      phone: 'Senior Lecturer',
       office: 'Room 201, Environmental Design Building',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
-      bio: 'Prof. Abbas has over 25 years of distinguished experience in climate change research and environmental policy. He leads several international research collaborations and has been instrumental in developing climate adaptation strategies for West African communities. His work has influenced policy at national and international levels, and he serves as a consultant to multiple government agencies and international organizations.',
+      bio: 'Dr. Mukhtar has over 25 years of distinguished experience in climate change research and environmental policy. He leads several international research collaborations and has been instrumental in developing climate adaptation strategies for West African communities. His work has influenced policy at national and international levels, and he serves as a consultant to multiple government agencies and international organizations.',
       research: ['Climate Change Adaptation', 'Environmental Policy', 'Sustainable Development', 'Water Resource Management', 'Ecosystem Services'],
       publications: 85,
       yearsOfExperience: 25,
@@ -67,7 +67,6 @@ const LecturerProfile = () => {
         'Sustainable Water Management in Arid Regions (€2.5M, EU-funded)',
         'Policy Framework for Climate Resilience in West Africa (UNEP-funded)'
       ],
-      officeHours: 'Monday, Wednesday, Friday: 2:00 PM - 4:00 PM',
       teachingPhilosophy: 'I believe in fostering critical thinking and practical problem-solving skills. My approach combines theoretical knowledge with real-world applications, encouraging students to become change agents in environmental sustainability.',
       professionalMemberships: [
         'Nigerian Academy of Science (Fellow)',
@@ -138,10 +137,10 @@ const LecturerProfile = () => {
                   <Calendar className="mr-2 text-green-300" size={16} />
                   <span>{lecturer.yearsOfExperience} Years Experience</span>
                 </div>
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <Users className="mr-2 text-green-300" size={16} />
                   <span>{lecturer.officeHours}</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -305,10 +304,10 @@ const LecturerProfile = () => {
                     <MapPin className="mr-2" size={16} />
                     <span className="text-sm">{lecturer.office}</span>
                   </div>
-                  <div className="flex items-center text-gray-700">
+                  {/* <div className="flex items-center text-gray-700">
                     <Calendar className="mr-2" size={16} />
                     <span className="text-sm">{lecturer.officeHours}</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

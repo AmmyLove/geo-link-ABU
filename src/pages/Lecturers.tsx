@@ -11,11 +11,11 @@ const Lecturers = () => {
   const lecturers = [
     {
       id: 1,
-      name: 'Prof. S. Abbas',
-      position: 'Professor & Head of Department',
-      specialization: 'Climate Change & Environmental Policy',
+      name: 'Dr. I. Mukhtar',
+      position: 'Head of Department',
+      specialization: 'Hydrology & Geomorphology',
       email: 's.abbas@abu.edu.ng',
-      phone: '+234 803 123 4567',
+      rank: 'Senior Lecturer',
       office: 'Room 201, Environmental Design Building',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
       bio: 'Prof. Abbas has over 25 years of experience in climate change research and environmental policy. He leads several international research collaborations.',

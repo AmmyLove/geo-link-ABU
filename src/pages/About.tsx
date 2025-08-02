@@ -57,15 +57,18 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Heritage</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Established in 1972, the Department of Geography and Environmental Management at Ahmadu Bello University 
-                has been at the forefront of geographical education and environmental research in West Africa. We have 
-                consistently produced graduates who have gone on to become leaders in academia, government, and the 
-                private sector.
+                The Department of Geography, Ahmadu Bello University started on September 26th 1962 using the classrooms formerly used in teaching ‘A’ Level Geography at the Nigerian College of Arts, Science and Technology. The first two lecturers were M.B. Thorp and M. Mortimore from Liverpool and Leeds respectively. Prof H.A. Moisley joined the Department as the first Professor of Geography in 1963 from the University of Glasgow and was later joined by P.N. Hore as a Senior Lecturer with a Ph.D from the University of London. By the time the first class of undergraduates moved into part III of the degree programme in October 1964, there were four academic staff in the department. The staff strength has grown to 26 academic staff, 6 technologists, 3 library staff, 7 secretarial staff and a driver.
+
+                The Departmental Library is the largest Geography Departmental Library in the country. The Department also has a comprehensive map Library.
+
+                Staff-Student relation is friendly and undergraduates run the socially and academically active National Association of Geography Students (NAGS), A.B.U Chapter.
+
+
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Our department combines traditional geographical knowledge with cutting-edge technology, including GIS, 
-                remote sensing, and environmental modeling, to address contemporary challenges in sustainable development, 
-                climate change, and urban planning.
+                Geography Department was under the Faculty of arts and Social Sciences offering the degree of B.A (Honours) and B.Sc (Honours) in geography respectively. Presently, the department is under the Faculty Science offering only B.Sc in Geography. Apart from the undergraduate degree, the department offers Postgraduate Diplomas in GIS and Rural Development respectively and Masters of Science in Geography, GIS, Transport Management, Population and Demographic studies, Rural Development and Environmental Management respectively. We also offer Ph.D in Geography and Rural Development.
+
+                These courses have made the Department a haven of postgraduate students that are eager to attain the training and have been tremendously relevant in all spheres of their endeavours.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-green-50 rounded-lg">
@@ -82,8 +85,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1466442929976-97f336a657be?w=600&h=500&fit=crop" 
-                alt="University Building"
+                src="https://physicalsciences.abu.edu.ng/department/geography/public/assets/images/geo2.jpg"
                 className="rounded-xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent rounded-xl"></div>
@@ -101,11 +103,17 @@ const About = () => {
                 <Target className="text-green-600 mr-3" size={32} />
                 <h3 className="text-2xl font-bold text-gray-800">Our Mission</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">
-                To provide world-class education and conduct cutting-edge research in geography and environmental 
-                management, developing professionals who can address complex environmental challenges and contribute 
-                to sustainable development in Nigeria and the global community.
-              </p>
+              <div className="text-gray-600 leading-relaxed">
+                The mission of our department is to:
+                  <ul>
+                    <li> Advance the frontier of knowledge in geography and environmental management through teaching and research by employing the state-of-the-art technology in the process. </li>
+                    <li> Use an interactive practical field-based courses for hand on experience.  </li>
+                    <li> Produce highly skilled manpower that can contribute to development at every level of society for the present and future needs of the country through basic and applied research trials and findings in transport, agriculture, water resource management, weather etc. </li>
+                    <li> Demonstrate the relevance of geography and environmental education and skills in the planning and management of global resources and environment establishing the purpose and relevance of department of geography and environmental management. </li>
+                    <li> Be in a state of preparedness to render service to the community whenever called upon through applied geography and environmental research confirming the reason for the existence of the department. </li>
+                    <li> Consequently, the department will advance the frontier of knowledge for the benefits of students and society as a whole to combat present and future challenges be it natural or human. </li>
+                  </ul>
+              </div>
             </div>
             
             <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -114,9 +122,14 @@ const About = () => {
                 <h3 className="text-2xl font-bold text-gray-800">Our Vision</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                To be a leading center of excellence in geographical education and environmental research in Africa, 
-                recognized globally for innovation, academic rigor, and contributions to sustainable environmental 
-                management and spatial science.
+                The vision of Department of Geography and Environmental Management in this 21st century are to:
+
+                Be a department of geography and environmental management of international repute that will be recognized nationally and internationally as a center of excellence with dynamic educational programmes.
+                Build a department that is able to disseminate its research findings and learning activities through publications such as books, journals, conference and workshop proceedings, occasional papers and internet based platforms.
+                Have a department made up of high calibre and highly motivated staff and students.
+                Have a department where collaborative research is highly encouraged.
+                Produce highly skilled manpower that can contribute to the development of society at every level.
+                Involvement in community and outreach services throughout Kaduna State, the nation and internationally. 
               </p>
             </div>
           </div>
