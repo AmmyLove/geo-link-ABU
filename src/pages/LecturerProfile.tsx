@@ -12,11 +12,9 @@ const LecturerProfile = () => {
     {
       id: 1,
       name: 'Dr. I. Mukhtar',
-      position: 'Head of Department',
-      specialization: 'Climate Change & Environmental Policy',
+      position: 'Senior Lecturer',
+      specialization: 'Biogeography, Pedology, Environmental Management & Climate change',
       email: 'i.mukhtar@abu.edu.ng',
-      phone: 'Senior Lecturer',
-      office: 'Room 201, Environmental Design Building',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
       bio: 'Dr. Mukhtar has over 25 years of distinguished experience in climate change research and environmental policy. He leads several international research collaborations and has been instrumental in developing climate adaptation strategies for West African communities. His work has influenced policy at national and international levels, and he serves as a consultant to multiple government agencies and international organizations.',
       research: ['Climate Change Adaptation', 'Environmental Policy', 'Sustainable Development', 'Water Resource Management', 'Ecosystem Services'],
@@ -74,6 +72,172 @@ const LecturerProfile = () => {
         'World Climate Research Programme',
         'African Climate Research Network (Board Member)'
       ]
+    },
+    {
+      id: 2,
+      name: 'Prof. Moses Mamman',
+      position: 'Professor',
+      specialization: 'Population & Demographic Studies, Resources & Environment, Gender & Development issues',
+      email: 'mammanmoses@gmail.com',
+      image: '../src/images/profMamman.jpeg',
+      research: ['Population & Demographic Studies', 'Resources & Environment', 'Gender & Development issues'],
+      publications: '40+',
+      yearsOfExperience: 37,
+
+      education: [
+        { degree: 'BA(Ed). Geography', institution: 'Ahmadu Bello University, Zaria', year: '1980' },
+        { degree: 'M.A. Geography', institution: 'Ahmadu Bello University, Zaria', year: '1985' },
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '1994' }
+      ],
+      courses: [
+        'GEOG 214: Population Geography', 
+        'GEOG 411: Population, Resources & Environment', 
+        'GEOG 212: Geography of African Development',
+        'GEOG 402: Systematic Geography of Nigeria II'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Perceptual Investigation of Gender-Based Violence among Women during COVID-19 lockdown in the FCT, Nigeria.',
+          journal: 'Book of Proceedings 46th Annual Conference of Soil Science Society of Nigeria Institute for Agricultural Research, Ahmadu Bello University, Zaria, Nigeria',
+          year: '2022'
+        },
+        {
+          title: 'An Assessment of the influence of climate change on farmers/Pastoralists conflict in Benue state, Nigeria.',
+          journal: 'Book of Proceedings 3rd School of Physical Sciences Biennial International Conference Federal University of Technology, Minna.',
+          year: '2021'
+          
+        },
+        {
+          title: 'An Analysis of animal waste and its management in Ikara LGA, Kaduna State.',
+          journal: 'Ife Research Publications in Geography. Vol. 16 (1) Page 54-64.',
+          year: '2018'
+        }
+      ],
+      
+      teachingPhilosophy: 'I believe in shaping the thinking of young people and developing their skills to be able to contribute positively to the development of Nigeria.',
+      professionalMemberships: [
+        'Association of Nigerian Geographers (ANG)',
+        'Population Association of Nigeria (PAN)'
+      ]
+    },
+    {
+      id: 6,
+      name: 'Prof. Sawa Bulus Ajiya',
+      position: 'Professor',
+      specialization: 'Climate Change Studies',
+      email: 'senatorsawa@gmail.com',
+      image: '../src/images/prof-b-a-sawa.jpg',
+      research: ['Climate Change Adaptation & Resilience'],
+      publications: '71',
+      yearsOfExperience: 26,
+
+      education: [
+        { degree: 'Ph.D. Climatology', institution: 'FUTI', year: '2009' },
+        { degree: 'M.Sc. Geography', institution: 'Ahmadu Bello University, Zaria', year: '1985' },
+        { degree: 'PGDE', institution: 'Ahmadu Bello University, Zaria', year: '2001' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello University, Zaria', year: '1986' }
+      ],
+      courses: [
+        'GEOG 101: Introduction to Human Geography',
+        'GEOG 105: Introduction to Practical Geography',
+        'GEOG 107: Zaria and its Region ',
+        'GEOG 104: Man’s Physical Environment II',
+        'GEOG 108: Elementary Statistics for Geographers',
+        'GEOG 112: Introduction to Cartography',
+        'GEOG 205: Quantitative Techniques',
+        'GEOG 207: Local Field Course',
+        'GEOG 204: Introduction to Climate & Biography',
+        'GEOL 208: Geology & Mineral Resources of Nigeria',
+        'GEOG 303: Soil Geography',
+        'GEOG 305: Economic Geography',
+        'GEOG 307: Field Course',
+        'GEOG 309: Biogeography',
+        'GEOG 311: Climatology',
+        'GEOG 401: Systematic Geography of Nigeria I',
+        'GEOG 403: Philosophy & Methodology in Geography',
+        'GEOG 406: Applied Climatology'
+        ],
+      
+      recentPublications: [
+        {
+          title: 'Soil Organic Carbon Stock and Sequestration Potential in Guinea Savanna Ecological Zone, Nigeria',
+          journal: 'Book of Proceedings 46th Annual Conference of Soil Science Society of Nigeria Institute for Agricultural Research, Ahmadu Bello University, Zaria, Nigeria',
+          year: '2022'
+        },
+        {
+          title: 'Urban Forest Degradation and Vulnerability to Pandemic Nexus in Minna Town, Niger State, Nigeria ',
+          journal: 'Book of Proceedings 3rd School of Physical Sciences Biennial International Conference Federal University of Technology, Minna.',
+          year: '2021'
+          
+        },
+        {
+          title: 'Spatial Variation of Carbon Stock Density in Guinea Savanna Landscape of Niger State, Nigeria',
+          journal: 'Ife Research Publications in Geography. Vol. 16 (1) Page 54-64.',
+          year: '2018'
+        }
+      ],
+      
+      teachingPhilosophy: 'I believe in impacting knowledge.',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (MANG)',
+        'Member, Nigerian Meteorological Society (MNiMetS) ',
+        'Member, Nigerian Association of Hydrological Science (MNAHS) ',
+        'Member, International Society of Agrometeorology (INSAM)',
+      ]
+    },
+    {
+      id: 11,
+      name: 'Dr. Abdullahi Jibrin',
+      position: 'Associate Professor',
+      specialization: 'Biogeography, Pedology, Environmental Management & Climate change',
+      email: 'ajibrin@abu.edu.ng',
+      image: '../src/images/drAJ.jpg',
+      research: ['Biomass Carbon stock and Sequestration Assessment for Climate Change Mitigation and Adaptation through Monitoring Reporting and Verification (MRV)'],
+      publications: '37 Peer Reviewed Journal Publications and 16 Conference Proceedings Publications',
+      yearsOfExperience: 14,
+
+      education: [
+        { degree: 'Ph.D. Environmental Geography', institution: 'University of Cambridge', year: '1999' },
+        { degree: 'M.Sc. Climate Science', institution: 'University of Reading', year: '1995' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello University', year: '1993' }
+      ],
+      courses: [
+        'GEOG 309: Biogeography', 
+        'GEOG 407: Pedology', 
+        'GEOG 434: Ecosystem',
+        'GEOG 423: Environmental hazards',
+        'GEOG 408: Land Survey',
+        'GEOG 425: Laboratory and Field techniques'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Soil Organic Carbon Stock and Sequestration Potential in Guinea Savanna Ecological Zone, Nigeria',
+          journal: 'Book of Proceedings 46th Annual Conference of Soil Science Society of Nigeria Institute for Agricultural Research, Ahmadu Bello University, Zaria, Nigeria',
+          year: '2022'
+        },
+        {
+          title: 'Urban Forest Degradation and Vulnerability to Pandemic Nexus in Minna Town, Niger State, Nigeria ',
+          journal: 'Book of Proceedings 3rd School of Physical Sciences Biennial International Conference Federal University of Technology, Minna.',
+          year: '2021'
+          
+        },
+        {
+          title: 'Spatial Variation of Carbon Stock Density in Guinea Savanna Landscape of Niger State, Nigeria',
+          journal: 'Ife Research Publications in Geography. Vol. 16 (1) Page 54-64.',
+          year: '2018'
+        }
+      ],
+      
+      teachingPhilosophy: 'I believe in scholarly search for facts / valuable knowledge and teaching/training of minds for the advancement of human civilization. This belief is backed by the values of working diligently in a challenging and dynamic environment, developing skills and competence in order to provide world-class solutions for the attainment of an organization’s corporate goals.',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (MANG)',
+        'Member, International Biogeography Society (IBS)	',
+        'Member, Forests and Forest Products Society (FFPS) ',
+        'Member, Soil Science Society of Nigeria (SSSN)',
+        'Teachers’ Registration Council of Nigeria (TRCN)'
+      ]
     }
     // Add more detailed profiles for other lecturers...
   ];
@@ -121,14 +285,7 @@ const LecturerProfile = () => {
                   <Mail className="mr-2 text-green-300" size={16} />
                   <span>{lecturer.email}</span>
                 </div>
-                <div className="flex items-center">
-                  <Phone className="mr-2 text-green-300" size={16} />
-                  <span>{lecturer.phone}</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="mr-2 text-green-300" size={16} />
-                  <span>{lecturer.office}</span>
-                </div>
+                
                 <div className="flex items-center">
                   <BookOpen className="mr-2 text-green-300" size={16} />
                   <span>{lecturer.publications} Publications</span>
@@ -137,10 +294,6 @@ const LecturerProfile = () => {
                   <Calendar className="mr-2 text-green-300" size={16} />
                   <span>{lecturer.yearsOfExperience} Years Experience</span>
                 </div>
-                {/* <div className="flex items-center">
-                  <Users className="mr-2 text-green-300" size={16} />
-                  <span>{lecturer.officeHours}</span>
-                </div> */}
               </div>
             </div>
           </div>
@@ -155,12 +308,6 @@ const LecturerProfile = () => {
             {/* Left Column */}
             <div className="lg:col-span-2 space-y-8">
               
-              {/* Biography */}
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Biography</h2>
-                <p className="text-gray-700 leading-relaxed">{lecturer.bio}</p>
-              </div>
-
               {/* Teaching Philosophy */}
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">Teaching Philosophy</h2>
@@ -179,18 +326,6 @@ const LecturerProfile = () => {
                 </div>
               </div>
 
-              {/* Current Projects */}
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Current Research Projects</h2>
-                <div className="space-y-3">
-                  {lecturer.currentProjects.map((project, index) => (
-                    <div key={index} className="border-l-4 border-green-500 pl-4">
-                      <p className="text-gray-700">{project}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
               {/* Recent Publications */}
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">Recent Publications</h2>
@@ -199,41 +334,25 @@ const LecturerProfile = () => {
                     <div key={index} className="border-l-4 border-green-500 pl-4">
                       <h3 className="font-semibold text-gray-800">{pub.title}</h3>
                       <p className="text-gray-600 text-sm">{pub.journal} ({pub.year})</p>
-                      <div className="flex items-center justify-between mt-2">
-                        <span className="text-xs text-gray-500">Citations: {pub.citations}</span>
-                        <div className="flex gap-2">
-                          <a
-                            href={`https://doi.org/${pub.doi}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-green-600 hover:text-green-700 text-sm"
-                          >
-                            <ExternalLink size={14} className="mr-1" />
-                            DOI
-                          </a>
-                          <button className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm">
-                            <Download size={14} className="mr-1" />
-                            PDF
-                          </button>
-                        </div>
-                      </div>
+                      
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Courses Taught */}
+              {/* Contact */}
               <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Courses Taught</h2>
-                <ul className="space-y-2">
-                  {lecturer.courses.map((course, index) => (
-                    <li key={index} className="flex items-center text-gray-700">
-                      <BookOpen className="mr-2 text-green-500" size={16} />
-                      {course}
-                    </li>
-                  ))}
-                </ul>
+                <h2 className="text-xl font-semibold text-gray-800 mb-4">Contact Information</h2>
+                <div className="space-y-3">
+                  <a href={`mailto:${lecturer.email}`} className="flex items-center text-green-600 hover:text-green-700">
+                    <Mail className="mr-2" size={16} />
+                    Send Email
+                  </a>
+                </div>
               </div>
+
+
+              
             </div>
 
             {/* Right Column */}
@@ -256,21 +375,6 @@ const LecturerProfile = () => {
                 </div>
               </div>
 
-              {/* Awards */}
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                  <Trophy className="mr-2 text-yellow-500" size={20} />
-                  Awards & Recognition
-                </h2>
-                <div className="space-y-2">
-                  {lecturer.awards.map((award, index) => (
-                    <div key={index} className="flex items-start text-gray-700">
-                      <Award className="mr-2 text-yellow-500 mt-1" size={16} />
-                      <span className="text-sm">{award}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
 
               {/* Professional Memberships */}
               <div className="bg-white rounded-xl p-6 shadow-lg">
@@ -288,28 +392,21 @@ const LecturerProfile = () => {
                 </div>
               </div>
 
-              {/* Contact */}
+
+              {/* Courses Taught */}
               <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h2 className="text-xl font-semibold text-gray-800 mb-4">Contact Information</h2>
-                <div className="space-y-3">
-                  <a href={`mailto:${lecturer.email}`} className="flex items-center text-green-600 hover:text-green-700">
-                    <Mail className="mr-2" size={16} />
-                    Send Email
-                  </a>
-                  <div className="flex items-center text-gray-700">
-                    <Phone className="mr-2" size={16} />
-                    <span className="text-sm">{lecturer.phone}</span>
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <MapPin className="mr-2" size={16} />
-                    <span className="text-sm">{lecturer.office}</span>
-                  </div>
-                  {/* <div className="flex items-center text-gray-700">
-                    <Calendar className="mr-2" size={16} />
-                    <span className="text-sm">{lecturer.officeHours}</span>
-                  </div> */}
-                </div>
-              </div>
+                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Courses Taught</h2>
+                <ul className="space-y-2">
+                  {lecturer.courses.map((course, index) => (
+                    <li key={index} className="flex items-center text-gray-700">
+                      <BookOpen className="mr-2 text-green-500" size={16} />
+                      {course}
+                    </li>
+                  ))}
+                </ul>
+              </div>    
+
+              
             </div>
           </div>
         </div>

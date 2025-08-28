@@ -25,17 +25,14 @@ const Lecturers = () => {
     },
     {
       id: 2,
-      name: 'Dr. Fatima Abubakar',
-      position: 'Associate Professor',
-      specialization: 'GIS & Remote Sensing',
-      email: 'fatima.abubakar@abu.edu.ng',
-      phone: '+234 803 234 5678',
-      office: 'Room 205, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=300&h=400&fit=crop',
-      bio: 'Dr. Abubakar specializes in GIS applications for urban planning and environmental monitoring. She heads the GIS Laboratory.',
-      research: ['Geographic Information Systems', 'Remote Sensing', 'Urban Planning'],
-      publications: 52,
-      yearsOfExperience: 18
+      name: 'Prof. Moses Mamman',
+      position: 'Professor',
+      specialization: 'Population & Demographic Studies, Resources & Environment, Gender & Development issues',
+      email: 'mammanmoses@gmail.com',
+      image: '../src/images/profMamman.jpeg',
+      research: ['Population & Demographic Studies', 'Resources & Environment', 'Gender & Development issues'],
+      publications: '40+',
+      yearsOfExperience: 37
     },
     {
       id: 3,
@@ -81,17 +78,14 @@ const Lecturers = () => {
     },
     {
       id: 6,
-      name: 'Dr. Halima Ahmed',
-      position: 'Lecturer I',
-      specialization: 'Environmental Management',
-      email: 'halima.ahmed@abu.edu.ng',
-      phone: '+234 803 678 9012',
-      office: 'Room 115, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=400&fit=crop',
-      bio: 'Dr. Ahmed specializes in environmental impact assessment and natural resource management.',
-      research: ['Environmental Impact Assessment', 'Natural Resource Management', 'Ecosystem Services'],
-      publications: 32,
-      yearsOfExperience: 14
+      name: 'Prof. Sawa Bulus Ajiya',
+      position: 'Professor',
+      specialization: 'Climate Change Studies',
+      email: 'senatorsawa@gmail.com',
+      image: '../src/images/prof-b-a-sawa.jpg',
+      research: ['Climate Change Adaptation & Resilience'],
+      publications: '71',
+      yearsOfExperience: 26
     },
     {
       id: 7,
@@ -151,17 +145,15 @@ const Lecturers = () => {
     },
     {
       id: 11,
-      name: 'Dr. Aliyu Sani',
-      position: 'Assistant Lecturer',
-      specialization: 'Surveying & Cartography',
-      email: 'aliyu.sani@abu.edu.ng',
-      phone: '+234 803 123 4567',
+      name: 'Dr. Abdullahi Jibrin',
+      position: 'Associate Professor',
+      specialization: 'Biogeography, Pedology, Environmental Management & Climate change',
+      email: 'ajibrin@abu.edu.ng',
       office: 'Room 140, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop',
-      bio: 'Dr. Sani specializes in modern surveying techniques and digital cartography.',
-      research: ['Surveying', 'Cartography', 'GPS Technology'],
-      publications: 15,
-      yearsOfExperience: 6
+      image: '../src/images/drAJ.jpg',
+      research: ['Biomass Carbon stock and Sequestration  Assessment for Climate Change Mitigation and Adaptation through Monitoring, Reporting and Verification (MRV)'],
+      publications: '37 Peer Reviewed Journal Publications and 16 Conference Proceedings Publications',
+      yearsOfExperience: 14
     },
     {
       id: 12,
@@ -512,10 +504,7 @@ const Lecturers = () => {
                       <Mail className="mr-2 text-green-500" size={16} />
                       <span className="truncate">{lecturer.email}</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Phone className="mr-2 text-green-500" size={16} />
-                      <span>{lecturer.phone}</span>
-                    </div>
+                    
                     <div className="flex items-center text-sm text-gray-600">
                       <BookOpen className="mr-2 text-green-500" size={16} />
                       <span>{lecturer.publications} Publications</span>

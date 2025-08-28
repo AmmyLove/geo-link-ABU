@@ -13,7 +13,7 @@ const Courses = () => {
 
   const courses = [
     // 100 Level First Semester (10 courses)
-    { id: 1, code: 'GENS101', title: 'Nationalism', level: '100', semester: 'First', category: 'General', credits: 1, description: 'Fundamental concepts of physical geography including landforms, climate, and natural processes.' },
+    { id: 1, code: 'GENS101', title: 'Nationalism', level: '100', semester: 'First', category: 'General', credits: 1, prerequisites: 'None - Entry level course', description: 'Fundamental concepts of physical geography including landforms, climate, and natural processes.' },
     { id: 2, code: 'GENS102', title: 'Environmental Health', level: '100', semester: 'First', category: 'General', credits: 1, description: 'Introduction to sanitation, pollution control, and environmental factors affecting public health.' },
     { id: 3, code: 'GENS103', title: 'English & Communication Skills', level: '100', semester: 'First', category: 'General', credits: 2, description: 'Development of oral and written communication for academic and professional purposes.' },
     { id: 4, code: 'GENS107', title: 'History & Philosophy of Science ', level: '100', semester: 'First', category: 'General', credits: 1, description: 'Historical and philosophical foundations of scientific inquiry.' },
@@ -234,15 +234,19 @@ const Courses = () => {
                             {course.category}
                           </span>
 
-                          <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">{course.description}</p>
+                          <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-4">{course.description}</p>
 
-                          <Link
+                          <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium">
+                           Prerequisites: {course.prerequisites}
+                          </span>
+
+                          {/* <Link
                             to={`/courses/${course.code.toLowerCase()}`}
                             className="inline-flex items-center bg-green-600 text-white px-3 py-2 rounded-md hover:bg-green-700 transition-colors text-sm"
                           >
                             View Details
                             <ArrowRight className="ml-1" size={14} />
-                          </Link>
+                          </Link> */}
                         </div>
                       </div>
                     ))}
