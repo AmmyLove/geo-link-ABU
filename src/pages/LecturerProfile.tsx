@@ -186,7 +186,7 @@ const LecturerProfile = () => {
         'Member, International Society of Agrometeorology (INSAM)',
       ]
     },
-    {
+     {
       id: 11,
       name: 'Dr. Abdullahi Jibrin',
       position: 'Associate Professor',
@@ -237,6 +237,251 @@ const LecturerProfile = () => {
         'Member, Forests and Forest Products Society (FFPS) ',
         'Member, Soil Science Society of Nigeria (SSSN)',
         'Teachers’ Registration Council of Nigeria (TRCN)'
+      ]
+    },
+    {
+      id: 12,
+      name: 'Dr. Muhammad Isma’il',
+      position: 'Dr.',
+      specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
+      email: 'migeogjameel@gmail.com',
+      image: '../src/images/drMI.jpg',
+      research: ['Energy Geographies', 'Economic Geography', 'Remote Sensing', 'GIS'],
+      publications: '80',
+      yearsOfExperience: 14,
+
+      education: [
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '2017' },
+        { degree: 'M.Sc. GIS', institution: 'University of Leicester, UK', year: '2011' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello  University, Zaria', year: '2007' }
+      ],
+      courses: [
+        'GEOG 402: Systematic Geography of Nigeria II',
+        'GEOG 415: Industrial Location',
+        'GEOG 428: Geography of Economic Development',
+        'GEOG 432: Application of GIS & Remote Sensing',
+        'GEOG 206: Introduction to Remote Sensing',
+        'GEOG 212: Geography of African Development',
+        'GEOG 315: Transportation Geography'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Site Suitability Analysis for Municipal Solid Waste Dumpsites in Kaduna Metropolis, Kaduna State, Nigeria.',
+          journal: 'Journal of Material Cycles and Waste Management 26, 96–108',
+          year: '2024'
+        }
+      ],
+      
+      teachingPhilosophy: 'I believe that the essence of teaching is to impact positively on the learner by transforming his negative thought into a positive one',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (ANG)',
+        'Geoinformation Society of Nigeria (GEOSON)'
+      ]
+    },
+    {
+      id: 13,
+      name: 'Dr. Hamza Mohammed',
+      position: 'Dr.',
+      specialization: 'Climatology, Agro Climatology, Climates, Transport, Transport Management, Environmental Management, Climate Change, Sustainable Environmental Management',
+      email: 'mhamza@abu.edu.ng',
+      image: '../src/images/drHamza.jpg',
+      research: ['Climatology', 'Agro Climatology', 'Climates', 'Transport', 'Transport Management', 'Environmental Management', 'Climate Change', 'Sustainable Environmental Management'],
+      publications: '30+ Journal Publications and Proceedings & 1 Book',
+      yearsOfExperience: 12,
+
+      education: [
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '2018' },
+        { degree: 'M.Sc. Geography', institution: 'Ahmadu Bello University, Zaria', year: '2012' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello  University, Zaria', year: '2006' }
+      ],
+      courses: [
+        'GEOG 204: Introduction to Climate & Biogeography',
+        'GEOG 311: Climatology',
+        'GEOG 409: Tropical Climatology',
+        'GEOG 426: Regional Development'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Socio-economic Impact of flood and Severity Level in Jigawa State, Nigeria.',
+          journal: 'Journal of Pure and Applied Sciences, Federal University, Dutse vol.11 no.2b range.97-112',
+          year: '2025'
+        },
+        {
+          title: 'Assessment of the extent of Community Preparedness to Flood Risk in Jigawa State, Nigeria.',
+          journal: 'Journal of Pure and Applied Sciences, Federal University, Dutse vol.10 no.3 range.42-48 ',
+          year: '2024'
+        },
+        {
+          title: 'Multi-criteria analysis and mapping of the vulnerable flood risk areas of Jigawa State, Nigeria.',
+          journal: 'Journal of Pure and Applied Sciences, Federal University, Dutse vol.10 no.3c range.39-54',
+          year: '2024'
+        }
+      ],
+      
+      teachingPhilosophy: 'I believe that we must be serious about anything we do. Whatever is worth doing is worth doing very well. This is pretty simple.',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (ANG)',
+        'Member, Nigerian Meteorological Society (NMetS)',
+        'Member, Open and Distance e-Learning Association of Nigeria (ODeLAN)'
+      ]
+    },
+    {
+      id: 20,
+      name: 'Dr. Ahmad Hamza Abdullahi',
+      position: 'Dr.',
+      specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
+      email: 'ahmadhamzaabdul@gmail.com',
+      image: '../src/images/AHA.jpg',
+      research: ['Environmental Health'],
+      publications: '31',
+      yearsOfExperience: 7,
+
+      education: [
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '' },
+        { degree: 'M.Sc.Remote Sensing and GIS', institution: 'Ahmadu Bello University, Zaria', year: '' },
+        { degree: 'B.Sc. Geography', institution: 'Bayero University, Kano', year: '' }
+      ],
+      courses: [
+        'GEOG 313: Geographic Information Systems (GIS)',
+        'GEOG 432: Application of GIS & Remote Sensing',
+        'GEOG 204: Introduction to Climate & Biogeography',
+        'GEOG 311: Climatology',
+        'GEOG 409: Tropical Climatology',
+        'GEOG 406: Applied Climatology'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'GIS-Based Determination of Urban Heat Island inKaduna Metropolis',
+          journal: '',
+          year: ''
+        },
+        {
+          title: 'Perceptions on Climate Variability and its Impact on Measles Outbreak in Kano State',
+          journal: '',
+          year: ''
+        },
+        {
+          title: 'Open Defeacation as a Challenge to Public Health in Giwa LGA ',
+          journal: '',
+          year: ''
+        }
+      ],
+      
+      teachingPhilosophy: 'I believe that teaching and learning are the background of all development.',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (ANG)',
+        'Teachers Registration Council of Nigeria '
+      ]
+    },
+    {
+      id: 21,
+      name: 'Dr. Muhammad Oyale Akhadelor',
+      position: 'Dr.',
+      specialization: 'Economic Geography, Transport Geography & Environmental Management',
+      email: 'msakhadelor@gmail.com',
+      image: '../src/images/AKHADELOR.jpg',
+      research: ['Transport Economic', 'Policy and Planning', 'Development and Environment'],
+      publications: '36',
+      yearsOfExperience: 1,
+
+      education: [
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '' },
+        { degree: 'M.Sc. Climate Science', institution: 'Ahmadu Bello  University, Zaria', year: '' },
+        { degree: 'PGDE', institution: 'Usumanu Danfodio University, Sokoto', year: '' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello  University, Zaria', year: '' }
+      ],
+      courses: [
+        'GEOG 101: Introduction to Human Geography',
+        'GEOG 102: Man, Location and Resources',
+        'GEOG 112: Introduction to Cartography',
+        'GEOG 202: Man & His Environment',
+        'GEOG 205: Quantitative Techniques',
+        'GEOG 207: Local Field Course',
+        'GEOG 305: Economic Geography',
+        'GEOG 307: Field Course',
+        'GEOG 315: Transportation Geography'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Barriers to Health Care Utilisation among Women in Rural Communities in Nigeria',
+          journal: 'Journal of Management and Social Sciences',
+          year: ''
+        },
+        {
+          title: 'Assessment of the Impact of Lagged Precipitation, Dry Spell and Evaporatio Rate in the Occurance of Road Accident in Zaria, Nigeria.',
+          journal: '',
+          year: ''
+          
+        },
+        {
+          title: 'Component of Non – Revenue Water, Its Management, As a Tool for Sustainable Water Resources: A Case Study of Doka District, Kaduna North L.G.A. ',
+          journal: '',
+          year: ''
+        }
+      ],
+      
+      teachingPhilosophy: 'I believe that teachers should be accountable for effective teaching and learners should take responsibility for their own progress and actively engaged through questioning, experimenting, and applying knowledge rather than just memorizing',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (ANG)',
+        'Member, Teachers Registration Council of Nigeria (TRCN)',
+        'Member, Student Seminar Committee, FCFM, Afaka, Kaduna',
+        'Member, Academic Staff Union of Research Institute (ASURI) Electoral Committee.',
+        'Member, Horticultural Society of Nigeria (HORTSON','Member, Bye-Law Committee (ASURI)',
+        'Member, Nigerian Meteorological Society (NmetS)',
+        'Member, MCAN, Okene Zone, Kogi State',
+        'Member, Chartered Institute of Logistics and Transport (CILT)'
+      ]
+    },
+    {
+      id: 26,
+      name: 'Mal. Abdulrazak Ahmed Kumo',
+      position: '',
+      specialization: 'Environmental Management',
+      email: 'talk2abdulkumo@gmail.com',
+      image: '../src/images/razak.jpg',
+      research: ['Renewable Energies', 'Environmental Impact Assessment (EIA)', 'Energy Transition', 'Energy Poverty'],
+      publications: '38 Journals & 8 Conferences',
+      yearsOfExperience: 6,
+
+      education: [
+        { degree: 'Ph.D. Environmental Management (ongoing)', institution: 'Bayero University, Kano', year: '2025' },
+        { degree: 'M.Sc. Environmental Management', institution: 'Ahmadu Bello  University, Zaria', year: '2024' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello  University, Zaria', year: '2015' }
+      ],
+      courses: [
+        'GEOG 105: Introduction to Practical Geography',
+        'GEOG 102: Man, Location and Resources',
+        'GEOG 112: Introduction to Cartography',
+        'GEOG 209: Introduction to Elementary Land Surveying',
+        'GEOG 104: Man’s Physical Environment II',
+        'GEOG 207: Local Field Course',
+        'GEOG 106: Introduction to Environmental Resources',
+        'GEOG 404: The Developed World',
+        'GEOG 307: Field Course'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Exploring the Drivers for Household Cooking Energy Transition in Gombe Metropolis, Gombe State',
+          journal: '',
+          year: ''
+        },
+        {
+          title: 'Assessing the Prevalence of Smoke Exposure Emanating from Household Cooking Practices in North-Western States of Nigeria.',
+          journal: '',
+          year: ''
+          
+        }
+      ],
+      
+      teachingPhilosophy: '',
+      professionalMemberships: [
+        'Environmental Management Association of Nigeria',
+        'Association of Nigerian Geographers (ANG)'
       ]
     }
     // Add more detailed profiles for other lecturers...
