@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import { Search, Mail, Phone, Globe, BookOpen } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import profMamman from '../images/profMamman.jpeg';
+import AHA from '../images/AHA.jpg';
+import profSawa from '../images/prof-b-a-sawa.jpg';
+import drAJ from '../images/drAJ.jpg';
+import AKHADELOR from '../images/AKHADELOR.jpg';
+import drHamza from '../images/drHamza.jpg';
+import drMI from '../images/drMI.jpg';
+import razak from '../images/razak.jpg';
+import gani from '../images/gani.jpg';
 
 const Lecturers = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -29,7 +38,7 @@ const Lecturers = () => {
       position: 'Professor',
       specialization: 'Population & Demographic Studies, Resources & Environment, Gender & Development issues',
       email: 'mammanmoses@gmail.com',
-      image: '../src/images/profMamman.jpeg',
+      image: profMamman,
       research: ['Population & Demographic Studies', 'Resources & Environment', 'Gender & Development issues'],
       publications: '40+',
       yearsOfExperience: 37
@@ -82,7 +91,7 @@ const Lecturers = () => {
       position: 'Professor',
       specialization: 'Climate Change Studies',
       email: 'senatorsawa@gmail.com',
-      image: '../src/images/prof-b-a-sawa.jpg',
+      image: profSawa,
       research: ['Climate Change Adaptation & Resilience'],
       publications: '71',
       yearsOfExperience: 26
@@ -150,7 +159,7 @@ const Lecturers = () => {
       specialization: 'Biogeography, Pedology, Environmental Management & Climate change',
       email: 'ajibrin@abu.edu.ng',
       office: 'Room 140, Environmental Design Building',
-      image: '../src/images/drAJ.jpg',
+      image: drAJ,
       research: ['Biomass Carbon stock and Sequestration  Assessment for Climate Change Mitigation and Adaptation through Monitoring, Reporting and Verification (MRV)'],
       publications: '37 Peer Reviewed Journal Publications and 16 Conference Proceedings Publications',
       yearsOfExperience: 14
@@ -161,7 +170,7 @@ const Lecturers = () => {
       position: 'Senior Lecturer',
       specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
       email: 'migeogjameel@gmail.com',
-      image: '../src/images/drMI.jpg',
+      image: drMI,
       research: ['Energy Geographies', 'Economic Geography', 'Remote Sensing', 'GIS'],
       publications: '80',
       yearsOfExperience: 14
@@ -172,7 +181,7 @@ const Lecturers = () => {
       position: 'Senior Lecturer',
       specialization: 'Climatology, Agro Climatology, Climates, Transport, Transport Management, Environmental Management, Climate Change, Sustainable Environmental Management',
       email: 'mhamza@abu.edu.ng',
-      image: '../src/images/drHamza.jpg',
+      image: drHamza,
       research: ['Climatology', 'Agro Climatology', 'Climates', 'Transport', 'Transport Management', 'Environmental Management', 'Climate Change', 'Sustainable Environmental Management'],
       publications: '30+ Journal Publications and Proceedings & 1 Book',
       yearsOfExperience: 12
@@ -267,7 +276,7 @@ const Lecturers = () => {
       position: 'Lecturer II',
       specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
       email: 'ahmadhamzaabdul@gmail.com',
-      image: '../src/images/AHA.jpg',
+      image: AHA,
       research: ['Environmental Health'],
       publications: '31',
       yearsOfExperience: 7
@@ -278,7 +287,7 @@ const Lecturers = () => {
       position: 'Dr.',
       specialization: 'Economic Geography, Transport Geography & Environmental Management',
       email: 'msakhadelor@gmail.com',
-      image: '../src/images/AKHADELOR.jpg',
+      image: AKHADELOR,
       research: ['Transport Economic', 'Policy and Planning', 'Development and Environment'],
       publications: '36',
       yearsOfExperience: 1
@@ -312,18 +321,15 @@ const Lecturers = () => {
       yearsOfExperience: 6
     },
     {
-      id: 24,
-      name: 'Dr. Rakiya Sani',
-      position: 'Lecturer III',
-      specialization: 'Gender Geography',
-      email: 'rakiya.sani@abu.edu.ng',
-      phone: '+234 803 456 7890',
-      office: 'Room 205, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=400&fit=crop',
-      bio: 'Dr. Sani researches gender issues in spatial development and planning.',
-      research: ['Gender Geography', 'Social Geography', 'Development Studies'],
-      publications: 12,
-      yearsOfExperience: 5
+      id: 23,
+            name: 'Dr. Usman Jibrin Gani',
+            position: 'Lecturer',
+            specialization: 'Transport Geography',
+            email: 'ardomodii@yahoo.com',
+            image: gani,
+            research: ['Transport Smart', 'AI'],
+            publications: '21',
+            yearsOfExperience: 12
     },
     {
       id: 25,
@@ -345,7 +351,7 @@ const Lecturers = () => {
       position: '',
       specialization: 'Environmental Management',
       email: 'talk2abdulkumo@gmail.com',
-      image: '../src/images/razak.jpg',
+      image: razak,
       research: ['Renewable Energies', 'Environmental Impact Assessment (EIA)', 'Energy Transition', 'Energy Poverty'],
       publications: '38 Journals & 8 Conferences',
       yearsOfExperience: 6

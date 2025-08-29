@@ -348,7 +348,7 @@ const VirtualTour = () => {
           <p className="text-gray-600 mb-6 text-sm md:text-base">
             Experience our world-class facilities and discover opportunities in Geography and Environmental Management.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-medium">
               Explore Academic Programs
             </button>
@@ -358,7 +358,7 @@ const VirtualTour = () => {
             <button className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium">
               Download Virtual Tour App
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

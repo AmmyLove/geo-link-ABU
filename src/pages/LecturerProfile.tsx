@@ -12,6 +12,7 @@ import AKHADELOR from '../images/AKHADELOR.jpg';
 import drHamza from '../images/drHamza.jpg';
 import drMI from '../images/drMI.jpg';
 import razak from '../images/razak.jpg';
+import gani from '../images/gani.jpg';
 
 const LecturerProfile = () => {
   const { id } = useParams();
@@ -253,7 +254,7 @@ const LecturerProfile = () => {
       position: 'Dr.',
       specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
       email: 'migeogjameel@gmail.com',
-      image: '../src/images/drMI.jpg',
+      image: drMI,
       research: ['Energy Geographies', 'Economic Geography', 'Remote Sensing', 'GIS'],
       publications: '80',
       yearsOfExperience: 14,
@@ -441,6 +442,38 @@ const LecturerProfile = () => {
         'Member, Horticultural Society of Nigeria (HORTSON','Member, Bye-Law Committee (ASURI)',
         'Member, Nigerian Meteorological Society (NmetS)',
         'Member, MCAN, Okene Zone, Kogi State',
+        'Member, Chartered Institute of Logistics and Transport (CILT)'
+      ]
+    },
+    {
+      id: 23,
+      name: 'Dr. Usman Jibrin Gani',
+      position: 'Lecturer',
+      specialization: 'Transport Geography',
+      email: 'ardomodii@yahoo.com',
+      image: gani,
+      research: ['Transport Smart', 'AI'],
+      publications: '21',
+      yearsOfExperience: 12,
+
+      education: [
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '' }
+      ],
+      courses: [
+        'All human geography courses'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Geospatial analysis of the effects on insecurity on road transportation in Kaduna state',
+          journal: '',
+          year: ''
+        }
+      ],
+      
+      teachingPhilosophy: 'Good',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (ANG)',
         'Member, Chartered Institute of Logistics and Transport (CILT)'
       ]
     },
