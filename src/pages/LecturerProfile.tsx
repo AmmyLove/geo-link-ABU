@@ -4,6 +4,14 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Mail, Phone, MapPin, BookOpen, ExternalLink, Download, Award, Users, Calendar, Globe, GraduationCap, Trophy } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import profMamman from '../images/profMamman.jpeg';
+import AHA from '../images/AHA.jpg';
+import profSawa from '../images/prof-b-a-sawa.jpg';
+import drAJ from '../images/drAJ.jpg';
+import AKHADELOR from '../images/AKHADELOR.jpg';
+import drHamza from '../images/drHamza.jpg';
+import drMI from '../images/drMI.jpg';
+import razak from '../images/razak.jpg';
 
 const LecturerProfile = () => {
   const { id } = useParams();
@@ -79,7 +87,7 @@ const LecturerProfile = () => {
       position: 'Professor',
       specialization: 'Population & Demographic Studies, Resources & Environment, Gender & Development issues',
       email: 'mammanmoses@gmail.com',
-      image: '../src/images/profMamman.jpeg',
+      image: profMamman,
       research: ['Population & Demographic Studies', 'Resources & Environment', 'Gender & Development issues'],
       publications: '40+',
       yearsOfExperience: 37,
@@ -127,7 +135,7 @@ const LecturerProfile = () => {
       position: 'Professor',
       specialization: 'Climate Change Studies',
       email: 'senatorsawa@gmail.com',
-      image: '../src/images/prof-b-a-sawa.jpg',
+      image: profSawa,
       research: ['Climate Change Adaptation & Resilience'],
       publications: '71',
       yearsOfExperience: 26,
@@ -192,7 +200,7 @@ const LecturerProfile = () => {
       position: 'Associate Professor',
       specialization: 'Biogeography, Pedology, Environmental Management & Climate change',
       email: 'ajibrin@abu.edu.ng',
-      image: '../src/images/drAJ.jpg',
+      image: drAJ,
       research: ['Biomass Carbon stock and Sequestration Assessment for Climate Change Mitigation and Adaptation through Monitoring Reporting and Verification (MRV)'],
       publications: '37 Peer Reviewed Journal Publications and 16 Conference Proceedings Publications',
       yearsOfExperience: 14,
@@ -285,7 +293,7 @@ const LecturerProfile = () => {
       position: 'Dr.',
       specialization: 'Climatology, Agro Climatology, Climates, Transport, Transport Management, Environmental Management, Climate Change, Sustainable Environmental Management',
       email: 'mhamza@abu.edu.ng',
-      image: '../src/images/drHamza.jpg',
+      image: drHamza,
       research: ['Climatology', 'Agro Climatology', 'Climates', 'Transport', 'Transport Management', 'Environmental Management', 'Climate Change', 'Sustainable Environmental Management'],
       publications: '30+ Journal Publications and Proceedings & 1 Book',
       yearsOfExperience: 12,
@@ -333,7 +341,7 @@ const LecturerProfile = () => {
       position: 'Dr.',
       specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
       email: 'ahmadhamzaabdul@gmail.com',
-      image: '../src/images/AHA.jpg',
+      image: AHA,
       research: ['Environmental Health'],
       publications: '31',
       yearsOfExperience: 7,
@@ -382,16 +390,16 @@ const LecturerProfile = () => {
       position: 'Dr.',
       specialization: 'Economic Geography, Transport Geography & Environmental Management',
       email: 'msakhadelor@gmail.com',
-      image: '../src/images/AKHADELOR.jpg',
+      image: AKHADELOR,
       research: ['Transport Economic', 'Policy and Planning', 'Development and Environment'],
       publications: '36',
-      yearsOfExperience: 1,
+      yearsOfExperience: 18,
 
       education: [
-        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '' },
-        { degree: 'M.Sc. Climate Science', institution: 'Ahmadu Bello  University, Zaria', year: '' },
-        { degree: 'PGDE', institution: 'Usumanu Danfodio University, Sokoto', year: '' },
-        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello  University, Zaria', year: '' }
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '2016' },
+        { degree: 'M.Sc. Climate Science', institution: 'Ahmadu Bello  University, Zaria', year: '2011' },
+        { degree: 'PGDE', institution: 'Usumanu Danfodio University, Sokoto', year: '2010' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello  University, Zaria', year: '2005' }
       ],
       courses: [
         'GEOG 101: Introduction to Human Geography',
@@ -442,7 +450,7 @@ const LecturerProfile = () => {
       position: '',
       specialization: 'Environmental Management',
       email: 'talk2abdulkumo@gmail.com',
-      image: '../src/images/razak.jpg',
+      image: razak,
       research: ['Renewable Energies', 'Environmental Impact Assessment (EIA)', 'Energy Transition', 'Energy Poverty'],
       publications: '38 Journals & 8 Conferences',
       yearsOfExperience: 6,
