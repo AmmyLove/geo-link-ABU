@@ -1,63 +1,28 @@
 
 import React, { useState, useEffect } from 'react';
-import { MapPin, Navigation, Loader2 } from 'lucide-react';
+import { MapPin, Navigation, Loader2, Filter } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import InteractiveMap from '../components/InteractiveMap';
+import MapboxMap from '../components/map/MapboxMap';
+import SearchBox from '../components/map/SearchBox';
+import LocationFilters from '../components/map/LocationFilters';
 import WeatherWidget from '../components/WeatherWidget';
 import LocationServices from '../components/LocationServices';
 import VirtualTour from '../components/VirtualTour';
+import { campusLocations, getLocationsByCategory, getLocationById } from '../data/campusLocations';
 
 const Maps = () => {
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [selectedLocation, setSelectedLocation] = useState<string>('main-gate');
+  const [selectedLocation, setSelectedLocation] = useState<string>('geography-department');
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [showFilters, setShowFilters] = useState(false);
 
-  const campusLocations = [
-    {
-      id: 'main-gate',
-      name: 'Main Gate',
-      coordinates: [7.6383, 11.1531] as [number, number],
-      description: 'Main entrance to ABU Zaria campus with security checkpoint and visitor information',
-      type: 'landmark' as const
-    },
-    {
-      id: 'geography-dept',
-      name: 'Geography Department',
-      coordinates: [7.6403, 11.1541] as [number, number],
-      description: 'Department of Geography and Environmental Management - Modern facilities for research and learning',
-      type: 'department' as const
-    },
-    {
-      id: 'library',
-      name: 'Kashim Ibrahim Library',
-      coordinates: [7.6393, 11.1521] as [number, number],
-      description: 'Main university library with extensive digital and physical collections',
-      type: 'facility' as const
-    },
-    {
-      id: 'student-center',
-      name: 'Student Center',
-      coordinates: [7.6413, 11.1551] as [number, number],
-      description: 'Hub for student activities, services, and campus life',
-      type: 'facility' as const
-    },
-    {
-      id: 'admin-block',
-      name: 'Administrative Block',
-      coordinates: [7.6388, 11.1535] as [number, number],
-      description: 'Central administration offices and academic records',
-      type: 'facility' as const
-    },
-    {
-      id: 'sports-complex',
-      name: 'Sports Complex',
-      coordinates: [7.6420, 11.1525] as [number, number],
-      description: 'Modern sports facilities including gymnasium and outdoor fields',
-      type: 'facility' as const
-    }
-  ];
+  // Filter locations based on selected categories
+  const filteredLocations = selectedCategories.length > 0 
+    ? campusLocations.filter(location => selectedCategories.includes(location.category))
+    : campusLocations;
 
   const findLocation = async () => {
     if (!navigator.geolocation) {
@@ -80,7 +45,7 @@ const Maps = () => {
       setUserLocation([position.coords.latitude, position.coords.longitude]);
       
       // Auto-select geography department when location is found
-      setSelectedLocation('geography-dept');
+      setSelectedLocation('geography-department');
     } catch (error: any) {
       let errorMessage = "Unable to retrieve your location.";
       
@@ -107,7 +72,19 @@ const Maps = () => {
     setSelectedLocation(locationId);
   };
 
-  const selectedLocationData = campusLocations.find(loc => loc.id === selectedLocation);
+  const handleCategoryToggle = (category: string) => {
+    setSelectedCategories(prev => 
+      prev.includes(category) 
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+  };
+
+  const handleClearFilters = () => {
+    setSelectedCategories([]);
+  };
+
+  const selectedLocationData = getLocationById(selectedLocation);
 
   // Clear error after 5 seconds
   useEffect(() => {
@@ -123,15 +100,26 @@ const Maps = () => {
 
       {/* Enhanced Header with better mobile support */}
       <header className="bg-gradient-to-r from-green-500 to-emerald-600 text-white py-12 md:py-16 px-4 shadow-lg">
-        <div className="container mx-auto text-center">
-          <div className="flex items-center justify-center mb-4">
-            <MapPin className="mr-3" size={28} />
-            <h1 className="text-2xl md:text-4xl font-bold">Campus Map & Navigation</h1>
+        <div className="container mx-auto">
+          <div className="text-center mb-8">
+            <div className="flex items-center justify-center mb-4">
+              <MapPin className="mr-3" size={28} />
+              <h1 className="text-2xl md:text-4xl font-bold">Campus Map & Navigation</h1>
+            </div>
+            <p className="text-sm md:text-lg opacity-90 max-w-2xl mx-auto">
+              Explore ABU Zaria campus with interactive maps, real-time weather updates, 
+              and advanced location services.
+            </p>
           </div>
-          <p className="text-sm md:text-lg opacity-90 max-w-2xl mx-auto">
-            Explore ABU Zaria campus with interactive maps, real-time weather updates, 
-            and advanced location services.
-          </p>
+          
+          {/* Search Box in Header */}
+          <div className="max-w-2xl mx-auto">
+            <SearchBox 
+              locations={campusLocations}
+              onLocationSelect={handleLocationSelect}
+              selectedLocation={selectedLocation}
+            />
+          </div>
         </div>
       </header>
 
@@ -139,20 +127,75 @@ const Maps = () => {
         {/* Enhanced Location Info Bar */}
         {selectedLocationData && (
           <div className="bg-white rounded-xl p-4 md:p-6 mb-6 md:mb-8 shadow-lg border">
-            <div className="flex flex-col md:flex-row md:items-start justify-between space-y-3 md:space-y-0">
+            <div className="flex flex-col lg:flex-row lg:items-start justify-between space-y-4 lg:space-y-0">
               <div className="flex-1">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{selectedLocationData.name}</h2>
-                <p className="text-gray-600 mb-2 text-sm md:text-base">{selectedLocationData.description}</p>
-                <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 text-sm text-gray-500">
-                  <span className="flex items-center">
-                    <Navigation size={16} className="mr-1" />
-                    <span className="break-all">
-                      {selectedLocationData.coordinates[0]}, {selectedLocationData.coordinates[1]}
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{selectedLocationData.name}</h2>
+                    {selectedLocationData.buildingNumber && (
+                      <div className="text-sm font-mono text-gray-500 mb-2">
+                        Building: {selectedLocationData.buildingNumber}
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="capitalize bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">
+                      {selectedLocationData.type}
                     </span>
-                  </span>
-                  <span className="capitalize bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">
-                    {selectedLocationData.type}
-                  </span>
+                    <span className="capitalize bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                      {selectedLocationData.category}
+                    </span>
+                  </div>
+                </div>
+                
+                <p className="text-gray-600 mb-3 text-sm md:text-base">{selectedLocationData.description}</p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex flex-col space-y-2">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Navigation size={16} className="mr-2" />
+                      <span>
+                        {selectedLocationData.coordinates[0].toFixed(4)}, {selectedLocationData.coordinates[1].toFixed(4)}
+                      </span>
+                    </div>
+                    {selectedLocationData.hours && (
+                      <div className="flex items-center text-sm text-gray-500">
+                        <div className="w-4 h-4 mr-2 flex items-center justify-center">
+                          <div className="w-3 h-3 border border-gray-400 rounded-full"></div>
+                        </div>
+                        <span>{selectedLocationData.hours}</span>
+                      </div>
+                    )}
+                    {selectedLocationData.contact && (
+                      <div className="flex items-center text-sm text-gray-500">
+                        <div className="w-4 h-4 mr-2 flex items-center justify-center">
+                          <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                        </div>
+                        <span>{selectedLocationData.contact}</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {selectedLocationData.features.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Features:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedLocationData.features.slice(0, 4).map((feature, index) => (
+                          <span 
+                            key={index}
+                            className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                        {selectedLocationData.features.length > 4 && (
+                          <span className="text-xs text-gray-500">
+                            +{selectedLocationData.features.length - 4} more
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -165,15 +208,42 @@ const Maps = () => {
           <div className="xl:col-span-3">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden border">
               <div className="p-4 md:p-6 border-b border-gray-200">
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">Interactive Campus Map</h3>
-                <p className="text-gray-600 text-sm">Click on markers to explore different campus locations</p>
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">Interactive Campus Map</h3>
+                    <p className="text-gray-600 text-sm">Click on markers to explore different campus locations</p>
+                  </div>
+                  <button
+                    onClick={() => setShowFilters(!showFilters)}
+                    className="flex items-center space-x-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                  >
+                    <Filter size={16} />
+                    <span className="text-sm font-medium">Filters</span>
+                    {selectedCategories.length > 0 && (
+                      <span className="bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">
+                        {selectedCategories.length}
+                      </span>
+                    )}
+                  </button>
+                </div>
+                
+                {showFilters && (
+                  <div className="mb-4">
+                    <LocationFilters
+                      selectedCategories={selectedCategories}
+                      onCategoryToggle={handleCategoryToggle}
+                      onClearFilters={handleClearFilters}
+                    />
+                  </div>
+                )}
               </div>
               <div className="p-4 md:p-6">
-                <InteractiveMap 
+                <MapboxMap 
                   selectedLocation={selectedLocation}
                   onLocationSelect={handleLocationSelect}
-                  locations={campusLocations}
+                  locations={filteredLocations}
                   userLocation={userLocation}
+                  height="h-[600px]"
                 />
               </div>
             </div>
