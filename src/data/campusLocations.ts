@@ -15,20 +15,20 @@ export interface CampusLocation {
   accessibility?: boolean;
 }
 
-// ABU Zaria campus coordinates (approximate center)
-export const CAMPUS_CENTER: [number, number] = [7.6393, 11.1531];
+// ABU Zaria campus coordinates (accurate center - Longitude, Latitude)
+export const CAMPUS_CENTER: [number, number] = [7.7000, 11.0667];
 export const CAMPUS_BOUNDS = {
-  north: 11.1600,
-  south: 11.1450,
-  east: 7.6500,
-  west: 7.6300
+  north: 11.0800,
+  south: 11.0500,
+  east: 7.7200,
+  west: 7.6800
 };
 
 export const campusLocations: CampusLocation[] = [
   {
     id: 'main-gate',
     name: 'ABU Main Gate',
-    coordinates: [7.6383, 11.1531],
+    coordinates: [7.6950, 11.0650],
     description: 'Main entrance to Ahmadu Bello University with 24/7 security checkpoint and visitor registration',
     type: 'landmark',
     category: 'services',
@@ -39,7 +39,7 @@ export const campusLocations: CampusLocation[] = [
   {
     id: 'geography-department',
     name: 'Department of Geography & Environmental Management',
-    coordinates: [7.6403, 11.1541],
+    coordinates: [7.7020, 11.0680],
     description: 'Modern department building with state-of-the-art GIS laboratories, research facilities, and lecture halls',
     type: 'department',
     category: 'education',
@@ -53,7 +53,7 @@ export const campusLocations: CampusLocation[] = [
   {
     id: 'geography-garden',
     name: 'Geography Teaching & Research Garden',
-    coordinates: [7.6408, 11.1545],
+    coordinates: [7.7030, 11.0690],
     description: 'Botanical research garden for environmental studies, plant geography, and ecological research',
     type: 'facility',
     category: 'education',
@@ -64,7 +64,7 @@ export const campusLocations: CampusLocation[] = [
   {
     id: 'cisco-center',
     name: 'CISCO Networking Academy',
-    coordinates: [7.6395, 11.1535],
+    coordinates: [7.6980, 11.0670],
     description: 'Advanced ICT training center with modern networking equipment and computer laboratories',
     type: 'facility',
     category: 'education',
@@ -77,7 +77,7 @@ export const campusLocations: CampusLocation[] = [
   {
     id: 'senate-building',
     name: 'University Senate Building',
-    coordinates: [7.6388, 11.1525],
+    coordinates: [7.6970, 11.0650],
     description: 'Administrative headquarters housing the Vice-Chancellor\'s office and key university management',
     type: 'administrative',
     category: 'administration',
@@ -90,7 +90,7 @@ export const campusLocations: CampusLocation[] = [
   {
     id: 'library-main',
     name: 'Kashim Ibrahim Library',
-    coordinates: [7.6398, 11.1520],
+    coordinates: [7.7000, 11.0640],
     description: 'Main university library with extensive digital collections, study spaces, and research resources',
     type: 'facility',
     category: 'education',
@@ -103,7 +103,7 @@ export const campusLocations: CampusLocation[] = [
   {
     id: 'student-center',
     name: 'Student Affairs Complex',
-    coordinates: [7.6413, 11.1551],
+    coordinates: [7.7040, 11.0700],
     description: 'Central hub for student services, activities, and campus life coordination',
     type: 'facility',
     category: 'services',
@@ -115,7 +115,7 @@ export const campusLocations: CampusLocation[] = [
   {
     id: 'sports-complex',
     name: 'University Sports Complex',
-    coordinates: [7.6420, 11.1525],
+    coordinates: [7.7080, 11.0660],
     description: 'Modern sports facilities including gymnasium, swimming pool, and outdoor courts',
     type: 'facility',
     category: 'recreation',
@@ -127,7 +127,7 @@ export const campusLocations: CampusLocation[] = [
   {
     id: 'medical-center',
     name: 'University Health Center',
-    coordinates: [7.6375, 11.1538],
+    coordinates: [7.6930, 11.0680],
     description: 'Primary healthcare facility serving the university community with 24/7 emergency services',
     type: 'facility',
     category: 'services',
@@ -140,7 +140,7 @@ export const campusLocations: CampusLocation[] = [
   {
     id: 'dining-hall',
     name: 'University Dining Hall',
-    coordinates: [7.6410, 11.1530],
+    coordinates: [7.7010, 11.0670],
     description: 'Main cafeteria serving diverse meals to students, staff, and visitors',
     type: 'facility',
     category: 'services',

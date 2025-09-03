@@ -22,6 +22,7 @@ interface MapboxMapProps {
   userLocation?: [number, number] | null;
   className?: string;
   height?: string;
+  accessToken?: string;
 }
 
 const MapboxMap: React.FC<MapboxMapProps> = ({ 
@@ -30,7 +31,8 @@ const MapboxMap: React.FC<MapboxMapProps> = ({
   locations,
   userLocation,
   className,
-  height = 'h-[500px]'
+  height = 'h-[500px]',
+  accessToken
 }) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
@@ -46,9 +48,13 @@ const MapboxMap: React.FC<MapboxMapProps> = ({
   useEffect(() => {
     if (!mapContainer.current) return;
 
-    // Set a default access token for demo purposes
-    // In production, this should be set via environment variable
-    mapboxgl.accessToken = 'pk.eyJ1IjoibG92YWJsZSIsImEiOiJjbTVwNDd2b20wbWN0MmlzNzE5cnRjcWN5In0.DVdgKVrBZqHrQKZJK6RTXQ';
+    // Set access token if provided
+    if (accessToken) {
+      mapboxgl.accessToken = accessToken;
+    } else if (!mapboxgl.accessToken) {
+      console.error('Mapbox access token is required');
+      return;
+    }
     
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
