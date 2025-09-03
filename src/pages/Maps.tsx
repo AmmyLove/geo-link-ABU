@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import MapboxMap from '../components/map/MapboxMap';
 import SearchBox from '../components/map/SearchBox';
 import LocationFilters from '../components/map/LocationFilters';
-import MapboxTokenInput from '../components/MapboxTokenInput';
+
 import WeatherWidget from '../components/WeatherWidget';
 import LocationServices from '../components/LocationServices';
 import VirtualTour from '../components/VirtualTour';
@@ -19,30 +19,13 @@ const Maps = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [showFilters, setShowFilters] = useState(false);
-  const [mapboxToken, setMapboxToken] = useState<string | null>(null);
-  const [isTokenLoading, setIsTokenLoading] = useState(false);
+  // Use the provided Mapbox token directly
+  const mapboxToken = 'pk.eyJ1IjoiYW1teWxvdmUxIiwiYSI6ImNtZjRlc21zdjAwYW4ybHM5cWl1dDdscHMifQ.lHvZ5v_UvB3AMji-I0b_ew';
 
   // Filter locations based on selected categories
   const filteredLocations = selectedCategories.length > 0 
     ? campusLocations.filter(location => selectedCategories.includes(location.category))
     : campusLocations;
-
-  // Handle token submission
-  const handleTokenSubmit = (token: string) => {
-    setIsTokenLoading(true);
-    // Store token in localStorage for persistence
-    localStorage.setItem('mapbox_token', token);
-    setMapboxToken(token);
-    setTimeout(() => setIsTokenLoading(false), 1000);
-  };
-
-  // Load token from localStorage on mount
-  useEffect(() => {
-    const storedToken = localStorage.getItem('mapbox_token');
-    if (storedToken) {
-      setMapboxToken(storedToken);
-    }
-  }, []);
 
   const findLocation = async () => {
     if (!navigator.geolocation) {
@@ -258,23 +241,14 @@ const Maps = () => {
                 )}
               </div>
               <div className="p-4 md:p-6">
-                {mapboxToken ? (
-                  <MapboxMap 
-                    selectedLocation={selectedLocation}
-                    onLocationSelect={handleLocationSelect}
-                    locations={filteredLocations}
-                    userLocation={userLocation}
-                    height="h-[600px]"
-                    accessToken={mapboxToken}
-                  />
-                ) : (
-                  <div className="h-[600px] flex items-center justify-center bg-muted/30 rounded-xl border-2 border-dashed border-muted-foreground/25">
-                    <MapboxTokenInput 
-                      onTokenSubmit={handleTokenSubmit}
-                      isLoading={isTokenLoading}
-                    />
-                  </div>
-                )}
+                <MapboxMap 
+                  selectedLocation={selectedLocation}
+                  onLocationSelect={handleLocationSelect}
+                  locations={filteredLocations}
+                  userLocation={userLocation}
+                  height="h-[600px]"
+                  accessToken={mapboxToken}
+                />
               </div>
             </div>
           </div>
