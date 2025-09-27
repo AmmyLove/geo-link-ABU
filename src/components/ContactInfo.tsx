@@ -9,7 +9,7 @@ const ContactInfo = () => {
       title: 'Department Address',
       details: [
         'Department of Geography and Environmental Management',
-        'Faculty of Environmental Design',
+        'Faculty of Physical Sciences',
         'Ahmadu Bello University, Zaria',
         'Kaduna State, Nigeria'
       ]
@@ -20,7 +20,7 @@ const ContactInfo = () => {
       details: [
         'Main Office: +234 (0) 69 550 1111',
         'Head of Dept: +234 803 123 4567',
-        'Student Affairs: +234 803 234 5678',
+        'Departmental President: +234 803 234 5678',
         'Emergency: +234 (0) 69 550 2222'
       ]
     },

@@ -12,26 +12,16 @@ import drHamza from '../images/drHamza.jpg';
 import drMI from '../images/drMI.jpg';
 import razak from '../images/razak.jpg';
 import gani from '../images/gani.jpg';
+import ABalarebe from '../images/ABalarebe.jpeg';
+import BA from '../images/BA.jpg';
+import Mairo from '../images/Mairo.jpg';
+import ROY from '../images/ROY.jpg';
 
 const Lecturers = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSpecialization, setSelectedSpecialization] = useState('All');
 
   const lecturers = [
-    {
-      id: 1,
-      name: 'Dr. I. Mukhtar',
-      position: 'Head of Department',
-      specialization: 'Hydrology & Geomorphology',
-      email: 's.abbas@abu.edu.ng',
-      rank: 'Senior Lecturer',
-      office: 'Room 201, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
-      bio: 'Prof. Abbas has over 25 years of experience in climate change research and environmental policy. He leads several international research collaborations.',
-      research: ['Climate Change Adaptation', 'Environmental Policy', 'Sustainable Development'],
-      publications: 85,
-      yearsOfExperience: 25
-    },
     {
       id: 2,
       name: 'Prof. Moses Mamman',
@@ -42,48 +32,6 @@ const Lecturers = () => {
       research: ['Population & Demographic Studies', 'Resources & Environment', 'Gender & Development issues'],
       publications: '40+',
       yearsOfExperience: 37
-    },
-    {
-      id: 3,
-      name: 'Dr. Ibrahim Musa',
-      position: 'Senior Lecturer',
-      specialization: 'Urban Geography & Planning',
-      email: 'ibrahim.musa@abu.edu.ng',
-      phone: '+234 803 345 6789',
-      office: 'Room 103, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop',
-      bio: 'Dr. Musa focuses on urban development patterns and sustainable city planning. He has consulted for several state governments.',
-      research: ['Urban Geography', 'City Planning', 'Transportation Geography'],
-      publications: 38,
-      yearsOfExperience: 15
-    },
-    {
-      id: 4,
-      name: 'Dr. Aisha Yusuf',
-      position: 'Senior Lecturer',
-      specialization: 'Hydrology & Water Resources',
-      email: 'aisha.yusuf@abu.edu.ng',
-      phone: '+234 803 456 7890',
-      office: 'Room 108, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c1e6b14e?w=300&h=400&fit=crop',
-      bio: 'Dr. Yusuf is an expert in water resource management and hydrological modeling, with focus on arid and semi-arid regions.',
-      research: ['Hydrology', 'Water Resource Management', 'Drought Assessment'],
-      publications: 45,
-      yearsOfExperience: 16
-    },
-    {
-      id: 5,
-      name: 'Dr. Mohammed Salim',
-      position: 'Lecturer I',
-      specialization: 'Economic Geography',
-      email: 'mohammed.salim@abu.edu.ng',
-      phone: '+234 803 567 8901',
-      office: 'Room 110, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
-      bio: 'Dr. Salim researches economic development patterns and regional economics in West Africa.',
-      research: ['Economic Geography', 'Regional Development', 'Trade Geography'],
-      publications: 28,
-      yearsOfExperience: 12
     },
     {
       id: 6,
@@ -97,60 +45,26 @@ const Lecturers = () => {
       yearsOfExperience: 26
     },
     {
-      id: 7,
-      name: 'Dr. Usman Bello',
-      position: 'Lecturer I',
-      specialization: 'Geomorphology',
-      email: 'usman.bello@abu.edu.ng',
-      phone: '+234 803 789 0123',
-      office: 'Room 120, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop',
-      bio: 'Dr. Bello studies landform evolution and surface processes in tropical environments.',
-      research: ['Geomorphology', 'Soil Erosion', 'Landscape Evolution'],
-      publications: 25,
-      yearsOfExperience: 11
-    },
-    {
       id: 8,
-      name: 'Dr. Zainab Garba',
-      position: 'Lecturer II',
-      specialization: 'Population Geography',
-      email: 'zainab.garba@abu.edu.ng',
-      phone: '+234 803 890 1234',
-      office: 'Room 125, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c1e6b14e?w=300&h=400&fit=crop',
-      bio: 'Dr. Garba specializes in demographic analysis and population dynamics in Nigeria.',
-      research: ['Population Geography', 'Migration Studies', 'Demographic Analysis'],
-      publications: 22,
-      yearsOfExperience: 9
+      name: 'Prof. Rafiu Yusuf',
+      position: 'Professor',
+      specialization: 'Development Studies, Rural Development and Agricultural Geography',
+      email: 'royusoba@yahoo.co.uk',
+      image: ROY,
+      research: ['Rural development issues', 'Development issues', 'Agricultural Issues'],
+      publications: 'Several',
+      yearsOfExperience: 18
     },
     {
       id: 9,
-      name: 'Dr. Aminu Hassan',
-      position: 'Lecturer II',
-      specialization: 'Climatology',
-      email: 'aminu.hassan@abu.edu.ng',
-      phone: '+234 803 901 2345',
-      office: 'Room 130, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
-      bio: 'Dr. Hassan researches climate patterns and weather systems in the Sahel region.',
-      research: ['Climatology', 'Weather Systems', 'Climate Modeling'],
-      publications: 19,
-      yearsOfExperience: 8
-    },
-    {
-      id: 10,
-      name: 'Dr. Khadijah Umar',
-      position: 'Lecturer II',
-      specialization: 'Agricultural Geography',
-      email: 'khadijah.umar@abu.edu.ng',
-      phone: '+234 803 012 3456',
-      office: 'Room 135, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=400&fit=crop',
-      bio: 'Dr. Umar studies agricultural systems and rural development in Northern Nigeria.',
-      research: ['Agricultural Geography', 'Rural Development', 'Food Security'],
-      publications: 24,
-      yearsOfExperience: 10
+      name: 'Prof. Benedine Akpu',
+      position: 'Professor',
+      specialization: 'Environmental Management, Urban studies, Remote Sensing and GIS',
+      email: 'benyb4real@gmail.com',
+      image: BA,
+      research: ['Environmental modeling', 'Urban Analysis', 'Disaster mapping and monitoring', 'Landuse and land cover modelling'],
+      publications: '41',
+      yearsOfExperience: 19
     },
     {
       id: 11,
@@ -187,88 +101,15 @@ const Lecturers = () => {
       yearsOfExperience: 12
     },
     {
-      id: 14,
-      name: 'Dr. Hauwa Abdullahi',
-      position: 'Assistant Lecturer',
-      specialization: 'Medical Geography',
-      email: 'hauwa.abdullahi@abu.edu.ng',
-      phone: '+234 803 456 7890',
-      office: 'Room 155, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=400&fit=crop',
-      bio: 'Dr. Abdullahi researches health geography and disease distribution patterns.',
-      research: ['Medical Geography', 'Health Systems', 'Disease Mapping'],
-      publications: 21,
-      yearsOfExperience: 8
-    },
-    {
-      id: 15,
-      name: 'Dr. Suleiman Garba',
-      position: 'Assistant Lecturer',
-      specialization: 'Transportation Geography',
-      email: 'suleiman.garba@abu.edu.ng',
-      phone: '+234 803 567 8901',
-      office: 'Room 160, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop',
-      bio: 'Dr. Garba studies transportation networks and accessibility patterns.',
-      research: ['Transportation Geography', 'Network Analysis', 'Accessibility Studies'],
-      publications: 13,
-      yearsOfExperience: 5
-    },
-    {
-      id: 16,
-      name: 'Dr. Fatima Lawal',
-      position: 'Graduate Assistant',
-      specialization: 'Biogeography',
-      email: 'fatima.lawal@abu.edu.ng',
-      phone: '+234 803 678 9012',
-      office: 'Room 165, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c1e6b14e?w=300&h=400&fit=crop',
-      bio: 'Dr. Lawal studies plant and animal distribution patterns in West Africa.',
-      research: ['Biogeography', 'Species Distribution', 'Conservation Biology'],
-      publications: 9,
-      yearsOfExperience: 3
-    },
-    {
       id: 17,
-      name: 'Dr. Ahmad Tukur',
-      position: 'Graduate Assistant',
-      specialization: 'Disaster Management',
-      email: 'ahmad.tukur@abu.edu.ng',
-      phone: '+234 803 789 0123',
-      office: 'Room 170, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
-      bio: 'Dr. Tukur specializes in natural hazard assessment and disaster risk reduction.',
-      research: ['Disaster Management', 'Risk Assessment', 'Emergency Planning'],
-      publications: 11,
-      yearsOfExperience: 4
-    },
-    {
-      id: 18,
-      name: 'Dr. Aisha Danjuma',
-      position: 'Graduate Assistant',
-      specialization: 'Soil Geography',
-      email: 'aisha.danjuma@abu.edu.ng',
-      phone: '+234 803 890 1234',
-      office: 'Room 175, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=400&fit=crop',
-      bio: 'Dr. Danjuma studies soil formation and degradation processes.',
-      research: ['Soil Geography', 'Land Degradation', 'Soil Conservation'],
-      publications: 8,
-      yearsOfExperience: 3
-    },
-    {
-      id: 19,
-      name: 'Dr. Nura Yakubu',
-      position: 'Graduate Assistant',
-      specialization: 'Oceanography',
-      email: 'nura.yakubu@abu.edu.ng',
-      phone: '+234 803 901 2345',
-      office: 'Room 180, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop',
-      bio: 'Dr. Yakubu researches coastal and marine environments.',
-      research: ['Oceanography', 'Coastal Processes', 'Marine Geography'],
-      publications: 7,
-      yearsOfExperience: 2
+      name: 'Dr. Mairo Abubakar',
+      position: 'Senior Lecturer',
+      specialization: 'Population and Medical Geography',
+      email: 'maryamabubakar08@gmail.com',
+      image: Mairo,
+      research: ['Population Studies'],
+      publications: '12 peer reviewed journal papers',
+      yearsOfExperience: 18
     },
     {
       id: 20,
@@ -293,57 +134,26 @@ const Lecturers = () => {
       yearsOfExperience: 1
     },
     {
-      id: 22,
-      name: 'Dr. Sadiya Balarabe',
-      position: 'Lecturer III',
-      specialization: 'Industrial Geography',
-      email: 'sadiya.balarabe@abu.edu.ng',
-      phone: '+234 803 234 5678',
-      office: 'Room 195, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c1e6b14e?w=300&h=400&fit=crop',
-      bio: 'Dr. Balarabe researches industrial location and manufacturing geography.',
-      research: ['Industrial Geography', 'Manufacturing', 'Location Analysis'],
-      publications: 17,
-      yearsOfExperience: 7
-    },
-    {
       id: 23,
-      name: 'Dr. Kabiru Aliyu',
-      position: 'Lecturer III',
-      specialization: 'Quaternary Studies',
-      email: 'kabiru.aliyu@abu.edu.ng',
-      phone: '+234 803 345 6789',
-      office: 'Room 200, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop',
-      bio: 'Dr. Aliyu studies paleoenvironments and Quaternary landscape evolution.',
-      research: ['Quaternary Studies', 'Paleoenvironments', 'Landscape Evolution'],
-      publications: 14,
-      yearsOfExperience: 6
+        name: 'Dr. Usman Jibrin Gani',
+        position: 'Lecturer',
+        specialization: 'Transport Geography',
+        email: 'ardomodii@yahoo.com',
+        image: gani,
+        research: ['Transport Smart', 'AI'],
+        publications: '21',
+        yearsOfExperience: 12
     },
     {
-      id: 23,
-            name: 'Dr. Usman Jibrin Gani',
-            position: 'Lecturer',
-            specialization: 'Transport Geography',
-            email: 'ardomodii@yahoo.com',
-            image: gani,
-            research: ['Transport Smart', 'AI'],
-            publications: '21',
-            yearsOfExperience: 12
-    },
-    {
-      id: 25,
-      name: 'Dr. Tijjani Musa',
-      position: 'Lecturer III',
-      specialization: 'Atmospheric Science',
-      email: 'tijjani.musa@abu.edu.ng',
-      phone: '+234 803 567 8901',
-      office: 'Room 210, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
-      bio: 'Dr. Musa studies atmospheric processes and air quality monitoring.',
-      research: ['Atmospheric Science', 'Air Quality', 'Environmental Monitoring'],
-      publications: 16,
-      yearsOfExperience: 7
+      id: 24,
+      name: 'Dr. Abdullahi Balarabe',
+      position: 'Dr.',
+      specialization: 'Environmental management, Hydrology',
+      email: 'abalarabe@abu.edu.ng',
+      image: ABalarebe,
+      research: ['Transport Economic', 'Policy and Planning', 'Development and Environment'],
+      publications: '30',
+      yearsOfExperience: 12,
     },
     {
       id: 26,
@@ -355,62 +165,6 @@ const Lecturers = () => {
       research: ['Renewable Energies', 'Environmental Impact Assessment (EIA)', 'Energy Transition', 'Energy Poverty'],
       publications: '38 Journals & 8 Conferences',
       yearsOfExperience: 6
-    },
-    {
-      id: 27,
-      name: 'Dr. Ismail Garba',
-      position: 'Senior Lecturer',
-      specialization: 'Geoinformatics',
-      email: 'ismail.garba@abu.edu.ng',
-      phone: '+234 803 789 0123',
-      office: 'Room 220, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop',
-      bio: 'Dr. Garba develops geospatial technologies and information systems.',
-      research: ['Geoinformatics', 'Spatial Databases', 'Web GIS'],
-      publications: 34,
-      yearsOfExperience: 15
-    },
-    {
-      id: 28,
-      name: 'Dr. Amina Suleiman',
-      position: 'Senior Lecturer',
-      specialization: 'Environmental Economics',
-      email: 'amina.suleiman@abu.edu.ng',
-      phone: '+234 803 890 1234',
-      office: 'Room 225, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=400&fit=crop',
-      bio: 'Dr. Suleiman studies the economic aspects of environmental resources and policies.',
-      research: ['Environmental Economics', 'Resource Valuation', 'Policy Analysis'],
-      publications: 31,
-      yearsOfExperience: 14
-    },
-    {
-      id: 29,
-      name: 'Dr. Nasir Abdullahi',
-      position: 'Senior Lecturer',
-      specialization: 'Spatial Statistics',
-      email: 'nasir.abdullahi@abu.edu.ng',
-      phone: '+234 803 901 2345',
-      office: 'Room 230, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
-      bio: 'Dr. Abdullahi develops statistical methods for spatial data analysis.',
-      research: ['Spatial Statistics', 'Geostatistics', 'Data Analysis'],
-      publications: 27,
-      yearsOfExperience: 12
-    },
-    {
-      id: 30,
-      name: 'Dr. Hauwa Usman',
-      position: 'Associate Professor',
-      specialization: 'Sustainable Development',
-      email: 'hauwa.usman@abu.edu.ng',
-      phone: '+234 803 012 3456',
-      office: 'Room 235, Environmental Design Building',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c1e6b14e?w=300&h=400&fit=crop',
-      bio: 'Dr. Usman leads research on sustainable development and environmental planning.',
-      research: ['Sustainable Development', 'Environmental Planning', 'Green Technology'],
-      publications: 48,
-      yearsOfExperience: 19
     }
   ];
 

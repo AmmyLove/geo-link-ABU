@@ -2,6 +2,9 @@ import React from 'react';
 import { Users, Target, Award, Calendar } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import BA from '../images/BA.jpg';
+import ABalarebe from '../images/ABalarebe.jpeg';
+import profMamman from '../images/profMamman.jpeg';
 
 const About = () => {
   // Add page metadata for SEO
@@ -26,22 +29,22 @@ const About = () => {
 
   const faculty = [
     {
-      name: 'Prof. Aminu Hassan',
-      position: 'Head of Department',
-      specialization: 'Climate Change & Environmental Policy',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=300&h=400&fit=crop'
+      name: 'Prof. Benedine Akpu',
+      position: 'Professor',
+      specialization: 'Environmental Management, Urban studies, Remote Sensing and GIS',
+      image: BA,
     },
     {
-      name: 'Dr. Fatima Abubakar',
-      position: 'Associate Professor',
-      specialization: 'GIS & Remote Sensing',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=400&fit=crop'
+      name: 'Prof. Moses Mamman',
+      position: 'Professor',
+      specialization: 'Population & Demographic Studies, Resources & Environment, Gender & Development issues',
+      image: profMamman,
     },
     {
-      name: 'Dr. Ibrahim Musa',
-      position: 'Senior Lecturer',
-      specialization: 'Urban Geography & Planning',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=400&fit=crop'
+      name: 'Dr. Abdullahi Balarabe',
+      position: 'Dr.',
+      specialization: 'Environmental management, Hydrology',
+      image: ABalarebe,
     },
   ];
 

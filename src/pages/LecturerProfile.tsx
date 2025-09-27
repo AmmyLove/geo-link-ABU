@@ -13,75 +13,15 @@ import drHamza from '../images/drHamza.jpg';
 import drMI from '../images/drMI.jpg';
 import razak from '../images/razak.jpg';
 import gani from '../images/gani.jpg';
+import ABalarebe from '../images/ABalarebe.jpeg';
+import BA from '../images/BA.jpg';
+import Mairo from '../images/Mairo.jpg';
+import ROY from '../images/ROY.jpg'
 
 const LecturerProfile = () => {
   const { id } = useParams();
 
   const lecturers = [
-    {
-      id: 1,
-      name: 'Dr. I. Mukhtar',
-      position: 'Senior Lecturer',
-      specialization: 'Biogeography, Pedology, Environmental Management & Climate change',
-      email: 'i.mukhtar@abu.edu.ng',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
-      bio: 'Dr. Mukhtar has over 25 years of distinguished experience in climate change research and environmental policy. He leads several international research collaborations and has been instrumental in developing climate adaptation strategies for West African communities. His work has influenced policy at national and international levels, and he serves as a consultant to multiple government agencies and international organizations.',
-      research: ['Climate Change Adaptation', 'Environmental Policy', 'Sustainable Development', 'Water Resource Management', 'Ecosystem Services'],
-      publications: 85,
-      yearsOfExperience: 25,
-      education: [
-        { degree: 'Ph.D. Environmental Geography', institution: 'University of Cambridge', year: '1999' },
-        { degree: 'M.Sc. Climate Science', institution: 'University of Reading', year: '1995' },
-        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello University', year: '1993' }
-      ],
-      courses: [
-        'GEO 401: Climate Change and Environment', 
-        'GEO 502: Environmental Policy Analysis', 
-        'GEO 601: Advanced Climate Modeling',
-        'GEO 701: Research Methods in Environmental Science'
-      ],
-      awards: [
-        'Excellence in Research Award 2023 - Nigerian Academy of Science',
-        'International Climate Leadership Award 2021 - World Climate Council',
-        'Distinguished Service Award 2020 - African Climate Research Network',
-        'Best Paper Award 2019 - International Journal of Climate Change'
-      ],
-      recentPublications: [
-        {
-          title: 'Climate Change Adaptation Strategies in West Africa: A Comprehensive Analysis',
-          journal: 'Environmental Research Letters',
-          year: '2024',
-          doi: '10.1088/1748-9326/abc123',
-          citations: 156
-        },
-        {
-          title: 'Water Resource Management Under Climate Change: Lessons from the Sahel',
-          journal: 'Journal of Hydrology',
-          year: '2023',
-          doi: '10.1016/j.jhydrol.2023.129456',
-          citations: 89
-        },
-        {
-          title: 'Policy Frameworks for Climate Resilience in Developing Countries',
-          journal: 'Global Environmental Change',
-          year: '2023',
-          doi: '10.1016/j.gloenvcha.2023.102567',
-          citations: 112
-        }
-      ],
-      currentProjects: [
-        'Climate Adaptation Strategies for Nigerian Cities (₦450M, 2024-2027)',
-        'Sustainable Water Management in Arid Regions (€2.5M, EU-funded)',
-        'Policy Framework for Climate Resilience in West Africa (UNEP-funded)'
-      ],
-      teachingPhilosophy: 'I believe in fostering critical thinking and practical problem-solving skills. My approach combines theoretical knowledge with real-world applications, encouraging students to become change agents in environmental sustainability.',
-      professionalMemberships: [
-        'Nigerian Academy of Science (Fellow)',
-        'International Association of Geographers',
-        'World Climate Research Programme',
-        'African Climate Research Network (Board Member)'
-      ]
-    },
     {
       id: 2,
       name: 'Prof. Moses Mamman',
@@ -193,6 +133,101 @@ const LecturerProfile = () => {
         'Member, Nigerian Meteorological Society (MNiMetS) ',
         'Member, Nigerian Association of Hydrological Science (MNAHS) ',
         'Member, International Society of Agrometeorology (INSAM)',
+      ]
+    },
+    {
+      id: 8,
+      name: 'Prof. Rafiu Yusuf',
+      position: 'Professor',
+      specialization: 'Development Studies, Rural Development and Agricultural Geography',
+      email: 'royusoba@yahoo.co.uk',
+      image: ROY,
+      research: ['Rural development issues', 'Development issues', 'Agricultural Issues'],
+      publications: 'Several',
+      yearsOfExperience: 18,
+
+      education: [
+        { degree: 'Ph.D.', institution: 'Unilorin', year: '' },
+        { degree: 'M.Sc.', institution: 'Unilorin', year: '' },
+        { degree: 'PGDE', institution: '', year: '' },
+        { degree: 'UDUS', institution: '', year: '' },
+        { degree: 'B.Sc.', institution: 'Unilorin', year: '' }
+      ],
+      courses: [
+        'GEOG 101: Introduction to Human Geography',
+        'GEOG 105: Introduction to Practical Geography',
+        'GEOG 102: Man, Location and Resources',
+        'GEOG 201: Spatial Organization of Society',
+        'GEOG 202: Man & His Environment',
+        'GEOG 301: Research Methods',
+        'GEOG 402: Systematic Geography of Nigeria II',
+        'GEOG 405: Advanced Remote Sensing',
+        ],
+      
+      recentPublications: [
+        {
+          title: '',
+          journal: '',
+          year: ''
+        }
+      ],
+      
+      teachingPhilosophy: 'Teaching and learning are essential requirements for personal, societal and national development. The two are lifelong.',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (MANG)',
+        'Nigeria Young Academy',
+      ]
+    },
+    {
+      id: 9,
+      name: 'Prof. Benedine Akpu',
+      position: 'Professor',
+      specialization: 'Environmental Management, Urban studies, Remote Sensing and GIS',
+      email: 'benyb4real@gmail.com',
+      image: BA,
+      research: ['Environmental modeling', 'Urban Analysis', 'Disaster mapping and monitoring', 'Landuse and land cover modelling'],
+      publications: '41',
+      yearsOfExperience: 19,
+
+      education: [
+        { degree: 'Ph.D.', institution: 'Bayero University Kano', year: '' },
+        { degree: 'M.Tech. Remote Sensing Applications', institution: 'Federal University of Technology Minna', year: '' },
+        { degree: 'B A (ed) Geography', institution: 'Ahmadu Bello University, Zaria', year: '' }
+      ],
+      courses: [
+        'GEOG 415: Industrial Location',
+        'GEOG 432: Application of GIS & Remote Sensing',
+        'GEOG 426: Regional Development',
+        'GEOG 313: Geographic Information Systems (GIS)',
+        'GEOG 206: Introduction to Remote Sensing',
+        'GEOG 207: Local Field Course',
+        'GEOG 307: Field Course'
+        ],
+      
+      recentPublications: [
+        {
+          title: 'Geospatial analysis of Crime incidence in Jalingo Metropolis, Taraba State, Nigeria',
+          journal: '',
+          year: ''
+        },
+        {
+          title: 'Spatio- temporal Analysis of crime incidence in Bayelsa West Senatorial district, Bayelsa State, Nigeria',
+          journal: '',
+          year: ''
+          
+        },
+        {
+          title: 'Analysis of the spatial pattern of violent crime in Kaduna Metropolis, Nigeria',
+          journal: '',
+          year: ''
+        }
+      ],
+      
+      teachingPhilosophy: 'Building intellectually sound minds and problem solvers; character moulding; training men and women who would contribute positively towards the growth and development of the society and nation at large.',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (MANG)',
+        'Environmental management Association of Nigeria (EMAN)',
+        'Geoinformation Society of Nigeria ( GEOSON)',
       ]
     },
      {
@@ -337,6 +372,62 @@ const LecturerProfile = () => {
       ]
     },
     {
+      id: 17,
+      name: 'Dr. Mairo Abubakar',
+      position: 'Senior Lecturer',
+      specialization: 'Population and Medical Geography',
+      email: 'maryamabubakar08@gmail.com',
+      image: Mairo,
+      research: ['Population Studies'],
+      publications: '12 peer reviewed journal papers',
+      yearsOfExperience: 18,
+
+      education: [
+        { degree: 'Ph.D. Geography', institution: '', year: '' },
+        { degree: 'M.Sc.', institution: '', year: '' },
+        { degree: 'B.Sc.', institution: '', year: '' }
+      ],
+      courses: [
+        'GEOG 101: Introduction to Human Geography',
+        'GEOG 102: Man, Location and Resources',
+        'GEOG 105: Introduction to Practical Geography',
+        'GEOG 106: Introduction to Environmental Resources',
+        'GEOG 107: Zaria and its Region ',
+        'GEOG 112: Introduction to Cartography',
+        'GEOG 201: Spatial Organization of Society',
+        'GEOG 207: Local Field Course',
+        'GEOG 214:Population Geography',
+        'GEOL 208: Geology & Mineral Resources of Nigeria',
+        'GEOG 307: Field Course',
+        'GEOG 411: Population, Resources & Environment',
+        'GEOG 418: Population & Migration',
+        'GEOG 421: Medical Geography',
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Assessment of knowledge, attitude and practice towards COVID-19 in Kaduna North, Nigeria.',
+          journal: '',
+          year: ''
+        },
+        {
+          title: 'Perceptual investigation of Gender-based violence among women during the COVID-19 lockdown in Gwagwalada area council, Abuja, Nigeria.',
+          journal: '',
+          year: ''
+        },
+        {
+          title: 'Assessment of the living conditions of retirees in Kebbi State, Nigeria',
+          journal: '',
+          year: ''
+        }
+      ],
+      
+      teachingPhilosophy: 'Teaching is a unique way of imparting knowledge to students who want to learn.',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (ANG)',
+      ]
+    },
+    {
       id: 20,
       name: 'Dr. Ahmad Hamza Abdullahi',
       position: 'Dr.',
@@ -475,6 +566,56 @@ const LecturerProfile = () => {
       professionalMemberships: [
         'Member, Association of Nigerian Geographers (ANG)',
         'Member, Chartered Institute of Logistics and Transport (CILT)'
+      ]
+    },
+    {
+      id: 24,
+      name: 'Dr. Abdullahi Balarabe',
+      position: 'Dr.',
+      specialization: 'Environmental management, Hydrology',
+      email: 'abalarabe@abu.edu.ng',
+      image: ABalarebe,
+      research: ['Transport Economic', 'Policy and Planning', 'Development and Environment'],
+      publications: '30',
+      yearsOfExperience: 12,
+
+      education: [
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '' },
+        { degree: 'M.Sc.', institution: '', year: '' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello  University, Zaria', year: '' }
+      ],
+      courses: [
+        'GEOG 106: Introduction to Environmental Resources',
+        'GEOG 434: Ecosystem',
+        'GEOG 309: Biogeography',
+        'GEOG 104: Man’s Physical Environment II',
+        'GEOG 201: Spatial Organization of Society',
+        'GEOG 423: Environmental Hazard'
+      ],
+      
+      recentPublications: [
+        {
+          title: '',
+          journal: '',
+          year: ''
+        },
+        {
+          title: '',
+          journal: '',
+          year: ''
+          
+        },
+        {
+          title: '',
+          journal: '',
+          year: ''
+        }
+      ],
+      
+      teachingPhilosophy: 'Make it as easy as possible and respect all.',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (ANG)',
+        '(NEM)'
       ]
     },
     {
