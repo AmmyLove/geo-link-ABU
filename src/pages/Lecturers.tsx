@@ -16,6 +16,8 @@ import ABalarebe from '../images/ABalarebe.jpeg';
 import BA from '../images/BA.jpg';
 import Mairo from '../images/Mairo.jpg';
 import ROY from '../images/ROY.jpg';
+import Buba from '../images/Buba.jpg';
+import SMB from '../images/SMB.jpeg';
 
 const Lecturers = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -101,6 +103,17 @@ const Lecturers = () => {
       yearsOfExperience: 12
     },
     {
+      id: 15,
+      name: 'Dr. Buba Adamu Ndawayo',
+      position: 'Reader',
+      specialization: 'Environmental Management',
+      email: 'adamububandawayo2013@gmail.com',
+      image: Buba,
+      research: ['Modelling', 'Environmental Management'],
+      publications: '20',
+      yearsOfExperience: 6
+    },
+    {
       id: 17,
       name: 'Dr. Mairo Abubakar',
       position: 'Senior Lecturer',
@@ -110,6 +123,17 @@ const Lecturers = () => {
       research: ['Population Studies'],
       publications: '12 peer reviewed journal papers',
       yearsOfExperience: 18
+    },
+    {
+      id: 19,
+      name: 'Dr. Suleiman Musa Balarebe',
+      position: 'Lecturer II',
+      specialization: 'Climate Change & Development',
+      email: 'suleimansmb69@gmail.com',
+      image: SMB,
+      research: ['Climate Change & Development'],
+      publications: '17',
+      yearsOfExperience: 9
     },
     {
       id: 20,
@@ -298,7 +322,7 @@ const Lecturers = () => {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-green-50 to-emerald-50">
+      {/*<section className="py-16 px-4 bg-gradient-to-r from-green-50 to-emerald-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Faculty Statistics</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -320,7 +344,7 @@ const Lecturers = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       <Footer />
     </div>

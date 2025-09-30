@@ -16,7 +16,9 @@ import gani from '../images/gani.jpg';
 import ABalarebe from '../images/ABalarebe.jpeg';
 import BA from '../images/BA.jpg';
 import Mairo from '../images/Mairo.jpg';
-import ROY from '../images/ROY.jpg'
+import ROY from '../images/ROY.jpg';
+import Buba from '../images/Buba.jpg';
+import SMB from '../images/SMB.jpeg';
 
 const LecturerProfile = () => {
   const { id } = useParams();
@@ -372,6 +374,45 @@ const LecturerProfile = () => {
       ]
     },
     {
+      id: 15,
+      name: 'Dr. Buba Adamu Ndawayo',
+      position: 'Reader',
+      specialization: 'Environmental Management',
+      email: 'adamububandawayo2013@gmail.com',
+      image: Buba,
+      research: ['Modelling', 'Environmental Management'],
+      publications: '20',
+      yearsOfExperience: 6,
+
+      education: [
+        { degree: 'Ph.D. Environmental Planning & Management', institution: 'Universiti Putra, Malaysia', year: '2017' },
+        { degree: 'M.Sc. Geography', institution: 'Ahmadu Bello University, Zaria', year: '2012' },
+        { degree: 'B.Sc. Geography', institution: 'University of Maiduguri', year: '1997' }
+      ],
+      courses: [
+        'GEOG 202: Man & His Environment',
+        'GEOG 207: Local Field Course',
+        'GEOG 208: Spatial Analysis',
+        'GEOG 307 :Field Course',
+        'GEOG 400: Research Project',
+        'GEOG 434: Ecosystem'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Farmer Climate Change Adaptation Strategies and Perception of its Effectiveness in Maradi state, Niger Republic',
+          journal: 'Jalingo Journal of Social and Management Sciences',
+          year: ''
+        }
+      ],
+      
+      teachingPhilosophy: 'Impacting Knowledge',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (ANG)',
+        'Member, Nigerian Meteorological Society (NMetS)'
+      ]
+    },
+    {
       id: 17,
       name: 'Dr. Mairo Abubakar',
       position: 'Senior Lecturer',
@@ -423,6 +464,58 @@ const LecturerProfile = () => {
       ],
       
       teachingPhilosophy: 'Teaching is a unique way of imparting knowledge to students who want to learn.',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (ANG)',
+      ]
+    },
+    {
+      id: 19,
+      name: 'Dr. Suleiman Musa Balarebe',
+      position: 'Lecturer II',
+      specialization: 'Climate Change & Development',
+      email: 'suleimansmb69@gmail.com',
+      image: SMB,
+      research: ['Climate Change & Development'],
+      publications: '17',
+      yearsOfExperience: 9,
+
+      education: [
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '2022' },
+        { degree: 'M.Sc. Geography', institution: 'Ahmadu Bello University, Zaria', year: '2014' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello  University, Zaria', year: '2007' }
+      ],
+      courses: [
+        'GEOG 103: Man’s Physical Environment I',
+        'GEOG 104: Man’s Physical Environment II',
+        'GEOG 105: Introduction to Practical Geography',
+        'GEOG 107: Zaria and its Region ',
+        'GEOG 108: Elementary Statistics for Geographers',
+        'GEOG 204: Introductory Climate and Biogeography',
+        'GEOG 308: Population Studies',
+        'GEOG 311: Climatology ',
+        'GEOG 406: Applied Climatology',
+        'GEOG 409: Tropical Climatology',
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Impact of Climate Change on Sugarcane Production and Adaptation Strategies in Kaduna State',
+          journal: 'International Journal of Science for Global Sustainability',
+          year: '2016'
+        },
+        {
+          title: 'Effects of Climate Change Induced Farmer-Herder Conflicts on Socio-economic Development of Farmers in Giwa Local Government Area, Kaduna State, Nigeria.',
+          journal: 'Dutse Journal of Pure and Applied Sciences',
+          year: '2022'
+        },
+        {
+          title: 'Impacts of Climate Change-Induced Small-Scale Severe Weather Phenomena (SCSWPS) on Crop Farming in Northwestern Nigeria.',
+          journal: 'Journal of Disaster Risk Reduction',
+          year: '2021'
+        }
+      ],
+      
+      teachingPhilosophy: 'Teaching is a divine calling, I take it seriously.',
       professionalMemberships: [
         'Member, Association of Nigerian Geographers (ANG)',
       ]
