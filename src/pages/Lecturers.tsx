@@ -21,7 +21,7 @@ import SMB from '../images/SMB.jpeg';
 
 const Lecturers = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedSpecialization, setSelectedSpecialization] = useState('All');
+  const [selectedPosition, setSelectedPosition] = useState('All');
 
   const lecturers = [
     {
@@ -192,22 +192,23 @@ const Lecturers = () => {
     }
   ];
 
-  const specializations = [
-    'All', 'Climate Change & Environmental Policy', 'GIS & Remote Sensing', 'Urban Geography & Planning', 
-    'Hydrology & Water Resources', 'Economic Geography', 'Environmental Management', 'Geomorphology',
-    'Population Geography', 'Climatology', 'Agricultural Geography', 'Surveying & Cartography',
-    'Tourism Geography', 'Political Geography', 'Medical Geography', 'Transportation Geography',
-    'Biogeography', 'Disaster Management', 'Soil Geography', 'Oceanography', 'Land Use Planning',
-    'Regional Geography', 'Industrial Geography', 'Quaternary Studies', 'Gender Geography',
-    'Atmospheric Science', 'Coastal Geography', 'Geoinformatics', 'Environmental Economics',
-    'Spatial Statistics', 'Sustainable Development'
+  const positions = [
+    'All', 
+    'Professor', 
+    'Associate Professor',
+    'Reader', 
+    'Senior Lecturer',
+    'Lecturer I', 
+    'Lecturer II', 
+    'Assistant Lecturer', 
+    'Graduate Assistant'
   ];
 
   const filteredLecturers = lecturers.filter(lecturer => {
     const matchesSearch = lecturer.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          lecturer.specialization.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesSpecialization = selectedSpecialization === 'All' || lecturer.specialization === selectedSpecialization;
-    return matchesSearch && matchesSpecialization;
+    const matchesPosition = selectedPosition === 'All' || lecturer.position === selectedPosition;
+    return matchesSearch && matchesPosition;
   });
 
   return (
@@ -240,12 +241,12 @@ const Lecturers = () => {
               />
             </div>
             <select
-              value={selectedSpecialization}
-              onChange={(e) => setSelectedSpecialization(e.target.value)}
+              value={selectedPosition}
+              onChange={(e) => setSelectedPosition(e.target.value)}
               className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
             >
-              {specializations.map(spec => (
-                <option key={spec} value={spec}>{spec}</option>
+              {positions.map(pos => (
+                <option key={pos} value={pos}>{pos}</option>
               ))}
             </select>
           </div>
@@ -295,10 +296,8 @@ const Lecturers = () => {
                       )}
                     </div>
                   </div>
-
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{lecturer.bio}</p>
                   
-                  <Link 
+                  <Link
                     to={`/lecturers/${lecturer.id}`}
                     className="block w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-center"
                   >
