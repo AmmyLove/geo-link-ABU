@@ -22,6 +22,7 @@ import SMB from '../images/SMB.jpeg';
 const Lecturers = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPosition, setSelectedPosition] = useState('All');
+  const [selectedGender, setSelectedGender] = useState('All');
 
   const lecturers = [
     {
@@ -33,7 +34,8 @@ const Lecturers = () => {
       image: profMamman,
       research: ['Population & Demographic Studies', 'Resources & Environment', 'Gender & Development issues'],
       publications: '40+',
-      yearsOfExperience: 37
+      yearsOfExperience: 37,
+      gender: 'Male'
     },
     {
       id: 6,
@@ -44,7 +46,8 @@ const Lecturers = () => {
       image: profSawa,
       research: ['Climate Change Adaptation & Resilience'],
       publications: '71',
-      yearsOfExperience: 26
+      yearsOfExperience: 26,
+      gender: 'Male'
     },
     {
       id: 8,
@@ -55,7 +58,8 @@ const Lecturers = () => {
       image: ROY,
       research: ['Rural development issues', 'Development issues', 'Agricultural Issues'],
       publications: 'Several',
-      yearsOfExperience: 18
+      yearsOfExperience: 18,
+      gender: 'Male'
     },
     {
       id: 9,
@@ -66,7 +70,8 @@ const Lecturers = () => {
       image: BA,
       research: ['Environmental modeling', 'Urban Analysis', 'Disaster mapping and monitoring', 'Landuse and land cover modelling'],
       publications: '41',
-      yearsOfExperience: 19
+      yearsOfExperience: 19,
+      gender: 'Male'
     },
     {
       id: 11,
@@ -78,7 +83,8 @@ const Lecturers = () => {
       image: drAJ,
       research: ['Biomass Carbon stock and Sequestration  Assessment for Climate Change Mitigation and Adaptation through Monitoring, Reporting and Verification (MRV)'],
       publications: '37 Peer Reviewed Journal Publications and 16 Conference Proceedings Publications',
-      yearsOfExperience: 14
+      yearsOfExperience: 14,
+      gender: 'Male'
     },
     {
       id: 12,
@@ -100,7 +106,8 @@ const Lecturers = () => {
       image: drHamza,
       research: ['Climatology', 'Agro Climatology', 'Climates', 'Transport', 'Transport Management', 'Environmental Management', 'Climate Change', 'Sustainable Environmental Management'],
       publications: '30+ Journal Publications and Proceedings & 1 Book',
-      yearsOfExperience: 12
+      yearsOfExperience: 12,
+      gender: 'Male'
     },
     {
       id: 15,
@@ -111,7 +118,8 @@ const Lecturers = () => {
       image: Buba,
       research: ['Modelling', 'Environmental Management'],
       publications: '20',
-      yearsOfExperience: 6
+      yearsOfExperience: 6,
+      gender: 'Male'
     },
     {
       id: 17,
@@ -122,7 +130,8 @@ const Lecturers = () => {
       image: Mairo,
       research: ['Population Studies'],
       publications: '12 peer reviewed journal papers',
-      yearsOfExperience: 18
+      yearsOfExperience: 18,
+      gender: 'Female'
     },
     {
       id: 19,
@@ -133,7 +142,8 @@ const Lecturers = () => {
       image: SMB,
       research: ['Climate Change & Development'],
       publications: '17',
-      yearsOfExperience: 9
+      yearsOfExperience: 9,
+      gender: 'Male'
     },
     {
       id: 20,
@@ -144,7 +154,8 @@ const Lecturers = () => {
       image: AHA,
       research: ['Environmental Health'],
       publications: '31',
-      yearsOfExperience: 7
+      yearsOfExperience: 7,
+      gender: 'Male'
     },
     {
       id: 21,
@@ -155,7 +166,8 @@ const Lecturers = () => {
       image: AKHADELOR,
       research: ['Transport Economic', 'Policy and Planning', 'Development and Environment'],
       publications: '36',
-      yearsOfExperience: 1
+      yearsOfExperience: 1,
+      gender: 'Male'
     },
     {
       id: 23,
@@ -166,7 +178,8 @@ const Lecturers = () => {
         image: gani,
         research: ['Transport Smart', 'AI'],
         publications: '21',
-        yearsOfExperience: 12
+        yearsOfExperience: 12,
+        gender: 'Male'
     },
     {
       id: 24,
@@ -178,6 +191,7 @@ const Lecturers = () => {
       research: ['Transport Economic', 'Policy and Planning', 'Development and Environment'],
       publications: '30',
       yearsOfExperience: 12,
+      gender: 'Male'
     },
     {
       id: 26,
@@ -188,7 +202,8 @@ const Lecturers = () => {
       image: razak,
       research: ['Renewable Energies', 'Environmental Impact Assessment (EIA)', 'Energy Transition', 'Energy Poverty'],
       publications: '38 Journals & 8 Conferences',
-      yearsOfExperience: 6
+      yearsOfExperience: 6,
+      gender: 'Male'
     }
   ];
 
@@ -208,7 +223,8 @@ const Lecturers = () => {
     const matchesSearch = lecturer.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          lecturer.specialization.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesPosition = selectedPosition === 'All' || lecturer.position === selectedPosition;
-    return matchesSearch && matchesPosition;
+    const matchesGender = selectedGender === 'All' || lecturer.gender === selectedGender;
+    return matchesSearch && matchesPosition && matchesGender;
   });
 
   return (
@@ -248,6 +264,15 @@ const Lecturers = () => {
               {positions.map(pos => (
                 <option key={pos} value={pos}>{pos}</option>
               ))}
+            </select>
+            <select
+              value={selectedGender}
+              onChange={(e) => setSelectedGender(e.target.value)}
+              className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            >
+              <option value="All">All Genders</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
             </select>
           </div>
         </div>
