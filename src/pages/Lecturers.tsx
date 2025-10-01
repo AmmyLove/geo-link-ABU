@@ -71,7 +71,7 @@ const Lecturers = () => {
       research: ['Environmental modeling', 'Urban Analysis', 'Disaster mapping and monitoring', 'Landuse and land cover modelling'],
       publications: '41',
       yearsOfExperience: 19,
-      gender: 'Male'
+      gender: 'Female'
     },
     {
       id: 11,
@@ -95,7 +95,8 @@ const Lecturers = () => {
       image: drMI,
       research: ['Energy Geographies', 'Economic Geography', 'Remote Sensing', 'GIS'],
       publications: '80',
-      yearsOfExperience: 14
+      yearsOfExperience: 14,
+      gender: 'Male'
     },
     {
       id: 13,
@@ -236,7 +237,7 @@ const Lecturers = () => {
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Faculty</h1>
           <p className="text-xl text-green-100 max-w-3xl mx-auto">
-            Meet our distinguished faculty of 30 members who are leaders in their fields, 
+            Meet our distinguished faculty of over 20 members who are leaders in their fields, 
             committed to excellence in teaching and groundbreaking research.
           </p>
         </div>
