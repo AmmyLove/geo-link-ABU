@@ -117,7 +117,7 @@ const Lecturers = () => {
     {
       id: 13,
       name: 'Dr. Muhammad Isma’il',
-      position: 'Senior Lecturer',
+      position: 'Associate Professor',
       specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
       email: 'migeogjameel@gmail.com',
       image: drMI,
@@ -248,7 +248,7 @@ const Lecturers = () => {
     },
     {
       id: 27,
-      name: 'Mal. Abdulrazak Ahmed Kumo',
+      name: 'Mr. Abdulrazak Ahmed Kumo',
       position: '',
       specialization: 'Environmental Management',
       email: 'talk2abdulkumo@gmail.com',
