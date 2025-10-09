@@ -1147,7 +1147,7 @@ const LecturerProfile = () => {
                           <BookOpen className="mr-2 text-green-500 flex-shrink-0 mt-1" size={16} />
                           {courseCode ? (
                             <Link 
-                              to={`/courses/${courseCode}`}
+                              to={`/courses#${courseCode}`}
                               className="text-green-600 hover:text-green-700 hover:underline"
                             >
                               {course}

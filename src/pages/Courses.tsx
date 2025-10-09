@@ -1,7 +1,7 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Search, BookOpen, Clock, Users, Star, ChevronRight, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -10,6 +10,9 @@ const Courses = () => {
   const [selectedLevel, setSelectedLevel] = useState('All');
   const [selectedSemester, setSelectedSemester] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [highlightedCourse, setHighlightedCourse] = useState<string | null>(null);
+  const location = useLocation();
+  const courseRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const courses = [
     // 100 Level First Semester (10 courses)
@@ -124,6 +127,27 @@ const Courses = () => {
     return acc;
   }, {} as Record<string, typeof courses>);
 
+  // Handle course highlighting from hash
+  useEffect(() => {
+    if (location.hash) {
+      const courseCode = location.hash.substring(1); // Remove the # symbol
+      setHighlightedCourse(courseCode);
+      
+      // Wait for the DOM to render, then scroll to the course
+      setTimeout(() => {
+        const courseElement = courseRefs.current[courseCode];
+        if (courseElement) {
+          courseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+          // Remove highlight after 3 seconds
+          setTimeout(() => {
+            setHighlightedCourse(null);
+          }, 3000);
+        }
+      }, 100);
+    }
+  }, [location.hash]);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -216,9 +240,17 @@ const Courses = () => {
                   <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-green-500 pb-2">
                     {sectionTitle} ({courses.length} courses)
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {courses.map((course) => (
-                      <div key={course.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {courses.map((course) => {
+                      const isHighlighted = highlightedCourse === course.code.replace(/\s+/g, '');
+                      return (
+                      <div 
+                        key={course.id} 
+                        ref={(el) => courseRefs.current[course.code.replace(/\s+/g, '')] = el}
+                        className={`bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] overflow-hidden ${
+                          isHighlighted ? 'ring-4 ring-green-500 shadow-2xl scale-105' : ''
+                        }`}
+                      >
                         <div className="p-4">
                           <div className="flex justify-between items-start mb-3">
                             <div>
@@ -249,7 +281,8 @@ const Courses = () => {
                           </Link> */}
                         </div>
                       </div>
-                    ))}
+                    );
+                    })}
                   </div>
                 </div>
               );

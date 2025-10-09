@@ -12,7 +12,6 @@ import Maps from "./pages/Maps";
 import NewsAndAnnouncements from "./pages/NewsAndAnnouncements";
 import Contact from "./pages/Contact";
 import Courses from "./pages/Courses";
-import CourseDetail from "./pages/CourseDetail";
 import Programs from "./pages/Programs";
 import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
@@ -31,7 +30,6 @@ const App = () => (
           <Route path="/lecturers" element={<Lecturers />} />
           <Route path="/lecturers/:id" element={<LecturerProfile />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/courses/:courseCode" element={<CourseDetail />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/maps" element={<Maps />} />
