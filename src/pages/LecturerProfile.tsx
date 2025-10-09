@@ -1127,26 +1127,37 @@ const LecturerProfile = () => {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">Courses Taught</h2>
                 <ul className="space-y-2">
-                  {lecturer.courses.map((course, index) => {
-                    // Extract course code from the course string (e.g., "GEOG 214: Population Geography")
-                    const courseCode = course.match(/^[A-Z]+\s*\d+/)?.[0].replace(/\s+/g, '');
-                    
-                    return (
-                      <li key={index} className="flex items-start">
-                        <BookOpen className="mr-2 text-green-500 flex-shrink-0 mt-1" size={16} />
-                        {courseCode ? (
-                          <Link 
-                            to={`/courses`}
-                            className="text-green-600 hover:text-green-700 hover:underline"
-                          >
-                            {course}
-                          </Link>
-                        ) : (
-                          <span className="text-gray-700">{course}</span>
-                        )}
-                      </li>
-                    );
-                  })}
+                  {[...lecturer.courses]
+                    .sort((a, b) => {
+                      // Extract course codes and numbers for sorting
+                      const codeA = a.match(/^[A-Z]+\s*(\d+)/);
+                      const codeB = b.match(/^[A-Z]+\s*(\d+)/);
+                      
+                      if (codeA && codeB) {
+                        return parseInt(codeA[1]) - parseInt(codeB[1]);
+                      }
+                      return 0;
+                    })
+                    .map((course, index) => {
+                      // Extract course code from the course string (e.g., "GEOG 214: Population Geography")
+                      const courseCode = course.match(/^[A-Z]+\s*\d+/)?.[0].replace(/\s+/g, '');
+                      
+                      return (
+                        <li key={index} className="flex items-start">
+                          <BookOpen className="mr-2 text-green-500 flex-shrink-0 mt-1" size={16} />
+                          {courseCode ? (
+                            <Link 
+                              to={`/courses/${courseCode}`}
+                              className="text-green-600 hover:text-green-700 hover:underline"
+                            >
+                              {course}
+                            </Link>
+                          ) : (
+                            <span className="text-gray-700">{course}</span>
+                          )}
+                        </li>
+                      );
+                    })}
                 </ul>
               </div>
 
