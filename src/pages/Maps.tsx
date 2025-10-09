@@ -102,7 +102,7 @@ const Maps = () => {
       <Navbar />
 
       {/* Enhanced Header with better mobile support */}
-      <header className="bg-gradient-to-r from-green-500 to-emerald-600 text-white py-12 md:py-16 px-4 shadow-lg">
+      {/* <header className="bg-gradient-to-r from-green-500 to-emerald-600 text-white py-12 md:py-16 px-4 shadow-lg">
         <div className="container mx-auto">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center mb-4">
@@ -116,7 +116,7 @@ const Maps = () => {
           </div>
           
           {/* Search Box in Header */}
-          <div className="max-w-2xl mx-auto">
+          {/*<div className="max-w-2xl mx-auto">
             <SearchBox 
               locations={campusLocations}
               onLocationSelect={handleLocationSelect}
@@ -124,7 +124,9 @@ const Maps = () => {
             />
           </div>
         </div>
-      </header>
+      </header> */}
+
+      
 
       <main className="container mx-auto py-6 md:py-8 px-4">
         {/* Enhanced Location Info Bar */}
@@ -262,27 +264,9 @@ const Maps = () => {
             />
             <WeatherWidget />
             
-            {/* Enhanced Quick Actions */}
-            {/* <div className="bg-white rounded-xl p-4 md:p-6 shadow-lg border">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
-              <div className="space-y-3">
-                <button className="w-full bg-green-50 hover:bg-green-100 text-green-700 rounded-lg p-3 transition-colors text-sm font-medium border border-green-200 flex items-center justify-center space-x-2">
-                  <MapPin size={16} />
-                  <span>Campus Virtual Tour</span>
-                </button>
-                <button className="w-full bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg p-3 transition-colors text-sm font-medium border border-blue-200 flex items-center justify-center space-x-2">
-                  <Navigation size={16} />
-                  <span>Download Campus App</span>
-                </button>
-                <button className="w-full bg-purple-50 hover:bg-purple-100 text-purple-700 rounded-lg p-3 transition-colors text-sm font-medium border border-purple-200 flex items-center justify-center space-x-2">
-                  <span className="w-4 h-4 bg-red-500 rounded-full"></span>
-                  <span>Emergency Contacts</span>
-                </button>
-              </div>
-            </div> */}
 
             {/* Campus Statistics */}
-            <div className="bg-white rounded-xl p-4 md:p-6 shadow-lg border">
+            {/* <div className="bg-white rounded-xl p-4 md:p-6 shadow-lg border">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Campus Info</h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
@@ -302,7 +286,7 @@ const Maps = () => {
                   <span className="font-semibold text-gray-900">108</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

@@ -19,6 +19,10 @@ import Mairo from '../images/Mairo.jpg';
 import ROY from '../images/ROY.jpg';
 import Buba from '../images/Buba.jpg';
 import SMB from '../images/SMB.jpeg';
+import Nura from '../images/Nura.jpg';
+import YYO from '../images/YYO.jpeg';
+import Maiwada from '../images/Maiwada.jpeg';
+
 
 const LecturerProfile = () => {
   const { id } = useParams();
@@ -182,6 +186,71 @@ const LecturerProfile = () => {
     },
     {
       id: 9,
+      name: 'Prof. Yusuf Yakubu Obadaki',
+      position: 'Professor',
+      specialization: '',
+      email: 'yyobadaki@abu.edu.ng',
+      image: YYO,
+      research: [''],
+      publications: '86',
+      yearsOfExperience: 25,
+
+      education: [
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University', year: '2013' },
+        { degree: 'M.Sc. Geography', institution: 'Ahmadu Bello University', year: '2006' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello University', year: '1999' }
+      ],
+      courses: [
+        'GEOG 105: Introduction to Practical Geography',
+        'GEOG 112: Introduction to Cartography',
+        'GEOG 207: Local Field Course',
+        'GEOG 209: Introduction to Elementary Surveying',
+        'GEOG 307: Distant Field Course',
+        'GEOG 425: Field and Laboratory Techniques in Geography',
+        'GEOG 103: Man’s Physical Environment I',
+        'GEOG 106: Introduction to Environmental Resources',
+        'GEOG 108: Elementary Statistics for Geography',
+        'GEOG 205: Quantitative Techniques in Geography',
+        'GEOG 208: Spatial Analysis',
+        'GEOG 412: Hydrology and Water Resources',
+        'GEOG 413: Fluvial Geomorphology',
+        'GEOG 414: Tropical Geomorphology',
+        'GEOG 301: Research Methods',
+        'GEOG 401: Systematic Geography of Nigeria I',
+        'GEOG 203: Introductory Geomorphology and Soils Geography'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Nature and Extent of Flood Risk Downstream of the Kubanni Dam, Kaduna State, Nigeria.',
+          journal: 'International Journal of Disaster Risk Management',
+          year: '2025'
+        },
+        {
+          title: 'Nature of Land Use/Land Cover in Kubanni Dam Catchment and Areas Liable to Flooding 	Downstream of Kubanni Dam Zaria, Kaduna State, Nigeria.',
+          journal: 'Nigerian Journal of Water 	Resources',
+          year: '2024'
+        },
+        {
+          title: 'Spatial Variability of Borehole Quality in Saki West Local Government Area of Oyo State, Nigeria.',
+          journal: 'Nigerian Journal of 	Hydrological Sciences',
+          year: '2023'
+        }
+      ],
+      
+      teachingPhilosophy: '',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (MANG)',
+        'Member, Nigerian Meteorological Society (NMS)',
+	      'Member, Nigerian Association of Hydrogeologists (NAH)',
+        'Member, Nigerian Association of Hydrological Sciences (NAHS)',
+        'Member, International Scientific Advisory Committee of the Wessex Institute, UK',
+        'Member, Science Association of Nigeria (SAN)',
+        'Council Representative of Earth Sciences (SAN)'	
+      ]
+    },
+    {
+      id: 10,
       name: 'Prof. Benedine Akpu',
       position: 'Professor',
       specialization: 'Environmental Management, Urban studies, Remote Sensing and GIS',
@@ -233,7 +302,7 @@ const LecturerProfile = () => {
       ]
     },
      {
-      id: 11,
+      id: 12,
       name: 'Dr. Abdullahi Jibrin',
       position: 'Associate Professor',
       specialization: 'Biogeography, Pedology, Environmental Management & Climate change',
@@ -286,7 +355,7 @@ const LecturerProfile = () => {
       ]
     },
     {
-      id: 12,
+      id: 13,
       name: 'Dr. Muhammad Isma’il',
       position: 'Dr.',
       specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
@@ -326,7 +395,7 @@ const LecturerProfile = () => {
       ]
     },
     {
-      id: 13,
+      id: 14,
       name: 'Dr. Hamza Mohammed',
       position: 'Dr.',
       specialization: 'Climatology, Agro Climatology, Climates, Transport, Transport Management, Environmental Management, Climate Change, Sustainable Environmental Management',
@@ -374,7 +443,7 @@ const LecturerProfile = () => {
       ]
     },
     {
-      id: 15,
+      id: 16,
       name: 'Dr. Buba Adamu Ndawayo',
       position: 'Reader',
       specialization: 'Environmental Management',
@@ -413,7 +482,7 @@ const LecturerProfile = () => {
       ]
     },
     {
-      id: 17,
+      id: 18,
       name: 'Dr. Mairo Abubakar',
       position: 'Senior Lecturer',
       specialization: 'Population and Medical Geography',
@@ -437,7 +506,7 @@ const LecturerProfile = () => {
         'GEOG 112: Introduction to Cartography',
         'GEOG 201: Spatial Organization of Society',
         'GEOG 207: Local Field Course',
-        'GEOG 214:Population Geography',
+        'GEOG 214: Population Geography',
         'GEOL 208: Geology & Mineral Resources of Nigeria',
         'GEOG 307: Field Course',
         'GEOG 411: Population, Resources & Environment',
@@ -470,6 +539,58 @@ const LecturerProfile = () => {
     },
     {
       id: 19,
+      name: 'Dr. Amina Maiwada',
+      position: 'Senior Lecturer',
+      specialization: 'Population Geography',
+      email: 'amaiwada@gmail.com',
+      image: Maiwada,
+      research: ['Population & Demography'],
+      publications: '29',
+      yearsOfExperience: 12,
+
+      education: [
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '' },
+        { degree: 'M.Sc. Geography', institution: 'Ahmadu Bello University, Zaria', year: '' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello University, Zaria', year: '' }
+      ],
+      courses: [
+        'GEOG 101: Introduction to Human Geography',
+        'GEOG 102: Man, Location and Resources',
+        'GEOG 105: Introduction to Practical Geography',
+        'GEOG 209: Introduction to Elementary Land Surveying',
+        'GEOG 307: Field Course',
+        'GEOG 400: Research Project',
+        'GEOG 403: Philosophy & Methodology in Geography',
+        'GEOG 411: Population, Resources & Environment',
+        'GEOG 421: Medical Geography'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Assessment of the nature and causes of Banditry in Birnin Gwari LGA, Kaduna State, Nigeria.',
+          journal: '',
+          year: ''
+        },
+        {
+          title: 'Perceptual investigation of Gender-based violence among women during the COVID-19 lockdown in Gwagwalada area council, Abuja, Nigeria.',
+          journal: '',
+          year: ''
+        },
+        {
+          title: 'Spatial Distribution of Street Beggars Locations in Kaduna State, Nigeria',
+          journal: '',
+          year: ''
+        }
+      ],
+      
+      teachingPhilosophy: 'Teaching is the best so far because it deals with how to understand and relate to students perspectives and emotions.',
+      professionalMemberships: [
+        'Member, Association of Nigerian Geographers (ANG)',
+        'Jama’a Orphans and Widows Organization (JOWSO)'
+      ]
+    },
+    {
+      id: 20,
       name: 'Dr. Suleiman Musa Balarebe',
       position: 'Lecturer II',
       specialization: 'Climate Change & Development',
@@ -521,7 +642,7 @@ const LecturerProfile = () => {
       ]
     },
     {
-      id: 20,
+      id: 21,
       name: 'Dr. Ahmad Hamza Abdullahi',
       position: 'Dr.',
       specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
@@ -570,7 +691,7 @@ const LecturerProfile = () => {
       ]
     },
     {
-      id: 21,
+      id: 22,
       name: 'Dr. Muhammad Oyale Akhadelor',
       position: 'Dr.',
       specialization: 'Economic Geography, Transport Geography & Environmental Management',
@@ -630,7 +751,7 @@ const LecturerProfile = () => {
       ]
     },
     {
-      id: 23,
+      id: 24,
       name: 'Dr. Usman Jibrin Gani',
       position: 'Lecturer',
       specialization: 'Transport Geography',
@@ -662,7 +783,7 @@ const LecturerProfile = () => {
       ]
     },
     {
-      id: 24,
+      id: 25,
       name: 'Dr. Abdullahi Balarabe',
       position: 'Dr.',
       specialization: 'Environmental management, Hydrology',
@@ -713,7 +834,46 @@ const LecturerProfile = () => {
     },
     {
       id: 26,
-      name: 'Mal. Abdulrazak Ahmed Kumo',
+      name: 'Mr. Nuraddin Ibrahim Muhammad',
+      position: '',
+      specialization: 'Pedology',
+      email: 'muhdnuraddin13@gmail.com',
+      image: Nura,
+      research: ['Soil Analysis using Geospatial Techniques'],
+      publications: '5',
+      yearsOfExperience: 7,
+
+      education: [
+        { degree: 'Ph.D. Geography (ongoing)', institution: 'Ahmadu Bello  University, Zaria', year: '' },
+        { degree: 'M.Sc. Geography', institution: 'Ahmadu Bello  University, Zaria', year: '' },
+        { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello  University, Zaria', year: '' }
+      ],
+      courses: [
+        'GEOG 108: Elementary Statistics for Geographers',
+        'GEOG 203: Introduction to Geomorphology & Soil Geography',
+        'GEOG 303: Soil Geography',
+        'GEOG 407: Pedology'
+      ],
+      
+      recentPublications: [
+        {
+          title: '',
+          journal: '',
+          year: ''
+          
+        }
+      ],
+      
+      teachingPhilosophy: 'I have a belief that education is an active partnership where students are empowered to think critically.',
+      professionalMemberships: [
+        'SSSN',
+        'Association of Nigerian Geographers (ANG)',
+        'NAE'
+      ]
+    },
+    {
+      id: 27,
+      name: 'Mr. Abdulrazak Ahmed Kumo',
       position: '',
       specialization: 'Environmental Management',
       email: 'talk2abdulkumo@gmail.com',

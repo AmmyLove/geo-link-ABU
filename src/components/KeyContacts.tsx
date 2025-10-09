@@ -19,11 +19,11 @@ const KeyContacts = () => {
       office: 'Room 101'
     },
     {
-      name: 'Mr. Ibrahim Garba',
-      position: 'Academic Officer',
-      email: 'academic.geography@abu.edu.ng',
-      phone: '+234 803 456 7890',
-      office: 'Room 102'
+      name: 'Mrs. Goodness Amarachi Edward',
+      position: 'Web Developer',
+      email: 'ammylove182@gmail.com',
+      phone: '+234 708 817 0390',
+      office: 'razeb.com'
     }
   ];
 

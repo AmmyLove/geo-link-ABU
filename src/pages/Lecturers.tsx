@@ -18,6 +18,9 @@ import Mairo from '../images/Mairo.jpg';
 import ROY from '../images/ROY.jpg';
 import Buba from '../images/Buba.jpg';
 import SMB from '../images/SMB.jpeg';
+import Nura from '../images/Nura.jpg';
+import YYO from '../images/YYO.jpeg';
+import Maiwada from '../images/Maiwada.jpeg';
 
 const Lecturers = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -63,6 +66,18 @@ const Lecturers = () => {
     },
     {
       id: 9,
+      name: 'Prof. Yusuf Yakubu Obadaki',
+      position: 'Professor',
+      specialization: '',
+      email: 'yyobadaki@abu.edu.ng',
+      image: YYO,
+      research: [''],
+      publications: '86',
+      yearsOfExperience: 25,
+      gender: 'Male'
+    },
+    {
+      id: 10,
       name: 'Prof. Benedine Akpu',
       position: 'Professor',
       specialization: 'Environmental Management, Urban studies, Remote Sensing and GIS',
@@ -74,7 +89,7 @@ const Lecturers = () => {
       gender: 'Female'
     },
     {
-      id: 11,
+      id: 12,
       name: 'Dr. Abdullahi Jibrin',
       position: 'Associate Professor',
       specialization: 'Biogeography, Pedology, Environmental Management & Climate change',
@@ -87,7 +102,7 @@ const Lecturers = () => {
       gender: 'Male'
     },
     {
-      id: 12,
+      id: 13,
       name: 'Dr. Muhammad Isma’il',
       position: 'Senior Lecturer',
       specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
@@ -99,7 +114,7 @@ const Lecturers = () => {
       gender: 'Male'
     },
     {
-      id: 13,
+      id: 14,
       name: 'Dr. Hamza Mohammed',
       position: 'Senior Lecturer',
       specialization: 'Climatology, Agro Climatology, Climates, Transport, Transport Management, Environmental Management, Climate Change, Sustainable Environmental Management',
@@ -111,7 +126,7 @@ const Lecturers = () => {
       gender: 'Male'
     },
     {
-      id: 15,
+      id: 16,
       name: 'Dr. Buba Adamu Ndawayo',
       position: 'Reader',
       specialization: 'Environmental Management',
@@ -123,7 +138,7 @@ const Lecturers = () => {
       gender: 'Male'
     },
     {
-      id: 17,
+      id: 18,
       name: 'Dr. Mairo Abubakar',
       position: 'Senior Lecturer',
       specialization: 'Population and Medical Geography',
@@ -136,6 +151,18 @@ const Lecturers = () => {
     },
     {
       id: 19,
+      name: 'Dr. Amina Maiwada',
+      position: 'Senior Lecturer',
+      specialization: 'Population Geography',
+      email: 'amaiwada@gmail.com',
+      image: Maiwada,
+      research: ['Population & Demography'],
+      publications: '29',
+      yearsOfExperience: 12,
+      gender: 'Female'
+    },
+    {
+      id: 20,
       name: 'Dr. Suleiman Musa Balarebe',
       position: 'Lecturer II',
       specialization: 'Climate Change & Development',
@@ -147,7 +174,7 @@ const Lecturers = () => {
       gender: 'Male'
     },
     {
-      id: 20,
+      id: 21,
       name: 'Dr. Ahmad Hamza Abdullahi',
       position: 'Lecturer II',
       specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
@@ -159,7 +186,7 @@ const Lecturers = () => {
       gender: 'Male'
     },
     {
-      id: 21,
+      id: 22,
       name: 'Dr. Muhammad Oyale Akhadelor',
       position: 'Dr.',
       specialization: 'Economic Geography, Transport Geography & Environmental Management',
@@ -171,7 +198,7 @@ const Lecturers = () => {
       gender: 'Male'
     },
     {
-      id: 23,
+      id: 24,
         name: 'Dr. Usman Jibrin Gani',
         position: 'Lecturer',
         specialization: 'Transport Geography',
@@ -183,7 +210,7 @@ const Lecturers = () => {
         gender: 'Male'
     },
     {
-      id: 24,
+      id: 25,
       name: 'Dr. Abdullahi Balarabe',
       position: 'Dr.',
       specialization: 'Environmental management, Hydrology',
@@ -195,7 +222,19 @@ const Lecturers = () => {
       gender: 'Male'
     },
     {
-      id: 26,
+    id: 26,
+      name: 'Mr. Nuraddin Ibrahim Muhammad',
+      position: '',
+      specialization: 'Pedology',
+      email: 'muhdnuraddin13@gmail.com',
+      image: Nura,
+      research: ['Soil Analysis using Geospatial Techniques'],
+      publications: '5',
+      yearsOfExperience: 7,
+      gender: 'Male'
+    },
+    {
+      id: 27,
       name: 'Mal. Abdulrazak Ahmed Kumo',
       position: '',
       specialization: 'Environmental Management',

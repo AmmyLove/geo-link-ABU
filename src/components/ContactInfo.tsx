@@ -15,23 +15,11 @@ const ContactInfo = () => {
       ]
     },
     {
-      icon: Phone,
-      title: 'Phone Numbers',
-      details: [
-        'Main Office: +234 (0) 69 550 1111',
-        'Head of Dept: +234 803 123 4567',
-        'Departmental President: +234 803 234 5678',
-        'Emergency: +234 (0) 69 550 2222'
-      ]
-    },
-    {
       icon: Mail,
       title: 'Email Addresses',
       details: [
         'General: geography@abu.edu.ng',
         'Head of Dept: hod.geography@abu.edu.ng',
-        'Admissions: admissions.geography@abu.edu.ng',
-        'Research: research.geography@abu.edu.ng'
       ]
     },
     {

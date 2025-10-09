@@ -175,7 +175,7 @@ const Index = () => {
       </section>
 
       {/* Featured Student Projects - Now using the new component */}
-      <FeaturedProjects />
+      {/* <FeaturedProjects /> */}
 
       {/* Latest News */}
       <section className="py-16 px-4 bg-gray-100">

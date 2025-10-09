@@ -37,7 +37,7 @@ const Contact = () => {
       </section>
 
       <KeyContacts />
-      <EmergencyInfo />
+      {/* <EmergencyInfo /> */}
 
       <Footer />
     </div>

@@ -1,6 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { Play, Pause, RotateCcw, ZoomIn, ZoomOut, Maximize2, Volume2, VolumeX, Info, Camera, Heart } from 'lucide-react';
+import Cart from '../images/Cart studio.jpg';
+import Classroom from '../images/Classroom.jpg';
+import Garden from '../images/Garden.jpg';
+import GIS from '../images/GIS lab.jpg';
+import MET from '../images/MET enclosure.jpg';
+import Library from '../images/Library.jpg';
+import Entrance from '../images/Entrance.jpg';
+
 
 interface TourLocation {
   name: string;
@@ -23,29 +31,26 @@ const VirtualTour = () => {
   const locations: TourLocation[] = [
     {
       name: 'Department Entrance',
-      image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=600&fit=crop',
+      image: Entrance,
       description: 'Welcome to the Department of Geography and Environmental Management',
       details: [
-        'Modern glass facade with sustainable design principles',
-        'Accessibility features including ramps and wide doorways',
         'Information board displaying current research projects'
       ],
       highlights: ['Sustainable Architecture', 'Accessibility Features', 'Information Hub']
     },
     {
       name: 'GIS Laboratory',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop',
+      image: GIS,
       description: 'State-of-the-art GIS and Remote Sensing Laboratory',
       details: [
-        '30 high-performance workstations with latest GIS software',
-        'Drone technology for aerial surveying and mapping',
+        'Several high-performance workstations with latest GIS software',
         'Advanced GPS equipment for fieldwork training'
       ],
       highlights: ['Latest Technology', 'Hands-on Learning', 'Research Equipment']
     },
     {
       name: 'Smart Lecture Halls',
-      image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=800&h=600&fit=crop',
+      image: Classroom,
       description: 'Interactive learning spaces with modern multimedia facilities',
       details: [
         'Capacity for 150 students with excellent acoustics',
@@ -55,30 +60,8 @@ const VirtualTour = () => {
       highlights: ['Interactive Technology', 'Comfortable Seating', 'Audio-Visual Equipment']
     },
     {
-      name: 'Faculty Research Offices',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop',
-      description: 'Dedicated spaces for faculty research and student consultation',
-      details: [
-        'Private offices for faculty members',
-        'Meeting rooms for student supervision',
-        'Research libraries with specialized collections'
-      ],
-      highlights: ['Research Focus', 'Student Support', 'Academic Resources']
-    },
-    {
-      name: 'Climate Research Center',
-      image: 'https://images.unsplash.com/photo-1551135049-8a33b5883817?w=800&h=600&fit=crop',
-      description: 'Advanced climate monitoring and environmental research facility',
-      details: [
-        'Weather monitoring station with real-time data',
-        'Soil and water analysis laboratory',
-        'Climate modeling and simulation computers'
-      ],
-      highlights: ['Real-time Monitoring', 'Laboratory Analysis', 'Climate Modeling']
-    },
-    {
-      name: 'Collaborative Study Spaces',
-      image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop',
+      name: 'Departmental Library',
+      image: Library,
       description: 'Modern study areas designed for collaboration and individual work',
       details: [
         'Flexible furniture arrangements for group work',
@@ -86,7 +69,38 @@ const VirtualTour = () => {
         'Quiet zones for individual study'
       ],
       highlights: ['Flexible Design', 'Technology Integration', 'Quiet Study Areas']
+    },
+    {
+      name: 'Cartographic Studio',
+      image: Cart,
+      description: 'Dedicated facility for map reading, spatial data visualization, and cartographic design.',
+      details: [
+        'Supports topographic, thematic, and digital mapping projects'
+      ],
+      highlights: ['Cartographic Design', 'Map Reading']
+    },
+    {
+      name: 'Meteorological Enclosure',
+      image: MET,
+      description: 'Outdoor facility for recording and analyzing meteorological data and atmospheric conditions.',
+      details: [
+        'Includes rain gauges, anemometers, thermometers, and barometers',
+        'Used for student practicals and weather data collection',
+        'Supports climate research and forecasting exercises'
+      ],
+      highlights: ['Weather Instruments', 'Field Observation', 'Data Collection']
+    },
+    {
+      name: 'Departmental Garden',
+      image: Garden,
+      description: 'A serene and educational space for environmental studies within the department.',
+      details: [
+        'Serves as a demonstration site for environmental management practices',
+        'Used for outdoor lectures and practical sessions'
+      ],
+      highlights: ['Ecological Diversity', 'Outdoor Learning', 'Environmental Management']
     }
+
   ];
 
   const nextLocation = () => {

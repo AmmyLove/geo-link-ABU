@@ -42,14 +42,10 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="text-green-400 mt-1" size={16} />
                 <span className="text-gray-300">
-                  Faculty of Environmental Design,<br />
+                  Faculty of Physical Sciences,<br />
                   Ahmadu Bello University,<br />
                   Zaria, Kaduna State, Nigeria
                 </span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="text-green-400" size={16} />
-                <span className="text-gray-300">+234 (0) 69 550 1111</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="text-green-400" size={16} />
@@ -82,7 +78,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Department of Geography and Environmental Management, Ahmadu Bello University. All rights reserved.
+            © 2025 Department of Geography and Environmental Management, Ahmadu Bello University. All rights reserved.
           </p>
         </div>
       </div>
