@@ -980,7 +980,7 @@ const LecturerProfile = () => {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-800 mb-4">Lecturer Not Found</h1>
           <Link to="/lecturers" className="text-green-600 hover:text-green-700">
-            Back to Faculty Directory
+            Back to Academic Team Directory
           </Link>
         </div>
       </div>
@@ -996,7 +996,7 @@ const LecturerProfile = () => {
         <div className="max-w-6xl mx-auto">
           <Link to="/lecturers" className="inline-flex items-center text-green-100 hover:text-white mb-6">
             <ArrowLeft className="mr-2" size={20} />
-            Back to Faculty Directory
+            Back to Academic Team Directory
           </Link>
           
           <div className="flex flex-col md:flex-row items-start gap-8">
@@ -1127,14 +1127,28 @@ const LecturerProfile = () => {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">Courses Taught</h2>
                 <ul className="space-y-2">
-                  {lecturer.courses.map((course, index) => (
-                    <li key={index} className="flex items-center text-gray-700">
-                      <BookOpen className="mr-2 text-green-500" size={16} />
-                      {course}
-                    </li>
-                  ))}
+                  {lecturer.courses.map((course, index) => {
+                    // Extract course code from the course string (e.g., "GEOG 214: Population Geography")
+                    const courseCode = course.match(/^[A-Z]+\s*\d+/)?.[0].replace(/\s+/g, '');
+                    
+                    return (
+                      <li key={index} className="flex items-start">
+                        <BookOpen className="mr-2 text-green-500 flex-shrink-0 mt-1" size={16} />
+                        {courseCode ? (
+                          <Link 
+                            to={`/courses`}
+                            className="text-green-600 hover:text-green-700 hover:underline"
+                          >
+                            {course}
+                          </Link>
+                        ) : (
+                          <span className="text-gray-700">{course}</span>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
-              </div>    
+              </div>
 
               
             </div>

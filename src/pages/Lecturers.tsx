@@ -287,9 +287,9 @@ const Lecturers = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-800 to-emerald-700 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Faculty</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Academic Team</h1>
           <p className="text-xl text-green-100 max-w-3xl mx-auto">
-            Meet our distinguished faculty of over 20 members who are leaders in their fields, 
+            Meet our distinguished academic team of over 20 members who are leaders in their fields, 
             committed to excellence in teaching and groundbreaking research.
           </p>
         </div>
