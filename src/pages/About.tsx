@@ -197,9 +197,9 @@ const About = () => {
         <section className="py-20 px-4 bg-gray-100">
           <div className="container mx-auto">
             <header className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">Meet Our Leadership</h2>
+              <h2 className="text-4xl font-bold text-gray-800 mb-4">Meet Our Academic Team</h2>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                Our distinguished faculty members bring decades of experience and expertise to guide students 
+                Our distinguished lecturers bring decades of experience and expertise to guide students 
                 in their academic and research endeavors
               </p>
             </header>
@@ -226,7 +226,7 @@ const About = () => {
                 href="/lecturers" 
                 className="inline-flex items-center px-8 py-4 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all duration-200 shadow-lg hover:shadow-xl font-semibold"
               >
-                View All Faculty Members
+                View All Lecturers
                 <Calendar className="ml-3" size={20} />
               </a>
             </div>

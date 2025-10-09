@@ -261,25 +261,7 @@ const Programs = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 px-4 bg-gray-100">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Ready to Join Our Programs?</h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Take the next step in your academic and professional journey. Our programs are designed 
-            to provide you with the skills and knowledge needed for success in today's world.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors">
-              Apply Now
-            </button>
-            <button className="border-2 border-emerald-600 text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-600 hover:text-white transition-colors">
-              Download Brochure
-            </button>
-          </div>
-        </div>
-      </section>
-
+      
       <Footer />
     </div>
   );

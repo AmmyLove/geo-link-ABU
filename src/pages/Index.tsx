@@ -10,7 +10,7 @@ const Index = () => {
   const quickLinks = [
     { title: 'Our Courses', icon: BookOpen, href: '/courses', description: 'Explore exciting courses' },
     { title: 'Academic Programs', icon: GraduationCap, href: '/programs', description: 'Discover our programs' },
-    { title: 'Faculty Profiles', icon: Users, href: '/lecturers', description: 'Meet our experts' },
+    { title: "Lecturer's Profiles", icon: Users, href: '/lecturers', description: 'Meet our experts' },
     { title: 'Career Prospects', icon: Briefcase, href: '/careers', description: 'Your future awaits' },
     { title: 'Campus Maps', icon: MapPin, href: '/maps', description: 'Navigate our campus' },
     { title: 'Latest News', icon: Calendar, href: '/news', description: 'Stay updated' },
@@ -43,8 +43,8 @@ const Index = () => {
     },
     {
       icon: Users,
-      title: 'Expert Faculty',
-      description: '25+ distinguished faculty members conducting cutting-edge research worldwide.',
+      title: 'Expert Academic Team',
+      description: '25+ distinguished lecturers conducting cutting-edge research worldwide.',
       link: '/lecturers'
     },
     {
@@ -160,7 +160,7 @@ const Index = () => {
             </div>
             <div>
               <div className="text-3xl font-bold text-green-600">25+</div>
-              <div className="text-gray-600">Faculty Members</div>
+              <div className="text-gray-600">Academic team</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-green-600">50+</div>

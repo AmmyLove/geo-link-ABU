@@ -4,20 +4,20 @@ import { User, Mail, Phone, MapPin } from 'lucide-react';
 
 const KeyContacts = () => {
   const staff = [
-    {
-      name: 'Prof. Aminu Hassan',
-      position: 'Head of Department',
-      email: 'aminu.hassan@abu.edu.ng',
-      phone: '+234 803 123 4567',
-      office: 'Room 201'
-    },
-    {
-      name: 'Mrs. Fatima Abdullahi',
-      position: 'Department Secretary',
-      email: 'secretary.geography@abu.edu.ng',
-      phone: '+234 803 345 6789',
-      office: 'Room 101'
-    },
+    // {
+    //   name: 'Prof. Aminu Hassan',
+    //   position: 'Head of Department',
+    //   email: 'aminu.hassan@abu.edu.ng',
+    //   phone: '+234 803 123 4567',
+    //   office: 'Room 201'
+    // },
+    // {
+    //   name: 'Mrs. Fatima Abdullahi',
+    //   position: 'Department Secretary',
+    //   email: 'secretary.geography@abu.edu.ng',
+    //   phone: '+234 803 345 6789',
+    //   office: 'Room 101'
+    // },
     {
       name: 'Mrs. Goodness Amarachi Edward',
       position: 'Web Developer',
