@@ -22,6 +22,7 @@ import SMB from '../images/SMB.jpeg';
 import Nura from '../images/Nura.jpg';
 import YYO from '../images/YYO.jpeg';
 import Maiwada from '../images/Maiwada.jpeg';
+import IGUISI from '../images/IGUISI.jpg';
 
 
 const LecturerProfile = () => {
@@ -74,6 +75,53 @@ const LecturerProfile = () => {
       professionalMemberships: [
         'Association of Nigerian Geographers (ANG)',
         'Population Association of Nigeria (PAN)'
+      ]
+    },
+    {
+      id: 3,
+      name: 'Prof. Edwin Osawe Iguisi ',
+      position: 'Professor',
+      specialization: 'Climate Change Adaptation & Vulnerability Assessment, Disaster Risk Reduction & Management, Hydrology, Soil & Water Resource Management, Remote Sensing / GIS Applications in Environmental Science, Environmental Planning & Policy',
+      email: '',
+      image: IGUISI,
+      research: ['Climate Change Adaptation & Vulnerability Assessment', 'Disaster Risk Reduction & Management', 'Hydrology, Soil & Water Resource Management', 'Remote Sensing / GIS Applications in Environmental Science', 'Environmental Planning & Policy'],
+      publications: '100+',
+      yearsOfExperience: '30+',
+
+      education: [
+        { degree: 'B.Sc. Geography', institution: 'Obafemi Awolowo University, Ile-Ife', year: '' },
+        { degree: 'M.Sc. Geography', institution: 'Obafemi Awolowo University, Ile-Ife', year: '' },
+        { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University, Zaria', year: '' }
+      ],
+      courses: [
+        'Numerous'
+      ],
+      
+      recentPublications: [
+        {
+          title: 'Nature and Extent of Flood Risk Downstream of the Kubanni Dam, Kaduna State, Nigeria',
+          journal: 'Journal of Disaster Risk Management',
+          year: '2025'
+        },
+        {
+          title: 'Various works on GIS-based runoff estimation, urban heat island analyses, climate variability, and disaster vulnerability (e.g. Kubanni drainage basin sediment yield, Benin City UHI) ',
+          journal: '',
+          year: ''
+          
+        },
+        {
+          title: 'Various works on GIS-based runoff estimation, urban heat island analyses, climate variability, and disaster vulnerability (e.g. Kubanni drainage basin sediment yield, Benin City UHI) ',
+          journal: '',
+          year: ''
+        }
+      ],
+      
+      teachingPhilosophy: '',
+      professionalMemberships: [
+        'Association of Nigerian Geographers (ANG)',
+        'Fellow, Nigerian Institute of Management',
+        'Fellow, Chartered Institute of Loan & Risk Management',
+        'External examiner to multiple universities across Nigeria'
       ]
     },
     {
@@ -188,10 +236,10 @@ const LecturerProfile = () => {
       id: 9,
       name: 'Prof. Yusuf Yakubu Obadaki',
       position: 'Professor',
-      specialization: '',
+      specialization: 'Hydrology, Fluvial Geomorphology and Water Resources Management',
       email: 'yyobadaki@abu.edu.ng',
       image: YYO,
-      research: [''],
+      research: ['Drainage Basin Geomorphology', 'Reservoir Monitoring and Management', 'Water Quality and Quantity Studies', 'Waste Management'],
       publications: '86',
       yearsOfExperience: 25,
 
@@ -238,7 +286,7 @@ const LecturerProfile = () => {
         }
       ],
       
-      teachingPhilosophy: '',
+      teachingPhilosophy: 'I am always motivated by the saying of Prophet Muhammad (PBUH) that: The best among you is the one that brings benefit to others. My teaching is therefore learner-centred, believing that education should empower students to become truly confident, critical thinkers and compassionate citizens. My students’ curiosity is celebrated, mistakes are learning opportunities, and are not discriminated against. I strive to be not just a teacher, but a facilitator of academic, social and emotional growth.',
       professionalMemberships: [
         'Member, Association of Nigerian Geographers (MANG)',
         'Member, Nigerian Meteorological Society (NMS)',

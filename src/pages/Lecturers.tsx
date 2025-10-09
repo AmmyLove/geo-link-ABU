@@ -21,6 +21,7 @@ import SMB from '../images/SMB.jpeg';
 import Nura from '../images/Nura.jpg';
 import YYO from '../images/YYO.jpeg';
 import Maiwada from '../images/Maiwada.jpeg';
+import IGUISI from '../images/IGUISI.jpg';
 
 const Lecturers = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -38,6 +39,18 @@ const Lecturers = () => {
       research: ['Population & Demographic Studies', 'Resources & Environment', 'Gender & Development issues'],
       publications: '40+',
       yearsOfExperience: 37,
+      gender: 'Male'
+    },
+    {
+      id: 3,
+      name: 'Prof. Edwin Osawe Iguisi ',
+      position: 'Professor',
+      specialization: 'Climate Change Adaptation & Vulnerability Assessment, Disaster Risk Reduction & Management, Hydrology, Soil & Water Resource Management, Remote Sensing / GIS Applications in Environmental Science, Environmental Planning & Policy',
+      email: '',
+      image: IGUISI,
+      research: ['Climate Change Adaptation & Vulnerability Assessment', 'Disaster Risk Reduction & Management', 'Hydrology, Soil & Water Resource Management', 'Remote Sensing / GIS Applications in Environmental Science', 'Environmental Planning & Policy'],
+      publications: '100+',
+      yearsOfExperience: '30+',
       gender: 'Male'
     },
     {
@@ -68,10 +81,10 @@ const Lecturers = () => {
       id: 9,
       name: 'Prof. Yusuf Yakubu Obadaki',
       position: 'Professor',
-      specialization: '',
+      specialization: 'Hydrology, Fluvial Geomorphology and Water Resources Management',
       email: 'yyobadaki@abu.edu.ng',
       image: YYO,
-      research: [''],
+      research: ['Drainage Basin Geomorphology', 'Reservoir Monitoring and Management', 'Water Quality and Quantity Studies', 'Waste Management'],
       publications: '86',
       yearsOfExperience: 25,
       gender: 'Male'
