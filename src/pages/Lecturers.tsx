@@ -86,7 +86,7 @@ const Lecturers = () => {
       image: YYO,
       research: ['Drainage Basin Geomorphology', 'Reservoir Monitoring and Management', 'Water Quality and Quantity Studies', 'Waste Management'],
       publications: '86',
-      yearsOfExperience: 25,
+      yearsOfExperience: 24,
       gender: 'Male'
     },
     {

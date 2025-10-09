@@ -241,7 +241,7 @@ const LecturerProfile = () => {
       image: YYO,
       research: ['Drainage Basin Geomorphology', 'Reservoir Monitoring and Management', 'Water Quality and Quantity Studies', 'Waste Management'],
       publications: '86',
-      yearsOfExperience: 25,
+      yearsOfExperience: 24,
 
       education: [
         { degree: 'Ph.D. Geography', institution: 'Ahmadu Bello University', year: '2013' },
@@ -249,23 +249,25 @@ const LecturerProfile = () => {
         { degree: 'B.Sc. Geography', institution: 'Ahmadu Bello University', year: '1999' }
       ],
       courses: [
-        'GEOG 105: Introduction to Practical Geography',
-        'GEOG 112: Introduction to Cartography',
-        'GEOG 207: Local Field Course',
-        'GEOG 209: Introduction to Elementary Surveying',
-        'GEOG 307: Distant Field Course',
-        'GEOG 425: Field and Laboratory Techniques in Geography',
         'GEOG 103: Man’s Physical Environment I',
+        'GEOG 105: Introduction to Practical Geography',
         'GEOG 106: Introduction to Environmental Resources',
         'GEOG 108: Elementary Statistics for Geography',
+        'GEOG 112: Introduction to Cartography',
+        'GEOG 203: Introductory Geomorphology and Soils Geography',
         'GEOG 205: Quantitative Techniques in Geography',
+        'GEOG 207: Local Field Course',
         'GEOG 208: Spatial Analysis',
+        'GEOG 209: Introduction to Elementary Surveying',
+        'GEOG 301: Research Methods',
+        'GEOG 307: Distant Field Course',
+        'GEOG 317: Geomorphology',
+        'GEOG 401: Systematic Geography of Nigeria I',
         'GEOG 412: Hydrology and Water Resources',
         'GEOG 413: Fluvial Geomorphology',
         'GEOG 414: Tropical Geomorphology',
-        'GEOG 301: Research Methods',
-        'GEOG 401: Systematic Geography of Nigeria I',
-        'GEOG 203: Introductory Geomorphology and Soils Geography'
+        'GEOG 425: Field and Laboratory Techniques in Geography',
+         
       ],
       
       recentPublications: [
@@ -405,7 +407,7 @@ const LecturerProfile = () => {
     {
       id: 13,
       name: 'Dr. Muhammad Isma’il',
-      position: 'Dr.',
+      position: 'Associate Professor',
       specialization: 'Energy Geographies, Economic Geography, Remote Sensing & GIS',
       email: 'migeogjameel@gmail.com',
       image: drMI,
